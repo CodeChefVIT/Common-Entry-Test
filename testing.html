@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <script src="https://kit.fontawesome.com/c233f299bf.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/home2.css">
+
+<title>HOME PAGE</title>
+<style>
+    @font-face
+{
+    src:url(../fonts/RobotoCondensed-Regular.ttf);
+    font-family: 'Roboto Condensed', sans-serif;
+}
+body{
+  padding-bottom:20px;
+    background:linear-gradient(to bottom,white,#000000,white);
+    color:white;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.searchbar{
+    margin-bottom:2em;
+    margin-top: 2em;
+    height: 60px;
+    background-color: #2c2c2c;
+    border-radius: 30px;
+    padding: 10px;
+}
+.search_input
+{
+    color: white;
+    border: 0;
+    outline: 0;
+    background: none;
+    width:0;
+    line-height:40px;
+    transition:width 0.4s linear;
+}
+.searchbar:hover>.search_input
+{
+    padding: 0 10px;
+    width:250px;
+    caret-color:white;
+    transition: width 0.4s linear;
+}
+.searchbar:hover>.search_icon
+{
+    background: white;
+    color:black;
+}
+.search_icon
+{
+    height:40px;
+    width:40px;
+    float:right;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    color:white;
+    text-decoration:none;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;}
+
+.container>.row>.col-lg-4{
+  text-align: center;
+  margin-bottom:20px;
+}
+.container>.row>.col-lg-4{
+  padding-top:10px;
+  color:white;
+}
+
+img{
+    height: 50px;
+    width:50px;
+    display: inline-block;
+    margin-bottom:20px;
+}
+h1{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 30px;
+    margin-top: 15px;
+    color:white;
+}
+h3{
+    font-size:30px;
+    align-content: center;
+    display: inline-block;
+}
+.btn{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color:white;
+    border: 1px solid white ;
+}
+.btn:hover{
+            color:orange;
+    }
+hr{ 
+  height: 1px;
+  background-color:white;
+  border: none;
+margin-bottom:15px;
+}
+.logo{
+    margin-right:10px;
+    border-radius: 50%;
+}
+.heading
+{
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size:40px;
+    text-shadow: 4px 4px 4px #bbe1fa;
+}
+#team .card{
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px #ebebf5;
+    transition:all 0.3s ease-in;
+    -webkit-transition:all 0.3s ease-in;
+    -moz-transition:all 0.3s ease-in;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: #2C2C2C;
+}
+#team .card:hover hr{
+    background-color:#2C2C2C;
+}
+#team .card:hover .btn{
+    color:#2C2C2C;
+    border: 1px solid #2c2c2c;
+}
+#team .card:hover h1{
+    color:#2C2C2C;
+}
+#team .card:hover{
+    background:white;
+    color:#2C2C2C;
+    border-radius: 10px;
+    border:none;
+    box-shadow: 5px 5px 10px #2C2C2C;
+    transform: scale(1.05);
+}
+.modal-content{
+        color: black;
+    }   
+</style>
+</head>
+ 
+ 
+<body>
+    <div class="pos-f-t">
+      <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg p-4" style="background-color:#000000">
+        <h6 style="color: white">Welcome to the Official Portal for CET-2020</h6>
+      <ul class="navbar-nav">
+      <li class="nav-item"><a href="" class="nav-link" data-toggle="modal" data-target="#login">Login </a>
+      <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Login </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+  <form class="px-4 py-3" >
+    <div class="form-group">
+      <label for="exampleDropdownFormEmail1">VIT Email address</label>
+      <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@vitstudent.ac.in">
+    </div>
+    <div class="form-group">
+      <label for="exampleDropdownFormPassword1">Password</label>
+      <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+    </div>
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="dropdownCheck">
+      <label class="form-check-label" for="dropdownCheck">
+        Remember me.
+      </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Sign in</button>
+  </form>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+</li>
+<li class="nav-item"><a href="" class="nav-link" data-toggle="modal" data-target="#ssu">Student Sign up</a>
+       <div class="modal fade" id="ssu" tabindex="-1" role="form" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" >
+       <div class="modal-dialog modal-dialog-centered" role="form">
+       <div class="modal-content">
+          <div class="modal-header">
+             <h5 class="modal-title" id="exampleModalLongTitle">Register here</h5>
+             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+             </button>
+         </div>
+         <div class="modal-body">
+            <form class="px-4 py-3">
+              <div class="form-group">
+              <label for="exampleDropdownFormEmail1">First Name</label>
+              <input type="text" class="form-control" placeholder="First Name" />
+              <br>
+              <label for="exampleDropdownFormEmail1">Last Name</label>
+              <input type="text" class="form-control" placeholder="Last Name" /><br>
+              <label for="exampleDropdownFormEmail1">Registration Number</label>
+              <input type="text" class="form-control" placeholder="20BCE****" /><br>
+              <label for="PhoneNo.">Phone No.</label>
+              <input type="text" class="form-control" placeholder="Phone No." maxlength="10" />
+              <br><label for="exampleDropdownFormEmail1">VIT Email address</label>
+              <input type="E mail" class="form-control" placeholder="email@vitstudent.ac.in" /><br>
+              <label for="exampleDropdownFormEmail1">Enter OTP sent to Vit Email-id</label>
+              <input type="Password" class="form-control" placeholder="****" maxlength="4" minlenght="4"/>
+              <br>   
+              <label for="exampleDropdownFormEmail1">Gender</label>
+              <select id="Gender" class="form-control" placeholder="Gender" title="Gender">
+              <option selected disabled>Gender</option>
+              <option>Male</option>
+              <option >Female</option>
+              <option >Dont want to specify</option>
+              </select><br>
+              <label for="exampleDropdownFormEmail1">Password</label>
+              <input type="Password" class="form-control" placeholder="Password" minlength="6" /><br>
+              <label for="exampleDropdownFormEmail1">Confirm Password</label>
+              <input type="Password" class="form-control" placeholder="Same as Password" minlength="6" /><br>
+            </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+   </div>
+   </div>
+   </div>
+</div>
+</li>
+
+<li class="nav-item dropdown"><a href="#" class="nav-link dropddown-toggle" data-toggle="dropdown">Clubs </a>
+    <div class="dropdown-menu">
+        <a href="https://gaana.com/" class="dropdown-item">Technical Clubs</a>
+        <a href="https://gaana.com/" class="dropdown-item">Non-Technical Clubs</a> 
+        <a href="https://gaana.com/" class="dropdown-item">Ngo in VIT</a> 
+    </div>
+</li>
+<li class="nav-item dropdown"><a href="#" class="nav-link dropddown-toggle" data-toggle="dropdown">Common Entry Test </a>
+    <div class="dropdown-menu">
+        <a href="https://gaana.com/" class="dropdown-item">Attend Test</a>
+        <a href="https://gaana.com/" class="dropdown-item">Attempted Test</a> 
+    </div>
+</li>
+       
+<li class="nav-item"><a href="" class="nav-link" data-toggle="modal" data-target="#aboutus">About us </a>
+      <div class="modal fade" id="aboutus" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+         <div class="modal-content">      
+           <div class="modal-body">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">About Us </h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+<br>
+CodeChef is a not-for-profit educational initiative by Directi, an Indian software company. It is a global programming community that fosters learning and friendly competition, built on top of the world’s largest competitive programming platform. We have also built a large community of problem curators.
+<br>
+<br>
+In Vellore Institute of Technology, CodeChef-VIT is a technical chapter that helps students all over the campus to improve their coding skills. The core committee members of the chapters are divided into four areas of expertise- Technical, Projects, Management and Design. The main objective is to provide the students a platform where they can learn, share and test their knowledge. CodeChef- VIT keeps conducting several workshops and events in order to help the students do the same.
+<br>
+<br>
+<ul>
+          <li><a href="https://www.facebook.com/codechefvit"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+          <li><a href="https://www.instagram.com/codechefvit"><span class="label"><i class="fab fa-instagram"></i>  Instagram</span></a></li>
+          <li><a href="https://github.com/CodeChefVIT"><span class="label"><i class="fab fa-github"></i>  GitHub</span></a></li>
+          <li><a href="https://www.linkedin.com/company/codechef-vit-chapter/about"><span class="label"><i class="fab fa-linkedin-in"></i>  LinkedIn</span></a></li>
+</ul>
+      </div>
+    </div>
+   </div>
+  </div>
+</li>
+        
+<li class="nav-item"><a href="https://gaana.com/" class="nav-link">Contact us </a></li>
+
+    </ul>
+  </div>
+</div>
+
+<nav class="navbar navbar-dark navbar-form " style="background-color: #000000">
+   <a href="https://gaana.com/"  class="navbar-brand" style="font-size:2.5em" >
+       <img src="assets/img/codechef.jpg">  CET VIT </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+</nav>
+</div>
+
+    <div class="container h-100">
+      <div class="d-flex justify-content-center h-100">
+        <div class="searchbar">
+          <input class="search_input" type="text" name="" placeholder="Search...">
+          <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+    </div>
+    </div>
+</div>
+    
+
+
+
+<div class="header">
+     <section id="team">
+<div class="col-lg-10" style="float:none;margin:auto;">
+<div class="card">
+    <div class="card-body">
+    <h1>About Us</h1>
+    <hr>
+<br>
+CodeChef is a not-for-profit educational initiative by Directi, an Indian software company. It is a global programming community that fosters learning and friendly competition, built on top of the world’s largest competitive programming platform. We have also built a large community of problem curators.
+<br>
+<br>
+In Vellore Institute of Technology, CodeChef-VIT is a technical chapter that helps students all over the campus to improve their coding skills. The core committee members of the chapters are divided into four areas of expertise- Technical, Projects, Management and Design. The main objective is to provide the students a platform where they can learn, share and test their knowledge. CodeChef- VIT keeps conducting several workshops and events in order to help the students do the same.
+<br>
+<br>
+    </div>
+    </div>
+</div>
+     
+      <div class="container">
+           <div class="row">
+              <div class="col-lg-4">
+                 <div class="card">
+                 <div class="card-body">
+                  <h1>Technical</h1>
+                  <hr class="white">
+                  <div class="row">
+                      <div>
+                        <img src="assets/img/codechef.jpg" class="logo img-circle img-fluid animated bounceIn">
+                      </div>
+                      <div>
+                          <h3>CodeChef VIT</h3>
+                      </div>
+
+                  </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed odit quod corrupti inventore ullam fugiat, nemo maiores enim nihil sequi.</p>
+                  
+                  <div class="row">
+                      <div>
+                        <img src="assets/img/dsc.jfif" class="img-circle animated bounceIn logo">
+                      </div>
+                      <div>
+                        <h3>DSC VIT</h3>
+                      </div>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed odit quod corrupti inventore ullam fugiat, nemo maiores enim nihil sequi.</p>
+                  <div class="row">
+                      <div>
+                        <img src="assets/img/acm.png" class="img-circle animated bounceIn logo">
+                      </div>
+                      <div>
+                        <h3>ACM VIT</h3>
+                      </div>
+                  </div> 
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed odit quod corrupti inventore ullam fugiat, nemo maiores enim nihil sequi.</p>  
+                  
+                  <a href="https://gaana.com/" class="btn btn-outline-info">See More &raquo;</a>
+                     </div>
+                  </div>
+              </div>
+          
+              <div class="col-lg-4">
+                 <div class="card">
+                 <div class="card-body">
+                  <h1>Non-Technical</h1>
+                  <hr>
+                  <div class="row">
+                      <div>
+                        <img src="assets/img/dance.jfif" class="img-circle animated bounceIn logo">
+                      </div>
+                      <div>
+                        <h3>Dance Club</h3>
+                      </div>
+                  </div> 
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed odit quod corrupti inventore ullam fugiat, nemo maiores enim nihil sequi.</p>
+                 <div class="row">
+                      <div>
+                        <img src="assets/img/photography.png" class="img-circle animated bounceIn logo">
+                      </div>
+                      <div>
+                        <h3>Photography Club</h3>
+                      </div>
+                  </div> 
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed odit quod corrupti inventore ullam fugiat, nemo maiores enim nihil sequi.</p>
+                  <div class="row">
+                      <div>
+                        <img src="assets/img/dramatics.jfif" class="img-circle animated bounceIn logo">
+                      </div>
+                      <div>
+                        <h3>Dramatics Club</h3>
+                      </div>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed odit quod corrupti inventore ullam fugiat, nemo maiores enim nihil sequi.</p>                
+                  
+                  <a href="https://gaana.com/" class="btn btn-outline-info">See More &raquo;</a>
+                     </div>
+                  </div>
+              </div>
+        <div class="col-lg-4">
+                 <div class="card">
+                 <div class="card-body">
+                  <h1>NGOs</h1>
+                   <hr>
+                    <div class="row">
+                      <div>
+                        <img src="assets/img/anokha.jfif" class="img-circle animated bounceIn logo">
+                      </div>
+                      <div>
+                        <h3>Anokha VIT</h3>
+                      </div>
+                  </div> 
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed odit quod corrupti inventore ullam fugiat, nemo maiores enim nihil sequi.</p>
+                    <div class="row">
+                      <div>
+                        <img src="assets/img/ayuda.jfif" class="img-circle animated bounceIn logo"
+                        >
+                      </div>
+                      <div>
+                        <h3>Ayuda</h3>
+                      </div>
+                  </div>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed odit quod corrupti inventore ullam fugiat, nemo maiores enim nihil sequi.</p> 
+                    <div class="row">
+                      <div>
+                        <img src="assets/img/helphen.png" class="img-circle animated bounceIn logo"
+                        >
+                      </div>
+                      <div>
+                        <h3>Helphen India</h3>
+                      </div>
+                  </div> 
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed odit quod corrupti inventore ullam fugiat, nemo maiores enim nihil sequi.</p>
+                  
+                  <a href="https://gaana.com/" class="btn btn-outline-info">See More &raquo;</a>
+              </div>
+          </div>
+      </div>
+   </div>
+ </div>
+  </section>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

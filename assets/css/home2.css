@@ -1,28 +1,62 @@
-body{
-	padding-bottom:20px;
-    background: linear-gradient(to bottom,white,#bbe1fa,white);
-}
 @font-face
 {
-    src:url(../fonts/BalooBhaina2-Bold.ttf);
-    font-family:'Baloo Bhaina 2';
+    src:url(../fonts/RobotoCondensed-Regular.ttf);
+    font-family: 'Roboto Condensed', sans-serif;
 }
- button {
-  border-radius: 20px;
-  border: 1px solid #032;
-  background-color: #FFB33B;
-  color: #FFFFFF;
-  font-size: 12px;
-  font-weight: bold;
-  padding: 12px 45px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  transition: transform 80ms ease-in;
+body{
+	padding-bottom:20px;
+    background:linear-gradient(to bottom,white,#bbe1fa,white) ;
+    margin: 0;
+    padding: 0;
 }
-button.partbutton {
-  background-color: transparent;
-  border-color: #FFFFFF;
+.searchbar{
+    margin-bottom:2em;
+    margin-top: 2em;
+    height: 60px;
+    background-color: #353b48;
+    border-radius: 30px;
+    padding: 10px;
 }
+.search_input
+{
+    color: white;
+    border: 0;
+    outline: 0;
+    background: none;
+    width:0;
+    line-height:40px;
+    transition:width 0.4s linear;
+}
+.searchbar:hover>.search_input
+{
+    padding: 0 10px;
+    width:300px;
+    caret-color:#bbe1fa;
+    transition: width 0.4s linear;
+}
+.searchbar:hover>.search_icon
+{
+    background: white;
+    color:black;
+}
+.search_icon
+{
+    height:40px;
+    width:40px;
+    float:right;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    color:white;
+    text-decoration:none;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
 .container>.row>.col-lg-4{
 	text-align: center;
 	margin-bottom:20px;
@@ -31,20 +65,23 @@ button.partbutton {
 	padding-top:10px;
 	color:#0f4c75;
 }
+
 img{
     height: 50px;
     width:50px;
+    display: inline-block;
+    margin-bottom:20px;
 }
 h1{
     font-family: 'Baloo Bhaina 2', cursive;
     font-size: 30px;
-    color: #0f4c75;
     margin-top: 15px;
-   
+    color: #0f4c75;
 }
 h3{
-    font-size:25px;
+    font-size:30px;
     align-content: center;
+    display: inline-block;
 }
 .btn{
     margin-top: 15px;
@@ -56,14 +93,44 @@ hr{
   height: 1px;
   background-color:#0f4c75;
   border: none;
+margin-bottom:15px;
 }
 .logo{
     margin-right:10px;
     border-radius: 50%;
 }
-.heading{
+.heading
+{
     color: #0f4c75;
     font-family: 'Baloo Bhaina 2', cursive;
     font-size:40px;
     text-shadow: 4px 4px 4px #bbe1fa;
+}
+#team .card{
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px #0f4c75;
+    transition:all 0.3s ease-in;
+    -webkit-transition:all 0.3s ease-in;
+    -moz-transition:all 0.3s ease-in;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+#team .card:hover hr{
+    background-color:white;
+}
+#team .card:hover .btn{
+    color:white;
+    border: 1px solid white;
+}
+#team .card:hover h1{
+    color:white;
+}
+#team .card:hover{
+    background: #0f4c75;
+    color:white;
+    border-radius: 10px;
+    border:none;
+    box-shadow: 5px 5px 10px black;
+    transform: scale(1.2);  
 }
