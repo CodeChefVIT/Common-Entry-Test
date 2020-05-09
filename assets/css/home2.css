@@ -4,16 +4,18 @@
     font-family: 'Roboto Condensed', sans-serif;
 }
 body{
-	padding-bottom:20px;
-    background:linear-gradient(to bottom,white,#bbe1fa,white) ;
+  padding-bottom:20px;
+    background:linear-gradient(to bottom,white,#000000,white) ;
+    color:white;
     margin: 0;
     padding: 0;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 .searchbar{
     margin-bottom:2em;
     margin-top: 2em;
     height: 60px;
-    background-color: #353b48;
+    background-color: #2c2c2c;
     border-radius: 30px;
     padding: 10px;
 }
@@ -30,8 +32,8 @@ body{
 .searchbar:hover>.search_input
 {
     padding: 0 10px;
-    width:300px;
-    caret-color:#bbe1fa;
+    width:250px;
+    caret-color:white;
     transition: width 0.4s linear;
 }
 .searchbar:hover>.search_icon
@@ -54,16 +56,15 @@ body{
 ul{
     margin: 0;
     padding: 0;
-    list-style-type: none;
-}
+    list-style-type: none;}
 
 .container>.row>.col-lg-4{
-	text-align: center;
-	margin-bottom:20px;
+  text-align: center;
+  margin-bottom:20px;
 }
 .container>.row>.col-lg-4{
-	padding-top:10px;
-	color:#0f4c75;
+  padding-top:10px;
+  color:white;
 }
 
 img{
@@ -73,10 +74,10 @@ img{
     margin-bottom:20px;
 }
 h1{
-    font-family: 'Baloo Bhaina 2', cursive;
+    font-family: 'Roboto Condensed', sans-serif;
     font-size: 30px;
     margin-top: 15px;
-    color: #0f4c75;
+    color:white;
 }
 h3{
     font-size:30px;
@@ -86,12 +87,15 @@ h3{
 .btn{
     margin-top: 15px;
     margin-bottom: 15px;
-    color:#0f4c75;
-    border: 1px solid #0f4c75 ;
+    color:white;
+    border: 1px solid white ;
 }
+.btn:hover{
+            color:orange;
+    }
 hr{ 
   height: 1px;
-  background-color:#0f4c75;
+  background-color:white;
   border: none;
 margin-bottom:15px;
 }
@@ -101,36 +105,128 @@ margin-bottom:15px;
 }
 .heading
 {
-    color: #0f4c75;
-    font-family: 'Baloo Bhaina 2', cursive;
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
     font-size:40px;
     text-shadow: 4px 4px 4px #bbe1fa;
 }
 #team .card{
     border-radius: 5px;
-    box-shadow: 5px 5px 15px #0f4c75;
+    box-shadow: 5px 5px 15px #ebebf5;
     transition:all 0.3s ease-in;
     -webkit-transition:all 0.3s ease-in;
     -moz-transition:all 0.3s ease-in;
     margin-bottom: 20px;
     margin-top: 20px;
-    margin-right: 20px;
+    background-color: #2C2C2C;
 }
 #team .card:hover hr{
-    background-color:white;
+    background-color:#2C2C2C;
 }
 #team .card:hover .btn{
-    color:white;
-    border: 1px solid white;
+    color:#2C2C2C;
+    border: 1px solid #2c2c2c;
 }
 #team .card:hover h1{
-    color:white;
+    color:#2C2C2C;
 }
 #team .card:hover{
-    background: #0f4c75;
-    color:white;
+    background:white;
+    color:#2C2C2C;
     border-radius: 10px;
     border:none;
-    box-shadow: 5px 5px 10px black;
-    transform: scale(1.2);  
+    box-shadow: 5px 5px 10px #2C2C2C;
+    transform: scale(1.05);
+}
+.modal-content{
+        color: black;
+    }  
+        
+h1{
+    text-align: center;
+}
+    .tl{
+        padding-top: 50px;
+        padding-bottom: 90px;
+    }
+.tl>.container ul {
+    list-style: none;
+    position:relative; 
+    color:white;
+    font-size: 14px;
+}
+.tl>.container ul:before {
+  content: '';
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  border-left: 2px dashed white;
+  
+}
+.tl>.container ul li {
+  position: relative;
+  margin-left: 30px ;
+  margin-right:30px;
+  background-color: black;
+  padding: 4px;
+    border: none;
+  border-radius: 6px;
+  -moz-box-shadow: inset 0 0 20px white ;
+  -webkit-box-shadow:inset 0 0 20px white;
+  box-shadow:inset 0 0 10px white; 
+}
+.tl>.container ul li:not(:first-child) {
+  margin-top: 100px;
+
+}
+.tl>.container ul li > span {
+  width: 2px;
+  height: 100%;
+  background:white;
+  left: -30px;
+  bottom: 0;
+  position: absolute;
+}
+.tl>.container ul li > span:before, .container ul li > span:after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1.5px solid white;
+  position: absolute;
+  background: #007aff;
+  left: -3.3px;
+  top: 0%;
+}
+.tl>.container ul li span:after {
+  top: 100%;
+}
+.tl>.container ul li > div {
+margin: 10px
+}
+.tl>.container div .title{
+font-weight: 600;
+font-size: 18px;
+}
+.tl>.container div .info {
+  font-weight: 300;
+    
+}
+.tl>.container div > div {
+  margin-top: 10px;
+}
+.tl>.container span.number {
+  height: 100%;
+}
+.tl>.container span.number span {
+  position: absolute;
+  font-size: 13px;
+  left: -95px;
+  font-weight: bold;
+}
+.tl>.container span.number span:first-child {
+  top: 0;
+}
+.tl>.container span.number span:last-child {
+  top: 100%;
 }
