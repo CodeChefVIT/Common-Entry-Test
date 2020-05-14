@@ -54,15 +54,15 @@ class LoginView(APIView):
 		try:
 			user_det = User.objects.filter(username = request.data['username'])
 			temp = request.data['password']
-			# if user_det[1].id == temp:
-			# 	return response({
-			# 			'message':'Succesfully Logged In'
-			# 		},status=200)
-			# else:
-			# 	return respone({
-			# 			'message':'Wrong Password Entered'
+			if user_det[1].id == temp:
+				return response({
+						'message':'Succesfully Logged In'
+					},status=200)
+			else:
+				return respone({
+						'message':'Wrong Password Entered'
 
-			# 		},status=400)
+					},status=400)
 			print(user_det)
 		except:
 			return respone({
