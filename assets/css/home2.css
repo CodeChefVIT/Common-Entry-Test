@@ -230,3 +230,72 @@ font-size: 18px;
 .tl>.container span.number span:last-child {
   top: 100%;
 }
+.acc{
+        color: black;
+    }
+    .acc>.ct{
+            margin-top: auto;
+        margin-bottom: auto;
+        display: inline-block;
+        display: flex;
+        justify-content: center;
+            
+        }
+        .acc>.ct>.circle{
+           align-items: center;
+            background:white;
+            border-radius: 50%;
+            box-shadow: inset 0 0 5px black,0 0 7px #ebebf5;
+            display: flex;
+            height: 4rem;
+            justify-content: center;
+            margin: 1rem auto 1.5rem;
+            width: 4rem;
+            position: relative;
+        }
+        .acc>.ct>p{
+            padding-left: 10px;
+            text-align: left;
+            font-weight: 600;
+        }
+        .acc>.ct>.counter{
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            -webkit-user-select:none;
+            -ms-user-select:none;
+            z-index: 3;
+            color :black;
+        }
+
+.acc>.ct>.content{
+    
+            }
+.acc>.ct>.content>img{
+    margin-right: 10px;
+    width: 250px;
+    height: 150px;
+    
+}
+
+        @media(max-width:767px)
+        {
+            .acc>.ct>.circle{
+                width:3rem;
+                height: 3rem;
+            }
+            .acc>.ct>.content{
+                 margin-bottom: 1rem; 
+                align-content: center;
+            }
+            .acc>.ct>p{
+                text-align: center;
+            }
+}
+#accordion>.card>.card-header{
+    color: white;
+    background-color: black;
+}
+#accordion>.card>.card-header>a{
+    color:white;
+}
