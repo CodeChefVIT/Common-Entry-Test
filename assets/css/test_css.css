@@ -3,7 +3,7 @@
 
 body {
   background-color: white;
-  background-image: url("assets/img/test.png");
+  background-image: url("../img/test.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -24,7 +24,7 @@ body {
 {
     color: #FFF;
     text-decoration: none;
-    font: 20px Raleway;
+    font: 18px Raleway;
     margin: 0px 5px;
     padding: 5px 5px;
     position: relative;
@@ -233,21 +233,7 @@ body {
     font-size:2.0em;
     font-weight: 100000em;
   }
-  /*
-  for applying a line 
-  .liner{
-    height: 2px;
-    background: #ddd;
-    position: absolute;
-    width: 80%;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    top: 50%;
-    z-index: 1;
-  }
   
-  */
   
   span.round-tabs{
     width: 50px;
@@ -412,3 +398,18 @@ body {
    opacity:0.4;
    object-fit: cover;
  }
+footer {
+    font-size: 16px;
+    color: white;
+    text-align: center;
+}
+footer hr{
+    background-color: white;
+    height:0.7px;
+}
+footer a{
+    color: white;
+}
+footer a:hover{
+    color:white;
+}
