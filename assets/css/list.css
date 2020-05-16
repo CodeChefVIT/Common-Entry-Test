@@ -1,28 +1,84 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway';
 body{
     font-size: 14px;
     font-weight: 400;
     margin: 0;
     padding: 0;
-    background:black;
+    background:white ;
     /* background:black linear-gradient(to bottom,white,#000000,white); */ 
 }
 
 h1{
 text-align: center;
-color: white;
+color:#5c72d4 ;
+    padding-top: 20px;
 }
+
+        @import 'https://fonts.googleapis.com/css?family=Raleway';
+
+ .navbar       .container
+{
+    font-family: Raleway;
+    margin: 0 auto;
+	padding: 1em 3em;
+	text-align: center;
+}
+
+.navbar .container a
+{
+    color: #FFF;
+    text-decoration: none;
+    font: 17px Raleway;
+    margin: 0px 5px;
+    padding: 5px 5px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+.topBotomBordersIn a:before, .topBotomBordersIn a:after
+{
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: white;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.topBotomBordersIn a:before
+{
+    top: 0px;
+    transform: translateY(-10px);
+}
+
+.topBotomBordersIn a:after
+{
+    bottom: 0px;
+    transform: translateY(10px);
+}
+
+.topBotomBordersIn a:hover:before, .topBotomBordersIn a:hover:after
+{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+
+
 
 .searchbar{
     margin-bottom:2em;
     margin-top: 2em;
     height: 60px;
-    background-color: white;
+    background-color:#5c72d4;
     border-radius: 30px;
     padding: 10px;
 }
 .search_input
 {
-    color:black ;
+    color:white ;
     border: 0;
     outline: 0;
     background: none;
@@ -34,13 +90,13 @@ color: white;
 {
     padding: 0 10px;
     width:250px;
-    caret-color:black;
+    caret-color:#5c72d4;
     transition: width 0.4s linear;
 }
 .searchbar:hover>.search_icon
 {
-    background:#eeeeee;
-    color: black;
+    background:white;
+    color: #5c72d4;
 }
 .search_icon
 {
@@ -51,7 +107,7 @@ color: white;
     justify-content:center;
     align-items:center;
     border-radius:50%;
-    color:black;
+    color:white;
     text-decoration:none;
 }
 h3{
@@ -80,25 +136,40 @@ h3{
     margin-top: 20px;
     margin-left: 0;
     margin-right: 0;
-    background-color:black/*  #2c2c2c */;
-    color: white;
+    background-color:white/*  #2c2c2c */;
+    color: #5c72d4;
     border:none;
     min-height: 225px;
     max-height: 225px;
     border-radius: 5px;
     /* box-shadow: 5px 5px 15px #ebebf5; */ 
--moz-box-shadow: inset 0 0 20px white ;
-       -webkit-box-shadow:inset 0 0 20px white;
-       box-shadow:inset 0 0 20px white;  
+-moz-box-shadow: inset 0 0 20px #5c72d4 ;
+       -webkit-box-shadow:inset 0 0 20px #5c72d4;
+       box-shadow:inset 0 0 20px #5c72d4;  
 }
 #team .card:hover{
     transform: scale(1.05);
-    background:white;
-    color:#2C2C2C;
+    background:#5c72d4;
+    color:white;
     border-radius: 10px;
     border:none;
     /* box-shadow: 5px 5px 10px #2C2C2C; */ 
-    -moz-box-shadow: inset 0 0 20px #2C2C2C ;
-             -webkit-box-shadow:inset 0 0 20px #2C2C2C;
-             box-shadow:inset 0 0 20px #2C2C2C; 
+    -moz-box-shadow: inset 0 0 20px white ;
+             -webkit-box-shadow:inset 0 0 20px white;
+             box-shadow:inset 0 0 20px white; 
+}
+footer {
+    font-size: 16px;
+    color: white;
+    text-align: center;
+}
+footer hr{
+    background-color: white;
+    height:0.7px;
+}
+footer a{
+    color: white;
+}
+footer a:hover{
+    color:white;
 }
