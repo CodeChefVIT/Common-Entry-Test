@@ -9,5 +9,4 @@ class paper(models.Model):
 	option2        = models.BooleanField(default=False)
 	option3        = models.BooleanField(default=False)
 	option4        = models.BooleanField(default=False)
-	correct_answer = models.IntegerField(blank=False,default = 0)
-
+	# correct_answer = models.IntegerField(blank=False,default = 0)

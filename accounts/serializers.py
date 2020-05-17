@@ -8,7 +8,7 @@ class AccountSerializer(serializers.ModelSerializer):
 		model = AccountModel
 		fields = '__all__'
 
-class PaperSerializer(serializers.ModelSerializer):
-	class Meta:
-		model = paper
-		fields = '__all__'
+# class PaperSerializer(serializers.ModelSerializer):
+# 	class Meta:
+# 		model = paper
+# 		fields = '__all__'
