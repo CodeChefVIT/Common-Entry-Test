@@ -91,6 +91,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 
 <p align="center">
-	With ❤️ by <a href="https://www.codechefvit.com/" target="_blank"> Codechef-VIT</a>
+	With ❤️ by <a href="https://www.codechefvit.com/" target="_blank"> CodeChef-VIT</a>
 </p>
 
