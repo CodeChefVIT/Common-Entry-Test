@@ -108,6 +108,10 @@ body{
     color:white;
     text-decoration:none;
 }
+::placeholder { 
+  color: white;
+  opacity: 1; 
+}
 ul{
     margin: 0;
     padding: 0;
@@ -185,6 +189,7 @@ margin-bottom:15px;
     color: #5c72d4;
     border: 1px solid #5c72d4;
 }
+
 #team .card:hover hr{
     background-color:white;
 }
@@ -192,6 +197,7 @@ margin-bottom:15px;
     color:white;
     border: 1px solid white;
 }
+
 #team .card:hover h1{
     color:white;
 }
