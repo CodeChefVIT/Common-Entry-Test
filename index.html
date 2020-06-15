@@ -4,553 +4,529 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <!-- Bootstrap CSS -->
     <link rel="shortcut icon" type="image/png" href="assets/img/domain_icon.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <script src="https://kit.fontawesome.com/c233f299bf.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="assets/css/home.css">
-<style>
-</style>
-<title>CET:Home</title>
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark  " style="background-color:#5c72d4;">
-  <a class="navbar-brand "  href="#" style="font: 22px Raleway;">Common Entry Test</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav topBotomBordersIn container ">
-      <a class="nav-item nav-link   active disabled topBotomBordersIn" href="#">Home<span class="sr-only">(current)</span></a>
-      
-      <a class="nav-item nav-link active " href="tech.html">Technical Clubs</a>
-      <a class="nav-item nav-link active " href="non_tech.html">Non-Technical Clubs</a>
-      <a class="nav-item nav-link active " href="ngo.html">NGO</a>
-      <a class="nav-item nav-link active   " href="test.html">Attend Test</a>
-      
-      
-     <li data-toggle="modal" data-target="#login"> <a class="nav-item nav-link active " data-toggle="modal" href="#">Login</a></li>
-      <li data-toggle="modal" data-target="#ssu"><a class="nav-item nav-link  active  " href="#">Register here</a></li>
-    </div>
-  </div>
-</nav>
+  <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/c233f299bf.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="assets/css/clubindex.css">
 
-<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h5 class="modal-title" id="exampleModalLongTitle">Login </h5>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close" >
-        <span aria-hidden="true">&times;</span>
+
+<title>Club Portal</title>
+  </head> 
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark  " style="background-color:white;">
+      <a class="navbar-brand "  href="#" style="font: 25px Raleway; padding-top: 0.5em; padding-left: 1em; color:#5c72d4;">CET : Club Portal</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
       </button>
-    </div>
-    
-    <div class="modal-body" class="modal-hero">
-      
-<form class="px-4 py-3" >
-  <div class="form-group">
-    <label for="exampleDropdownFormEmail1">VIT Email-address</label>
-    <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@vitstudent.ac.in">
-  </div>
-  <div class="form-group">
-    <label for="exampleDropdownFormPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
-  </div>
-  <div class="form-check">
-    <input type="checkbox" class="form-check-input" id="dropdownCheck">
-    <label class="form-check-label" for="dropdownCheck">
-      Remember me.
-    </label>
-  </div>
-  <button type="submit" class="btn btn-primary">Sign in</button>
-</form>
-    </div>
-  </div>
-</div>
-</div>
-
-<div class="modal fade" id="ssu" tabindex="-1" role="form" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" >
-    <div class="modal-dialog modal-dialog-centered " role="form">
-    <div class="modal-content">
-       <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">Register here</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-         <span aria-hidden="true">&times;</span>
-          </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav topBotomBordersIn container ">
+          <a class="nav-item nav-link active  topBotomBordersIn atags" href="index.html" style="color: #5c72d4;" >Home <span class="sr-only">(current)</span></a>
+        
+          <a class="nav-item nav-link active atags"  href="mailTo:cet@gmail.com" target="_blank" style="color: #5c72d4;">Contact us </a>
+          <a class="nav-item nav-link  active atags" href="#" style="color: #5c72d4; " >Logout</a>
+          
+          
+        
+        </div>
       </div>
-      <div class="modal-body">
-         <form class="px-4 py-3">
-           <div class="form-group">
-           <label for="exampleDropdownFormEmail1">Name</label>
-           <input type="text" class="form-control" placeholder="Full name" />
-           <br>
-           
-           <label for="exampleDropdownFormEmail1">Registration Number</label>
-           <input type="text" class="form-control" placeholder="20BCE****" /><br>
-           <label for="PhoneNo.">Phone No.</label>
-           <input type="text" class="form-control" placeholder="Phone No." maxlength="10" />
-           <br><label for="exampleDropdownFormEmail1">VIT Email address</label>
-           <input type="E mail" class="form-control" placeholder="email@vitstudent.ac.in" /><br>
-           <label for="exampleDropdownFormEmail1">Enter OTP sent to Vit Email-id</label>
-           <input type="Password" class="form-control" placeholder="****" maxlength="4" minlenght="4"/>
-           <br>   
-           <label for="exampleDropdownFormEmail1">Gender</label>
-           <select id="Gender" class="form-control" placeholder="Gender" title="Gender">
-           <option selected disabled>Gender</option>
-           <option>Male</option>
-           <option >Female</option>
-           <option >Dont want to specify</option>
-           </select><br>
-           <label for="exampleDropdownFormEmail1">Password</label>
-           <input type="Password" class="form-control" placeholder="Password" minlength="6" /><br>
-           <label for="exampleDropdownFormEmail1">Confirm Password</label>
-           <input type="Password" class="form-control" placeholder="Same as Password" minlength="6" /><br>
-         </div>
-     <button type="submit" class="btn btn-primary">Submit</button>
- </form>
-</div>
-</div>
-</div>
-</div>
+    </nav>
+
+    
+
+<!--navbar is over -->
 
 
 
-   
-   
-   
- <div class="container mt-4">
+<div class="container">
+  <div class="bg-image"></div>
+    
+  
+            <div class="row">
+              <div class="col-12">
+               
+                <div class="Main-heading">
+                    <h1  class="text-center "  >Welcome to the official club portal of CET</h1>
+                </div>
+                </div>
+            </div>
+          
+            
 
-       
-  <div class="container mt-4">
-    <div class="row mb-4">
-        <div class="col-md-12">
-            <div class="card" style="background:url(assets/img/home_page.png) no-repeat ;background-size: cover; opacity: 3.0;">
-                <div class="text-white text-center d-flex align-items-center py-5 px-4 my-5">
-                    <div>
-                        <h1 class="card-title pt-3 mb-5 font-bold"><strong>Not sure about Common Entry Test ?</strong></h1>
-                        <h5 class="mx-5 mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat,
-                            laboriosam, voluptatem, optio vero odio nam sit officia accusamus
-                            minus error nisi architecto nulla ipsum dignissimos. Odit sed qui,
-                            dolorum!.</h5>
-                        <h5>Follow these given steps and you are done with the recruitment process </h5>
+
+  <div class="row">
+    <div class="col-12">
+      <div class="Main-heading">
+          <h1  class="text-center"  >We offer these 3 services :-</h1>
+      </div>
+      </div>
+  </div>
+            <div class="row">
+                <div class="col-md-12 board">
+                    <div class="board-inner">
+                        <ul class="nav nav-pills" id="myTab">
+                            
+                            <li class="active" >
+                                <a href="#home" aria-controls="home" role="tab " data-toggle="tab" title="Managment">
+                      <span class=" round-tabs one">
+                      <i class="fas fa-marker"></i>
+                      </span>
+                                </a>
+                              </li>
+
+
+                            <li><a href="#menu1"  role="tab" data-toggle="tab" title="Design" >
+                     <span class="round-tabs one">
+                         <i class="fas fa-drafting-compass"></i>
+                     </span>
+                            </a>
+                            </li>
+
+                            
+                            <li><a href="#menu2"  role="tab" data-toggle="tab" title="Techincal">
+                     <span class="round-tabs one">
+                       <i class="fas fa-cog"></i>                      
+                     </span> </a>
+                            </li>
+
+
+                        </ul></div>
+
+
+                    <div class="tab-content active">
+                      <div class="tab-pane fade" id="home">
+                        <h1 class="head text-center">Add Question</h1>
+                        <p class="narrow text-center" >
+                            Lorem ipsum dolor sit amet, his ea mollis fabellas principes.
+                           <p class="text-center">
+                            <button class="btn   btn-outline-rounded green" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                              Sub-Domains 
+                            </button>
+                          </p>
+                            
+                          <div class="collapse" id="collapseExample">
+                            <div class="container p-3 my-3  background-color: black"> 
+                            
+                             <div class="row">
+                           
+                            <ul>
+                              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 margining item button">
+                                <div class="folded-corner before_effects">
+                                   <div class="text">
+                                   <i class="fa fa-lightbulb-o fa-5x fa-icon-image" ></i>
+                                      <p class="item-title">
+                                          <h3> Content Writing</h3>
+                                        </p>
+                                    <p>
+                                      Lorem ippsum dolor sit amet, his ea mollis fabellas principes.
+                                    </p>
+                                    <button class="btn   btn-outline-rounded green" type="button" data-toggle="modal" data-target="#ssu" data-backdrop="static" data-keyboard="false" >
+                                     <a href="add.html" class="atags2"> Add question </a>
+                                    </button>
+                                  </div>
+                                </div>
+                                </div>
+                              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 margining  item">
+                                <div class="folded-corner before_effects">
+                                  <div class="text">
+                                    <i class="fa fa-image fa-5x fa-icon-image"></i>
+                                      <p class="item-title">
+                                        <h3> Event Managment</h3>
+                                      </p>
+                                      <p>
+                                        Lorem ipsum dolor sit amet, his ea mollis fabellas principes.
+                                    </p>
+                                    <button class="btn   btn-outline-rounded green" type="button" data-toggle="modal" data-target="#ssu" data-backdrop="static" data-keyboard="false">
+                                      <a href="add.html" class="atags2">Add question </a>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 margining  item">
+                                <div class="folded-corner before_effects">
+                                  <div class="text">
+                                    <i class="fa fa-image fa-5x fa-icon-image"></i>
+                                      <p class="item-title">
+                                        <h3> Event Managment</h3>
+                                      </p>
+                                      <p>
+                                        Lorem ipsum dolor sit amet, his ea mollis fabellas principes.
+                                    </p>
+                                    <button class="btn   btn-outline-rounded green" type="button" data-toggle="modal" data-target="#ssu" data-backdrop="static" data-keyboard="false">
+                                      <a href="add.html" class="atags2"> Add question </a>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 margining  item">
+                                <div class="folded-corner before_effects">
+                                  <div class="text">
+                                    <i class="fa fa-image fa-5x fa-icon-image"></i>
+                                      <p class="item-title">
+                                        <h3> Event Managment</h3>
+                                      </p>
+                                      <p>
+                                        Lorem ipsum dolor sit amet, his ea mollis fabellas principes.
+                                    </p>
+                                    <button class="btn   btn-outline-rounded green" type="button" data-toggle="modal" data-target="#ssu" data-backdrop="static" data-keyboard="false" >
+                                      <a href="add.html" class="atags2"> Add question </a>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+
+                             
+                              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 margining  item">
+                                <div class="folded-corner before_effects">
+                                  <div class="text">
+                                    <i class="fa fa-image fa-5x fa-icon-image"></i>
+                                      <p class="item-title">
+                                        <h3> Event Managment</h3>
+                                      </p>
+                                      <p>
+                                        Lorem ipsum dolor sit amet, his ea mollis fabellas principes.
+                                    </p>
+                                   <button class="btn   btn-outline-rounded green" type="button" data-toggle="modal" data-target="#ssu" data-backdrop="static" data-keyboard="false">
+                                      <a href="add.html" class="atags2"> Add question </a> 
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 margining   item">
+                                <div class="folded-corner before_effects">
+                                   <div class="text">
+                                   <i class="fa fa-lightbulb-o fa-5x fa-icon-image" ></i>
+                                      <p class="item-title">
+                                          <h3> Content Writing</h3>
+                                        </p>
+                                    <p>
+                                      Lorem ipsum dolor sit amet, his ea mollis fabellas principes.
+                                    </p>
+                                    <button class="btn   btn-outline-rounded green" type="button" data-toggle="modal" data-target="#ssu" data-backdrop="static" data-keyboard="false">
+                                      <a href="add.html" class="atags2"> Add question </a>
+                                    </button>
+                                  </div>
+                                </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 margining   item">
+                                  <div class="folded-corner before_effects">
+                                     <div class="text">
+                                     <i class="fa fa-lightbulb-o fa-5x fa-icon-image" ></i>
+                                        <p class="item-title">
+                                            <h3> Content Writing</h3>
+                                          </p>
+                                      <p>
+                                        Lorem ipsum dolor sit amet, his ea mollis fabellas principes.
+                                      </p>
+                                      <button class="btn   btn-outline-rounded green" type="button" data-toggle="modal" data-target="#ssu" data-backdrop="static" data-keyboard="false" >
+                                        <a href="add.html" class="atags2"> Add question </a>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  </div>
+                              
+
+                              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 margining  item">
+                                <div class="folded-corner before_effects">
+                                  <div class="text">
+                                    <i class="fa fa-image fa-5x fa-icon-image"></i>
+                                      <p class="item-title">
+                                        <h3> Event Managment</h3>
+                                      </p>
+                                      <p>
+                                        Lorem ipsum dolor sit amet, his ea mollis fabellas principes.
+                                    </p>
+                                    <button class="btn   btn-outline-rounded green" type="button" data-toggle="modal" data-target="#ssu" data-backdrop="static" data-keyboard="false">
+                                      <a href="add.html" class="atags2"> Add question </a>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                               </ul>
+                            </div>
+                          </div>
+                          
+                            </div>
+                          </div>
+                          
+
+
+
+                        <div class="tab-pane fade" id="menu1">
+                          <h1 class="head text-center">View Submissions</h1>
+                          <p class="narrow text-center" >
+                              Lorem ipsum dolor sit amet, his ea mollis fabellas principes.
+                             <p class="text-center">
+                              <button class="btn   btn-outline-rounded green" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                Sub-Domains 
+                              </button>
+                              </p>
+                              
+                            <div class="collapse" id="collapseExample">
+                              <div class="container p-3 my-3  background-color: black"> 
+                              
+                               <div class="row">
+                             
+                              <ul>
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 margining   item">
+                                  <div class="folded-corner before_effects">
+                                     <div class="text">
+                                      <i class="fa fa-image fa-5x fa-icon-image"></i>
+                                        <p class="item-title">
+                                            <h3> Video Editing </h3>
+                                          </p><!-- /.item-title -->
+                                      <p>
+                                        Lorem ipsum dolor sit amet, his ea mollis fabellas principes. 
+                                      </p>
+                                      <button class="btn   btn-outline-rounded green" type="button" data-toggle="modal" data-target="#ssu" data-backdrop="static" data-keyboard="false">
+                                        <a href="view.html" class="atags2"> Attempt Test</a>
+                                      </button>
+                                      </div>
+                                      </div>
+                                      </div>
+                                      
+
+                                  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 margining   item">
+                                    <div class="folded-corner before_effects">
+                                       <div class="text">
+                                        <i class="fa fa-image fa-5x fa-icon-image"></i>
+                                          <p class="item-title">
+                                              <h3> Video Editing </h3>
+                                            </p><!-- /.item-title -->
+                                        <p>
+                                          Lorem ipsum dolor sit amet, his ea mollis fabellas principes. 
+                                        </p>
+                                        <button class="btn   btn-outline-rounded green" type="button" data-toggle="modal" data-target="#ssu" data-backdrop="static" data-keyboard="false">
+                                          <a href="view.html" class="atags2"> Attempt Test</a>
+                                        </button>
+                                      </div>
+                                    </div>
+                                    </div>
+                                        
+  
+                                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 margining   item">
+                                      <div class="folded-corner before_effects">
+                                         <div class="text">
+                                          <i class="fa fa-image fa-5x fa-icon-image"></i>
+                                            <p class="item-title">
+                                                <h3> Video Editing </h3>
+                                              </p><!-- /.item-title -->
+                                          <p>
+                                            Lorem ipsum dolor sit amet, his ea mollis fabellas principes. 
+                                          </p>
+                                          <button class="btn   btn-outline-rounded green" type="button" data-toggle="modal" data-target="#ssu" data-backdrop="static" data-keyboard="false">
+                                            <a href="view.html" class="atags2"> Attempt Test</a>
+                                          </button>
+                                        </div>
+                                      </div>
+                                      </div>
+
+                                      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 margining   item">
+                                        <div class="folded-corner before_effects">
+                                           <div class="text">
+                                            <i class="fa fa-image fa-5x fa-icon-image"></i>
+                                              <p class="item-title">
+                                                  <h3> Video Editing </h3>
+                                                </p><!-- /.item-title -->
+                                            <p>
+                                              Lorem ipsum dolor sit amet, his ea mollis fabellas principes. 
+                                            </p>
+                                            <button class="btn   btn-outline-rounded green" type="button" data-toggle="modal" data-target="#ssu" data-backdrop="static" data-keyboard="false" >
+                                              <a href="view.html" class="atags2"> Attempt Test</a>
+                                            </button>
+                                          </div>
+                                        </div>
+                                        </div>             
+                                         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 margining   item">
+                                          <div class="folded-corner before_effects">
+                                             <div class="text">
+                                              <i class="fa fa-image fa-5x fa-icon-image"></i>
+                                                <p class="item-title">
+                                                    <h3> Video Editing </h3>
+                                                  </p><!-- /.item-title -->
+                                              <p>
+                                                Lorem ipsum dolor sit amet, his ea mollis fabellas principes. 
+                                              </p>
+                                              <button class="btn   btn-outline-rounded green" type="button" data-toggle="modal" data-target="#ssu" data-backdrop="static" data-keyboard="false">
+                                                <a href="view.html" class="atags2"> Attempt Test</a>
+                                              </button>
+                                              
+                                            </div>
+                                          </div>
+                                          </div>
+        
+                                          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 margining   item">
+                                            <div class="folded-corner before_effects">
+                                               <div class="text">
+                                                <i class="fa fa-image fa-5x fa-icon-image"></i>
+                                                  <p class="item-title">
+                                                      <h3> Video Editing </h3>
+                                                    </p><!-- /.item-title -->
+                                                <p>
+                                                  Lorem ipsum dolor sit amet, his ea mollis fabellas principes. 
+                                                </p>
+                                                <button class="btn   btn-outline-rounded green" type="button" data-toggle="modal" data-target="#ssu" data-backdrop="static" data-keyboard="false" >
+                                                  <a href="view.html" class="atags2"> Attempt Test</a>
+                                                </button>
+                                              </div>
+                                            </div>
+                                            </div>
+
+                                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 margining   item">
+                                              <div class="folded-corner before_effects">
+                                                 <div class="text">
+                                                  <i class="fa fa-image fa-5x fa-icon-image"></i>
+                                                    <p class="item-title">
+                                                        <h3> Video Editing </h3>
+                                                      </p><!-- /.item-title -->
+                                                  <p>
+                                                    Lorem ipsum dolor sit amet, his ea mollis fabellas principes. 
+                                                  </p>
+                                                  <button class="btn   btn-outline-rounded green" type="button" data-toggle="modal" data-target="#ssu" data-backdrop="static" data-keyboard="false" >
+                                                    <a href="view.html" class="atags2"> Attempt Test</a>
+                                                  </button>
+                                                </div>
+                                              </div>
+                                              </div>
+                                                  
+                                              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 margining   item">
+                                                <div class="folded-corner before_effects">
+                                                   <div class="text">
+                                                    <i class="fa fa-image fa-5x fa-icon-image"></i>
+                                                      <p class="item-title">
+                                                          <h3> Video Editing </h3>
+                                                        </p><!-- /.item-title -->
+                                                    <p>
+                                                      Lorem ipsum dolor sit amet, his ea mollis fabellas principes. 
+                                                    </p>
+                                                    <button class="btn   btn-outline-rounded green" type="button" data-toggle="modal" data-target="#ssu" data-backdrop="static" data-keyboard="false" >
+                                                      <a href="view.html" class="atags2"> Attempt Test</a>
+                                                    </button>
+                                                  </div>
+                                                </div>
+                                                </div>
+                                 </ul>
+                              </div>
+                            </div>
+                            
+                              </div>
+                            </div>
+                            
+
+
+
+                        <div class="tab-pane fade" id="menu2">
+                          <h1 class="head text-center">Current Status</h1>
+                          <p class="narrow text-center" >
+                              Lorem ipsum dolor sit amet, his ea mollis fabellas principes.
+                             <p class="text-center">
+                              <button class="btn   btn-outline-rounded green" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                Sub-Domains 
+                              </button>
+                              </p>
+                              
+                            <div class="collapse" id="collapseExample">
+                              <div class="container p-3 my-3  background-color: black"> 
+                              
+                               <div class="row">
+                             
+                              <ul>
+                                
+                                  <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 margining  item">
+                                    <div class="folded-corner before_effects">
+                                      <div class="text">
+                                        
+                                        <i class="fa fa-lightbulb-o fa-5x fa-icon-image" ></i>
+                                          <p class="item-title">
+                                            <h3>Managment</h3>
+                                          </p>
+                                          <p>
+                                            Lorem ipsum dolor sit amet, his ea mollis fabellas principes.
+                                        </p>
+                                        <button class="btn   btn-outline-rounded green" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                          <a href="status.html" class="atags2">View Status</a>
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 margining  item">
+                                  <div class="folded-corner before_effects">
+                                    <div class="text">
+                                      
+                                      <i class="fa fa-lightbulb-o fa-5x fa-icon-image" ></i>
+                                        <p class="item-title">
+                                          <h3>Design</h3>
+                                        </p>
+                                        <p>
+                                          Lorem ipsum dolor sit amet, his ea mollis fabellas principes.
+                                      </p>
+                                      <button class="btn   btn-outline-rounded green" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                        <a href="status.html" class="atags2"> View Status</a>
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 margining  item">
+                                  <div class="folded-corner before_effects">
+                                    <div class="text">
+                                      <i class="fa fa-lightbulb-o fa-5x fa-icon-image" ></i>
+                                        <p class="item-title">
+                                          <h3> Technical</h3> 
+                                        </p>
+                                      <p>
+                                        Lorem ipsum dolor sit amet, his ea mollis fabellas principes.
+                                      </p>
+                                      <button class="btn   btn-outline-rounded green" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                        <a href="status.html" class="atags2"> View Status</a>
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                                
+                               
+
+                                 </ul>
+                              </div>
+                            </div>
+                            
+                              </div>
+                            </div>
+                                                          
+                        </div>
+                        
+                        <div class="clearfix"></div>
                     </div>
                 </div>
             </div>
-            <div id="accordion">
-                <div class="card">
-                  <div class="card-header">
-                    <a class="card-link" data-toggle="collapse" href="#collapseOne">
-                     Step 1: Register for CET 
-                    </a>
-                  </div>
-                  <div id="collapseOne" class="collapse show" data-parent="#accordion">
-                  <div class="card-body">
-                   <div class="row acc">
-        <div class="col-lg-2 col-md-12 ct" >
-            <div class="circle">
-            <span class="counter" style="color: white;">1</span>
-         </div>
         </div>
-         <div class="col-lg-3 col-md-12 ct" >
-         <div class="content">
-         <img src="assets/img/screen.jpg" alt="" >
-         </div>
-         </div>
-          <div class="col-lg-7 col-md-12 ct" >
-          <p style="color: #5c72d4;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, eius dolorem optio ea tempora nemo maiores aspernatur odio omnis vel. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sint laudantium, facere quia consequuntur ab. Quibusdam, nobis dolore atque nemo.</p>
-         </div>
-     </div>
-                 </div>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-header">
-                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
-                    Step 2: Identify your prefered clubs before hand 
-                  </a>
-                  </div>
-                  <div id="collapseTwo" class="collapse" data-parent="#accordion">
-                    <div class="card-body">
-                      <div class="row acc">
-        <div class="col-lg-2 col-md-12 ct" >
-            <div class="circle">
-            <span class="counter"style="color: white;">2</span>
-         </div>
-        </div>
-         <div class="col-lg-3 col-md-12 ct" >
-         <div class="content">
-         <img src="assets/img/screen.jpg" alt="" >
-         </div>
-         </div>
-          <div class="col-lg-7 col-md-12 ct" >
-          <p style="color: #5c72d4;" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, eius dolorem optio ea tempora nemo maiores aspernatur odio omnis vel. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sint laudantium, facere quia consequuntur ab. Quibusdam, nobis dolore atque nemo.</p>
-         </div>
-     </div>
-                  </div>
-                </div>
-                </div>
-                <div class="card">
-                    <div class="card-header">
-                      <a class="collapsed card-link" data-toggle="collapse" href="#collapse3">
-                      Step 3: Choose the Domains according your interest 
-                    </a>
-                    </div>
-                    <div id="collapse3" class="collapse" data-parent="#accordion">
-                    <div class="card-body">
-                    <div class="row acc">
-        <div class="col-lg-2 col-md-12 ct" >
-            <div class="circle">
-            <span class="counter"style="color: white;">3</span>
-         </div>
-        </div>
-         <div class="col-lg-3 col-md-12 ct" >
-         <div class="content">
-         <img src="assets/img/screen.jpg" alt="" >
-         </div>
-         </div>
-          <div class="col-lg-7 col-md-12 ct" >
-          <p style="color: #5c72d4;" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, eius dolorem optio ea tempora nemo maiores aspernatur odio omnis vel. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sint laudantium, facere quia consequuntur ab. Quibusdam, nobis dolore atque nemo.</p>
-         </div>
-     </div>
-                   </div>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-header">
-                      <a class="collapsed card-link" data-toggle="collapse" href="#collapse4">
-                      Step 4: Appear for CET
-                    </a>
-                    </div>
-                    <div id="collapse4" class="collapse" data-parent="#accordion">
-                      <div class="card-body">
-<div class="row acc">
-        <div class="col-lg-2 col-md-12 ct" >
-            <div class="circle">
-            <span class="counter"style="color: white;">4</span>
-         </div>
-        </div>
-         <div class="col-lg-3 col-md-12 ct" >
-         <div class="content">
-         <img src="assets/img/screen.jpg" alt="" >
-         </div>
-         </div>
-          <div class="col-lg-7 col-md-12 ct" >
-          <p style="color: #5c72d4;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, eius dolorem optio ea tempora nemo maiores aspernatur odio omnis vel. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sint laudantium, facere quia consequuntur ab. Quibusdam, nobis dolore atque nemo.</p>
-         </div>
-     </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-header">
-                      <a class="collapsed card-link" data-toggle="collapse" href="#collapse5">
-                      Step 5: Choose the clubs 
-                    </a>
-                    </div>
-                    <div id="collapse5" class="collapse" data-parent="#accordion">
-                      <div class="card-body">
-                       <div class="row acc">
-        <div class="col-lg-2 col-md-12 ct" >
-            <div class="circle">
-            <span class="counter"style="color: white;">5</span>
-         </div>
-        </div>
-         <div class="col-lg-3 col-md-12 ct" >
-         <div class="content">
-         <img src="assets/img/screen.jpg" alt="" >
-         </div>
-         </div>
-          <div class="col-lg-7 col-md-12 ct" >
-          <p style="color: #5c72d4;" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, eius dolorem optio ea tempora nemo maiores aspernatur odio omnis vel. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sint laudantium, facere quia consequuntur ab. Quibusdam, nobis dolore atque nemo.</p>
-         </div>
-     </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                <div class="card">
-                  <div class="card-header">
-                    <a class="collapsed card-link" data-toggle="collapse" href="#collapse6">
-                   Step 6: Hold back for result 
-                    </a>
-                  </div>
-                  <div id="collapse6" class="collapse" data-parent="#accordion">
-                    <div class="card-body">
-                      <div class="row acc">
-        <div class="col-lg-2 col-md-12 ct" >
-            <div class="circle">
-            <span class="counter"style="color: white;">6</span>
-         </div>
-        </div>
-         <div class="col-lg-3 col-md-12 ct" >
-         <div class="content">
-         <img src="assets/img/screen.jpg" alt="" >
-         </div>
-         </div>
-          <div class="col-lg-7 col-md-12 ct" >
-          <p style="color: #5c72d4;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, eius dolorem optio ea tempora nemo maiores aspernatur odio omnis vel. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sint laudantium, facere quia consequuntur ab. Quibusdam, nobis dolore atque nemo.</p>
-         </div>
-     </div>
-                    </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-                
-        </div>
-    </div>
 
-     
-      
-       
-         
+
  
 
-
-    <div class="tl">
-         <h1 style="padding-bottom:20px; color: #5c72d4;">Important deadlines </h1>
-         <ul class="timeline">
-  <li>
-    <div class="direction-r">
-      <div class="flag-wrapper">
-        <span class="flag">1st September- 10th September</span>
-      </div>
-      <div class="desc"> Register yourself on CET</div>
-    </div>
-  </li>
-  
-   <li>
-    <div class="direction-l">
-      <div class="flag-wrapper">
-        <span class="flag">11th September-15th September</span>
-      </div>
-      <div class="desc">Test link opens</div>
-      </div>
-  </li>
-
-  <li>
-    <div class="direction-r">
-      <div class="flag-wrapper">
-        <span class="flag">16th September-20th September</span>
-      </div>
-      <div class="desc"> Evaluation period.</div>
-    </div>
-  </li>
-  
-  <li>
-    <div class="direction-l">
-      <div class="flag-wrapper">
-        <span class="flag">20th September-30th September</span>
-      </div>
-      <div class="desc">Results for 2nd round</div>
-    </div>
-  </li>
- <li>
-    <div class="direction-r">
-      <div class="flag-wrapper">
-        <span class="flag"> 1st October-10th October</span>
-      </div>
-      <div class="desc">Club and Chapter interviews</div>
-    </div>
-  </li>
-    <li>
-    <div class="direction-l">
-      <div class="flag-wrapper">
-        <span class="flag">11th October-15th October</span>
-      </div>
-      <div class="desc">Final Results</div>
-    </div>
-  </li>
-        </ul></div>
-
-
-        <h1 style="padding-top:15px; color: #5c72d4;">List of Clubs and Chapters</h1>
- <div class="container h-100">
-          <div class="d-flex justify-content-center h-100">
-            <div class="searchbar">
-              <input class="search_input" type="text" style="color: white;" placeholder="Search...">
-              <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
-        </div>
-        </div>
-    </div>
-     
-       <section id="team">
-      <div class="container">
-           <div class="row">
-              <div class="col-lg-4">
-                 <div class="card">
-                 <div class="card-body">
-                  <h1>Technical</h1>
-                  <hr class="white">
-                  <div class="row">
-                      <div>
-                        <img src="assets/img/codechef.jpg" class="logo img-circle img-fluid animated bounceIn">
-                      </div>
-                      <div>
-                          <h3>CodeChef VIT</h3>
-                      </div>
-
-                  </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed odit quod corrupti inventore ullam fugiat, nemo maiores enim nihil sequi.</p>
-                  
-                  <div class="row">
-                      <div>
-                        <img src="assets/img/dsc.jfif" class="img-circle animated bounceIn logo">
-                      </div>
-                      <div>
-                        <h3>DSC VIT</h3>
-                      </div>
-                  </div>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed odit quod corrupti inventore ullam fugiat, nemo maiores enim nihil sequi.</p>
-                  <div class="row">
-                      <div>
-                        <img src="assets/img/acm.png" class="img-circle animated bounceIn logo">
-                      </div>
-                      <div>
-                        <h3>ACM VIT</h3>
-                      </div>
-                  </div> 
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed odit quod corrupti inventore ullam fugiat, nemo maiores enim nihil sequi.</p>  
-                  
-                  <a href="tech.html" class="btn btn-outline-info">See More &raquo;</a>
-                     </div>
-                  </div>
-              </div>
-          
-              <div class="col-lg-4">
-                 <div class="card">
-                 <div class="card-body">
-                  <h1>Non-Technical</h1>
-                  <hr>
-                  <div class="row">
-                      <div>
-                        <img src="assets/img/dance.jfif" class="img-circle animated bounceIn logo">
-                      </div>
-                      <div>
-                        <h3>Dance Club</h3>
-                      </div>
-                  </div> 
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed odit quod corrupti inventore ullam fugiat, nemo maiores enim nihil sequi.</p>
-                 <div class="row">
-                      <div>
-                        <img src="assets/img/photography.png" class="img-circle animated bounceIn logo">
-                      </div>
-                      <div>
-                        <h3>Photography Club</h3>
-                      </div>
-                  </div> 
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed odit quod corrupti inventore ullam fugiat, nemo maiores enim nihil sequi.</p>
-                  <div class="row">
-                      <div>
-                        <img src="assets/img/dramatics.jfif" class="img-circle animated bounceIn logo">
-                      </div>
-                      <div>
-                        <h3>Dramatics Club</h3>
-                      </div>
-                  </div>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed odit quod corrupti inventore ullam fugiat, nemo maiores enim nihil sequi.</p>                
-                  
-                  <a href="non_tech.html" class="btn btn-outline-info">See More &raquo;</a>
-                     </div>
-                  </div>
-              </div>
-        <div class="col-lg-4">
-                 <div class="card">
-                 <div class="card-body">
-                  <h1>NGOs</h1>
-                   <hr>
-                    <div class="row">
-                      <div>
-                        <img src="assets/img/anokha.jfif" class="img-circle animated bounceIn logo">
-                      </div>
-                      <div>
-                        <h3>Anokha VIT</h3>
-                      </div>
-                  </div> 
-                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed odit quod corrupti inventore ullam fugiat, nemo maiores enim nihil sequi.</p>
-                    <div class="row">
-                      <div>
-                        <img src="assets/img/ayuda.jfif" class="img-circle animated bounceIn logo"
-                        >
-                      </div>
-                      <div>
-                        <h3>Ayuda</h3>
-                      </div>
-                  </div>
-                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed odit quod corrupti inventore ullam fugiat, nemo maiores enim nihil sequi.</p> 
-                    <div class="row">
-                      <div>
-                        <img src="assets/img/helphen.png" class="img-circle animated bounceIn logo"
-                        >
-                      </div>
-                      <div>
-                        <h3>Helphen India</h3>
-                      </div>
-                  </div> 
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed odit quod corrupti inventore ullam fugiat, nemo maiores enim nihil sequi.</p>
-                  
-                  <a href="ngo.html" class="btn btn-outline-info">See More &raquo;</a>
-              </div>
-          </div>
-      </div>
-   </div>
- </div>
-  </section>
-    </div>
+<section>
+  <div class="wave wave-one"></div>
+  <div class="wave wave-two"></div>
+  <div class="wave wave-three"></div>
+  <div class="wave wave-four"></div>
+</section>
 
 
 
-<!-- Footer -->
-<footer class="page-footer font-small unique-color-dark" style="background-color:#5c72d4;padding-top: 10px">
 
-  <div class="container text-center text-md-left mt-5">
-    <div class="row mt-3">
-      <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-        <h6 class="text-uppercase font-weight-bold">Common Entry Test</h6>
-        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias repellat sapiente ipsum facilis molestiae, mollitia voluptates, sequi laudantium eum! Corporis.</p>
 
-      </div>
-      
-      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-        <h6 class="text-uppercase font-weight-bold">Important Links</h6>
-        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-        <p>
-          <a href="test.html" style="color: white;">Attend Test</a>
-        </p>
-        <p>
-          <a href="tech.html" style="color: white;">Technical Clubs</a>
-        </p>
-        <p>
-          <a href="non_tech.html" style="color: white;">Non Technical Clubs</a>
-        </p>
-        <p>
-          <a href="ngo.html" style="color: white;">NGO</a>
-        </p>
-
-      </div>
-      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-        <h6 class="text-uppercase font-weight-bold">Contact us</h6>
-        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-        <p>
-          <i class="fas fa-home mr-3"></i>Vellore Institute of Technology</p>
-        <p>
-          <i class="fas fa-envelope mr-3"></i> info@example</p>
-        <p>
-          <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-      </div>
-    </div>
-
-  </div>
-  <div class="footer-copyright text-center py-3">Made with ❤️ by Codechef-VIT
-  </div>
-
-</footer>
-<!-- Footer -->
-
-  
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
