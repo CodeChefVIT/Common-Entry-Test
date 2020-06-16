@@ -15,7 +15,7 @@ body{
 
 @import 'https://fonts.googleapis.com/css?family=Raleway';
 
-  .navbar .container
+  .navbar      .container
 {
     font-family: Raleway;
     margin: 0 auto;
@@ -96,10 +96,6 @@ body{
     background: white;
     color:#5c72d4;
 }
-::placeholder { 
-  color: white;
-  opacity: 1; 
-}
 .search_icon
 {
     height:40px;
@@ -139,12 +135,11 @@ h1{
     color:white;
 }
 h3{
-    font-size:25px;
+    font-size:30px;
     align-content: center;
     display: inline-block;
-    font-weight:600;
 }
-.col-lg-4 .btn{
+.btn{
     margin-top: 15px;
     margin-bottom: 15px;
     color:white;
@@ -153,15 +148,8 @@ h3{
 .btn:hover{
             color:orange;
     }
-#accordion a{
-    font-weight: 600;
-}
-#accordion span{
-    font-size: 20px;
-    font-weight: 500px;
-}
 hr{ 
-  height: 1.5px;
+  height: 1px;
   background-color:white;
   border: none;
 margin-bottom:15px;
@@ -213,7 +201,7 @@ margin-bottom:15px;
     border-radius: 10px;
     border:none;
     box-shadow: 5px 5px 10px white;
-    transform: scale(1.03);
+    transform: scale(1.05);
 }
 .modal-content{
         color: black;
@@ -221,7 +209,6 @@ margin-bottom:15px;
         
 h1{
     text-align: center;
-    font-weight: 700;
 }
 
 .timeline {
@@ -455,7 +442,7 @@ h1{
 
 .desc {
   margin: 1em 0.75em 0 0;
-  font-size: 1.1em;
+  font-size: 0.9em;
   font-style: italic;
   line-height: 1.5em;
   color: #5c72d4;
@@ -575,182 +562,3 @@ h1{
 #accordion>.card>.card-header>a{
     color:#5c72d4;
 }
-.container{
-        font-family: Raleway;
-    font-weight: 500;
-    }
-    #team .card:hover .btn:hover{
-    color:#5c72d4;
-    border: 1px solid #5c72d4;
-    background-color: white;
-}
-p{
-    font-weight: 550;
-}    h2,h3{
-         color: #5c72d4;
-     }   
-      .btn-mod.btn-large {
-      height: auto;
-      padding: 13px 52px;
-      font-size: 15px;
-      padding-bottom: 15px;
-  }
-  
-  .btn-mod.btn-border {
-      color:  #5c72d4;
-      border: 1px solid  #5c72d4;
-      background: transparent;
-      font-weight: bold;
-      border-radius: 20px;
-  }
-  
-  .btn-mod, a.btn-mod {
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      padding: 4px 13px;
-      color: #fff;
-      background: rgba(34,34,34, .9);
-      border: 1px solid transparent;
-      font-size: 11px;
-      font-weight: 400;
-      text-transform: uppercase;
-      text-decoration: none;
-      letter-spacing: 2px;
-      -webkit-border-radius: 0;
-      -moz-border-radius: 0;
-      border-radius: 0;
-      -webkit-box-shadow: none;
-      -moz-box-shadow: none;
-      box-shadow: none;
-      -webkit-transition: all 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-      -moz-transition: all 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-      -o-transition: all 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-      -ms-transition: all 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-      transition: all 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-  }
-  
-  .btn-mod.btn-border:hover, .btn-mod.btn-border:active, .btn-mod.btn-border:focus, .btn-mod.btn-border:active:focus {
-      color: #fff;
-      border-color: #5c72d4;
-      background: #5c72d4;
-      outline: none;
-  }
-  
-  @media only screen and (max-width: 500px) {
-      .btn-mod.btn-large {
-         padding: 6px 16px;
-         font-size: 10px;
-      }
-    
-      .form-title {
-          font-size: 20px;
-    }
-  }
-#head h3{
-    font-size: 25px;
-    font-weight: normal;
-}
-    #head h2{
-	position: relative;
-	float: left;
-	color: #5c72d4;
-	font-weight: bold;
-	
-}
-@media only screen and (min-width:1223px){
-#head h2 span{
-	position: absolute;
-	top: 0;
-	right: 0;
-	background: white;
-	width: 100%;
-	border-left: .1em solid transparent;
-	-webkit-animation: typing 6s steps(68) forwards,
-										 cursor 1s infinite;
-	animation: typing 6s steps(68) forwards,
-						 cursor 1s infinite;
-}
-/* Animation */
-@-webkit-keyframes typing{
-	from { width: 100%;}
-	to { width: 0;}
-}
-@-webkit-keyframes cursor{
-	50% { border-color: white;}
-}
-@keyframes typing{
-	from{ width: 100%;}
-	to{ width: 0;}
-}
-@keyframes cursor{
-	50% { border-color: white;}
-    }}
- #head .container .input-group input::placeholder{
-  color:#5c72d4;
-  opacity:1;
-      }
-  #head .tb{
-      border-color: #5c72d4;
-      caret-color:#5c72d4; 
-  font-size:16px;
-  color:#5c72d4;
-      height: 40px;
-      }
-  #head .btn-mod.btn-large {
-      height: 40px;
-      padding: 7px 42px;
-      font-size: 11px;
-      padding-bottom: 7px;
-  }
-  
-    #head .btn-mod.btn-border {
-      color:  white;
-      border: 2px solid  #5c72d4;
-      background:  #5c72d4;
-      font-weight: bold;
-  }
-  
-   #head .btn-mod, a.btn-mod {
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      padding: 4px 13px;
-      color:  #5c72d4;
-      background: rgba(34,34,34, .9);
-      border: 2px solid  #5c72d4;
-      font-size: 11px;
-      font-weight: 400;
-      text-transform: uppercase;
-      text-decoration: none;
-      letter-spacing: 2px;
-      -webkit-border-radius: 0;
-      -moz-border-radius: 0;
-      border-radius: 0;
-      -webkit-box-shadow: none;
-      -moz-box-shadow: none;
-      box-shadow: none;
-      -webkit-transition: all 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-      -moz-transition: all 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-      -o-transition: all 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-      -ms-transition: all 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-      transition: all 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-  }
-  
-    #head .btn-mod.btn-border:hover, .btn-mod.btn-border:active, .btn-mod.btn-border:focus, .btn-mod.btn-border:active:focus {
-      color: #5c72d4;
-      border-color: #5c72d4;
-      background: white;
-      outline: none;
-  }
-  
-  @media only screen and (max-width: 500px) {
-        #head .btn-mod.btn-large {
-         padding: 6px 16px;
-         font-size: 10px;
-      }
-    
-       #head .form-title {
-          font-size: 20px;
-    }
-  }
