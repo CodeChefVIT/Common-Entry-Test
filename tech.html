@@ -13,30 +13,213 @@
   <script>
     
     </script>
-    <style></style>
+<!--
+    <style>
+      @import 'https://fonts.googleapis.com/css?family=Raleway';
+body{
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    background:white ;
+    /* background:black linear-gradient(to bottom,white,#000000,white); */ 
+}
+
+h1{
+text-align: center;
+color:#5c72d4 ;
+    padding-top: 20px;
+}
+
+        @import 'https://fonts.googleapis.com/css?family=Raleway';
+
+ .navbar       .container
+{
+    font-family: Raleway;
+    margin: 0 auto;
+	padding: 1em 3em;
+	text-align: center;
+}
+
+.navbar .container a
+{
+    color: #FFF;
+    text-decoration: none;
+    font: 17px Raleway;
+    margin: 0px 5px;
+    padding: 5px 5px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+.topBotomBordersIn a:before, .topBotomBordersIn a:after
+{
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: white;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.topBotomBordersIn a:before
+{
+    top: 0px;
+    transform: translateY(-10px);
+}
+
+.topBotomBordersIn a:after
+{
+    bottom: 0px;
+    transform: translateY(10px);
+}
+
+.topBotomBordersIn a:hover:before, .topBotomBordersIn a:hover:after
+{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+
+
+
+.searchbar{
+    margin-bottom:2em;
+    margin-top: 2em;
+    height: 60px;
+    background-color:#5c72d4;
+    border-radius: 30px;
+    padding: 10px;
+}
+.search_input
+{
+    color:white ;
+    border: 0;
+    outline: 0;
+    background: none;
+    width:0;
+    line-height:40px;
+    transition:width 0.4s linear;
+}
+.searchbar:hover>.search_input
+{
+    padding: 0 10px;
+    width:250px;
+    caret-color:white;
+    transition: width 0.4s linear;
+}
+.searchbar:hover>.search_icon
+{
+    background:white;
+    color: #5c72d4;
+}
+.search_icon
+{
+    height:40px;
+    width:40px;
+    float:right;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    color:white;
+    text-decoration:none;
+}
+::placeholder { 
+  color: white;
+  opacity: 1; 
+}
+h3{
+  font-size: 24px;
+    font-weight: bold;
+}
+#team img{
+    margin-top: -70px; 
+    height: 100px;
+    width:100px;
+    display: inline-block;
+    margin-bottom:5px;
+    
+}
+#team a{
+    text-decoration: none;
+}
+#team p{
+    font-weight: 500;
+}
+#team .card{
+    transition:all 0.3s ease-in;
+    -webkit-transition:all 0.3s ease-in;
+    -moz-transition:all 0.3s ease-in;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    margin-left: 0;
+    margin-right: 0;
+    background-color:white/*  #2c2c2c */;
+    color: #5c72d4;
+    border:none;
+    min-height: 300px;
+    max-height: 300px;
+    border-radius: 5px;
+    /* box-shadow: 5px 5px 15px #ebebf5; */ 
+-moz-box-shadow: inset 0 0 20px #5c72d4 ;
+       -webkit-box-shadow:inset 0 0 20px #5c72d4;
+       box-shadow:inset 0 0 20px #5c72d4;  
+}
+#team .card:hover{
+    transform: scale(1.05);
+    background:#5c72d4;
+    color:white;
+    border-radius: 10px;
+    border:none;
+    /* box-shadow: 5px 5px 10px #2C2C2C; */ 
+    -moz-box-shadow: inset 0 0 20px white ;
+             -webkit-box-shadow:inset 0 0 20px white;
+             box-shadow:inset 0 0 20px white; 
+}
+footer {
+    font-size: 16px;
+    color: white;
+    text-align: center;
+}
+footer hr{
+    background-color: white;
+    height:0.7px;
+}
+footer a{
+    color: white;
+}
+footer a:hover{
+    color:white;
+}
+</style>
+-->
 <title>Technical</title>
 
 </head>
  
  
 <body>
- 
- <nav class="navbar navbar-expand-lg navbar-dark  " style="background-color:#5c72d4;">
-  <a class="navbar-brand "  href="#" style="font: 22px Raleway;">CET:Club List</a>
+  <nav class="navbar navbar-expand-lg navbar-dark  " style="background-color:#5c72d4;">
+  <a class="navbar-brand "  href="#" style="font: 22px Raleway;">Common Entry Test</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav topBotomBordersIn container ">
-      <a class="nav-item nav-link active  topBotomBordersIn" href="index.html">Home<span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link   active " href="index.html">Home<span class="sr-only">(current)</span></a>
       
-      <a class="nav-item nav-link active disabled " href="#">Technical Clubs</a>
+      <a class="nav-item nav-link active disabled topBotomBordersIn" href="#">Technical Clubs</a>
       <a class="nav-item nav-link active " href="non_tech.html">Non-Technical Clubs</a>
-      <a class="nav-item nav-link active " href="ngo.html">NGO</a>
-      <a class="nav-item nav-link active  " href="test.html">Attend Test</a>
+      <a class="nav-item nav-link active" href="ngo.html">NGO</a>
+      <a class="nav-item nav-link active" href="domain_choosing.html">Exam Portal </a>
+      <a class="nav-item nav-link active" href="attemptedindex.html">Student Portal </a>
       
-     <li data-toggle="modal" data-target="#login"> <a class="nav-item nav-link  disabled " data-toggle="modal" href="#">Login</a></li>
-      <li data-toggle="modal" data-target="#ssu"><a class="nav-item nav-link  disabled " href="#">Register here</a></li>
+      
+     <li data-toggle="modal" > <a class="nav-item nav-link active " data-toggle="modal" href="clubindex.html">Club Portal</a></li>
+      <li data-toggle="modal" data-target="#login"><a class="nav-item nav-link  active  " href="#">Login</a></li>
     </div>
   </div>
 </nav>
@@ -56,391 +239,548 @@
        <div class="container text-center">
          <div class="row my-5">
            
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
               <a href="https://acmvit.in/" target="_blank" style="text-decoration: none" >
               <div class="card" >
                <div class="card-body">
                    <img src="assets/img/acm.png" alt="" class="img-fluid rounded-circle mb-3">
                    <h3>ACM-VIT</h3> 
-                   <p>Association for Computing Machinery</p>
+<!--                   <p>Association for Computing Machinery</p>-->
                   <!-- <p style="color: blue">Website Link</p> -->
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p>
+                                
                </div>
                </div>
                 </a>
                 
             </div>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+             <a href="https://www.facebook.com/aeevitchapter/" target="_blank" style="text-decoration: none">
+              <div class="card" >
+               <div class="card-body">
+                   <img src="assets/img/aee.png" alt="" class="img-fluid rounded-circle mb-3">
+                   <h3>AEE-VIT</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p>
+                </div>
+               </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
              <a href="https://www.aichevit.com/" target="_blank" style="text-decoration: none">
               <div class="card" >
                <div class="card-body">
                    <img src="assets/img/aiche.png" alt="" class="img-fluid rounded-circle mb-3">
                    <h3>AIChE VIT</h3>
-                   <p>American Institute of Chemical Engineers
+<!--                   <p>American Institute of Chemical Engineers</p>--> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p>
+                                
                    </div>
                </div>
                 </a>
             </div>
-            <div class="col-lg-3 col-md-6 mx-auto">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                 <a href="https://www.alphabiocell.org/" target="_blank" style="text-decoration: none">
               <div class="card" >
                <div class="card-body">
                    <img src="assets/img/abc.jfif" alt="" class="img-fluid rounded-circle mb-3">
                    <h3>ABC</h3>
-                   <p>Alpha Bio Cell</p>
+<!--                   <p>Alpha Bio Cell</p>-->
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p>
                 
                </div>
                </div>
                 </a>
             </div>  
+           
+         </div>
+         
+         
+         
+        <div class="row mb-5">
 
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
              <a href="http://adgvit.com/" target="_blank" style="text-decoration: none">
               <div class="card" >
                <div class="card-body">
                    <img src="assets/img/adg.jfif" alt="" class="img-fluid rounded-circle mb-3">
                    <h3>ADG-VIT</h3>
-                   <p>Apple Developers Group</p>
-                   
-               </div>
-               </div>
-                </a>
-            </div>           
-         </div>
-         
-         
-         
-        <div class="row mb-5">
-
-            <div class="col-lg-3 col-md-6">
-             <a href="http://www.codechefvit.com/" target="_blank" style="text-decoration: none">
-              <div class="card" >
-               <div class="card-body">
-                   <img src="assets/img/codechef.jpg" alt="" class="img-fluid rounded-circle mb-3">
-                   <h3>Codechef-VIT</h3>
+<!--                   <p>Apple Developers Group</p>-->
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p>
                </div>
                </div>
                 </a>
             </div>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+             <a href="http://www.codechefvit.com/" target="_blank" style="text-decoration: none">
+              <div class="card" >
+               <div class="card-body">
+                   <img src="assets/img/codechef.jpg" alt="" class="img-fluid rounded-circle mb-3">
+                   <h3>CodeChef-VIT</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p>
+               </div>
+               </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
              <a href="https://www.facebook.com/pages/Creation-Labs-VIT/1390831191137453" style="text-decoration: none">
               <div class="card" >
                <div class="card-body">
                    <img src="assets/img/creation_labs.jpg" alt="" class="img-fluid rounded-circle mb-3" >
                    <h3>Creation Lab</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p>
                </div>
                </div>
                 </a>
             </div>
             
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
             <a href="https://csedvit.com/home/" target="_blank" style="text-decoration: none">
               <div class="card" >
                <div class="card-body">
                    <img src="assets/img/csed.jpg" alt="" class="img-fluid rounded-circle mb-3">
                    <h3>CSED-VIT</h3>
-                   <p>Centre for Social Entrepreneurship and Development</p>
-
+<!--                   <p>Centre for Social Entrepreneurship and Development</p>-->
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p>
                </div>
                </div>
                 </a>
             </div>
-            <div class="col-lg-3 col-md-6">
+           
+         </div>
+    
+        <div class="row mb-5">
+ <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
              <a href="https://csivit.com/" target="_blank" style="text-decoration: none">
               <div class="card" >
                <div class="card-body">
                    <img src="assets/img/csi_vit.jpg" alt="" class="img-fluid rounded-circle mb-3">
                    <h3>CSI-VIT</h3>
-                   <p>Computer Society of India</p>
+<!--                   <p>Computer Society of India</p>-->
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p>
                </div>
                </div>
                 </a>
             </div>
-         </div>
-    
-        <div class="row mb-5">
-            <div class="col-lg-3 col-md-6 mx-auto">
-             <a href="https://www.facebook.com/DreamMerchantsVIT/" target="_blank" style="text-decoration: none">
-              <div class="card" >
-               <div class="card-body">
-                   <img src="assets/img/dream_merchants.jpg" alt="" class="img-fluid rounded-circle mb-3">
-                   <h3>Dream Merchants</h3>
-               </div>
-               </div>
-                </a>
-            </div>  
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
              <a href="https://dscvit.com/" target="_blank" style="text-decoration: none">
               <div class="card" >
                <div class="card-body">
                    <img src="assets/img/dsc.jfif" alt="" class="img-fluid rounded-circle mb-3">
                    <h3>DSC-VIT</h3>
-                   <p>Developer Student Club</p>
+<!--                   <p>Developer Student Club</p>-->
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p>
                 </div>
                </div>
                 </a>
             </div>
-           <div class="col-lg-3 col-md-6">
+           <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
              <a href="https://www.facebook.com/e2pcvit/" target="_blank" style="text-decoration: none">
               <div class="card" >
                <div class="card-body">
                    <img src="assets/img/e2pc.png" alt="" class="img-fluid rounded-circle mb-3">
                    <h3>E2PC</h3>
-                   <p>Energy & Environment Protection Club</p>
+<!--                   <p>Energy & Environment Protection Club</p>-->
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p>
                </div>
                </div>
                </a> 
             </div> 
-            <div class="col-lg-3 col-md-6">
+           <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
              <a href="http://ecellvit.in/" target="_blank" style="text-decoration: none">
               <div class="card" >
                <div class="card-body">
                    <img src="assets/img/e_cell.png" alt="" class="img-fluid rounded-circle mb-3">
                    <h3>E-Cell</h3>
-                   <p>Entrepreneurship Cell</p>
+<!--                   <p>Entrepreneurship Cell</p>-->
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p>
                </div>
                </div>
                 </a>
             </div>
-          
+                 
+                 
          </div>
-          
+<div class="row mb-5">
+     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+             <a href="http://www.ieeecsvit.com/" target="_blank" style="text-decoration: none">
+              <div class="card" >
+               <div class="card-body">
+                   <img src="assets/img/ieee_cs.jfif" alt="" class="img-fluid rounded-circle mb-3">
+                   <h3>IEEE-CS</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p>
+                </div>
+               </div>
+                </a>
+            </div>
+                  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+             <a href="https://b-m.facebook.com/ieeeiasvit/" target="_blank" style="text-decoration: none">
+              <div class="card" >
+               <div class="card-body">
+                   <img src="assets/img/iee_ias.png" alt="" class="img-fluid rounded-circle mb-3">
+                   <h3>IEEE-IAS</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p>
+                </div>
+               </div>
+                </a>
+            </div>
+                  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+             <a href="https://www.facebook.com/PCSVIT/" target="_blank" style="text-decoration: none">
+              <div class="card" >
+               <div class="card-body">
+                   <img src="assets/img/PCS.jfif" alt="" class="img-fluid rounded-circle mb-3">
+                   <h3>IEEE-PCS</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p>
+                </div>
+               </div>
+                </a>
+            </div>
+                   <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+             <a href="https://www.facebook.com/ieee.pes.vit" target="_blank" style="text-decoration: none">
+              <div class="card" >
+               <div class="card-body">
+                   <img src="assets/img/PES.jfif" alt="" class="img-fluid rounded-circle mb-3">
+                   <h3>IEEE-PES</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p>
+                </div>
+               </div>
+                </a>
+            </div>
+                 </div>
+                  <div class="row mb-5">
+                   <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+             <a href="https://ieeevit.org/" target="_blank" style="text-decoration: none">
+              <div class="card" >
+               <div class="card-body">
+                   <img src="assets/img/ieee.png" alt="" class="img-fluid rounded-circle mb-3">
+                   <h3>IEEE-VIT</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p>
+                </div>
+               </div>
+                </a>
+            </div>
+         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+             <a href="https://www.facebook.com/IEEEWIEVIT/" target="_blank" style="text-decoration: none">
+              <div class="card" >
+               <div class="card-body">
+                   <img src="assets/img/ieee_wie.jfif" alt="" class="img-fluid rounded-circle mb-3">
+                   <h3>IEE-WIE</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p>
+                </div>
+               </div>
+                </a>
+            </div> 
+                   <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+             <a href="https://www.facebook.com/ietvit/" target="_blank" style="text-decoration: none">
+              <div class="card" >
+               <div class="card-body">
+                   <img src="assets/img/iet.png" alt="" class="img-fluid rounded-circle mb-3">
+                   <h3>IET-VIT</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p>
+                </div>
+               </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+             <a href="https://www.facebook.com/ieteisf/" target="_blank" style="text-decoration: none">
+              <div class="card" >
+               <div class="card-body">
+                   <img src="assets/img/iete.jfif" alt="" class="img-fluid rounded-circle mb-3">
+                   <h3>IETE-VIT</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p>
+                </div>
+               </div>
+                </a>
+            </div>
+                   
+</div>
           
  <div class="row mb-5">
- 
-            <div class="col-lg-3 col-md-6">
+  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+             <a href="https://www.facebook.com/iothincVIT/" target="_blank" style="text-decoration: none">
+              <div class="card" >
+               <div class="card-body">
+                   <img src="assets/img/iot.png" alt="" class="img-fluid rounded-circle mb-3">
+                   <h3>I0thinc VIT</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p>
+               </div>
+               </div>
+                </a>
+            </div>  
+           <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
              <a href="https://istevit.in/" style="text-decoration: none" target="_blank"> 
               <div class="card" >
                <div class="card-body">
                    <img src="assets/img/iste.jpg" alt="" class="img-fluid rounded-circle mb-3">
                    <h3>ISTE-VIT</h3>
-                   <p>Indian Society for Technical Education</p>
-                   
+<!--                   <p>Indian Society for Technical Education</p>-->
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p>
                </div>
                </div>
                 </a>
             </div> 
-            <div class="col-lg-3 col-md-6 mx-auto">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
              <a href="http://iquestvit.com/" style="text-decoration: none" target="_blank">
               <div class="card" >
                <div class="card-body">
                    <img src="assets/img/i_quest.jpg" alt="" class="img-fluid rounded-circle mb-3">
                    <h3>Innovator's Quest</h3>
-                   
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p>
                </div>
                </div>
                 </a>
             </div>  
-                <div class="col-lg-3 col-md-6">
+             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                 <a href="https://www.facebook.com/isavitchapter/" target="_blank" style="text-decoration: none">
               <div class="card" >
                <div class="card-body">
                    <img src="assets/img/isa.jpg" alt="" class="img-fluid rounded-circle mb-3">
                    <h3>ISA-VIT</h3>
-                   <p>International Society of Automation</p>
-                   
+<!--                   <p>International Society of Automation</p>-->
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p> 
                </div>
                </div>
                     </a>
             </div>
-            <div class="col-lg-3 col-md-6">
+           
+</div>
+
+ <div class="row mb-5">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
              <a href="https://www.facebook.com/kiracing/" target="_blank" style="text-decoration: none">
               <div class="card" >
                <div class="card-body">
                    <img src="assets/img/ki.png" alt="" class="img-fluid rounded-circle mb-3">
                    <h3>KI Racing</h3>
-                   
+                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p>  
                </div>
                </div>
                 </a>
             </div> 
-</div>
-
- <div class="row mb-5">
-       
-           <div class="col-lg-3 col-md-6">
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
              <a href="https://www.facebook.com/mstcvit/" target="_blank" style="text-decoration: none">
               <div class="card" >
                <div class="card-body">
                    <img src="assets/img/mstc.png" alt="" class="img-fluid rounded-circle mb-3">
                    <h3>Microsoft Student Technical Community</h3>
-                   
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p>
                </div>
                </div>
                </a>
             </div>
                  
-           <div class="col-lg-3 col-md-6">
+       <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
              <a href="https://www.facebook.com/pages/category/Personal-Blog/Mozilla-Firefox-Club-VIT-2747192918639989/" target="_blank" style="text-decoration: none">
               <div class="card" >
                <div class="card-body">
                    <img src="assets/img/mozilla.jpg" alt="" class="img-fluid rounded-circle mb-3">
                    <h3>Mozilla Firefox Club VIT</h3>
-                   
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p>
                </div>
                </div>
                </a>
             </div> 
-         <div class="col-lg-3 col-md-6">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
              <a href="http://pravega-racing.com/" target="_blank" style="text-decoration: none">
               <div class="card" >
                <div class="card-body">
                    <img src="assets/img/pravega.jpg" alt="" class="img-fluid rounded-circle mb-3">
                    <h3>Pravega Racing</h3>
-                   
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p>
                </div>
                </div>
              </a>
             </div>
-           <div class="col-lg-3 col-md-6">
+          
+</div>
+<div class="row mb-5">
+<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
              <a href="https://www.facebook.com/revmechanics/" target="_blank" style="text-decoration: none">
               <div class="card" >
                <div class="card-body">
                    <img src="assets/img/revm.jpg" alt="" class="img-fluid rounded-circle mb-3" >
                    <h3>REV Mechanics</h3>
-                   
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p>
                </div>
                </div>
                </a>
      </div>          
-</div>
-<div class="row mb-5">
- 
-           <div class="col-lg-3 col-md-6">
+ <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
               <a href="https://www.facebook.com/robovitics/" target="_blank" style="text-decoration: none">
               <div class="card" >
                <div class="card-body">
                    <img src="assets/img/robvitics.jpg" alt="" class="img-fluid rounded-circle mb-3" >
                    <h3>RoboVITics</h3>
-                   <p>Robotics club of VIT</p>
-                  
+<!--                   <p>Robotics club of VIT</p>-->
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p>
                </div>
                </div>
                </a>
             </div> 
-
-           <div class="col-lg-3 col-md-6">
+<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
              <a href="https://www.siamvit.in/" target="_blank" style="text-decoration: none">
               <div class="card" >
                <div class="card-body">
                    <img src="assets/img/siam.jpg" alt="" class="img-fluid rounded-circle mb-3">
                    <h3>SIAM VIT</h3>
-                   <p>Society for Industrial and Applied Mathematics</p>
-                   
+<!--                   <p>Society for Industrial and Applied Mathematics</p>-->
+ <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p>                  
                </div>
                </div>
                </a>
             </div> 
-            <div class="col-lg-3 col-md-6">
+  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
              <a href="https://www.facebook.com/smevituniversity/" target="_blank" style="text-decoration: none">
               <div class="card" >
                <div class="card-body">
                    <img src="assets/img/sme.jpg" alt="" class="img-fluid rounded-circle mb-3">
                    <h3>SME-VIT</h3>
-                   <p>Society of manufacturing engineers</p>
+<!--                   <p>Society of manufacturing engineers</p>-->
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p>
                </div>
                </div>
                 </a>
             </div>
-          <div class="col-lg-3 col-md-6">
+
+         
+</div>
+<div class="row mb-5">
+         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
              <a href="https://vit.sedsindia.org/" target="_blank" style="text-decoration: none">
               <div class="card" >
                <div class="card-body">
                    <img src="assets/img/seds.png" alt="" class="img-fluid rounded-circle mb-3">
                    <h3>SEDS-VIT</h3>
-                   <p>Students for the Exploration and Development of Space</p>
-                   
+<!--                   <p>Students for the Exploration and Development of Space</p>-->
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p>             
                </div>
                </div>
               </a>
     </div>
-         
-</div>
-<div class="row mb-5">
-           <div class="col-lg-3 col-md-6">
-             <a href="https://www.facebook.com/talbatross/" target="_blank" style="text-decoration: none">
-              <div class="card" >
-               <div class="card-body">
-                   <img src="assets/img/albatross.jpg" alt="" class="img-fluid rounded-circle mb-3">
-                   <h3>Team Albatross</h3>
-                   
-               </div>
-               </div>
-               </a>
-            </div> 
-           <div class="col-lg-3 col-md-6">
-             <a href="http://teameklavya.com/" target="_blank" style="text-decoration: none">
-              <div class="card" >
-               <div class="card-body">
-                   <img src="assets/img/eklavya.jpg" alt="" class="img-fluid rounded-circle mb-3">
-                   <h3>Team Eklavya</h3>
-               </div>
-               </div>
-               </a>
-            </div> 
- 
-           <div class="col-lg-3 col-md-6">
-             <a href="http://teamjaabaz.com/" target="_blank" style="text-decoration: none">
-              <div class="card" >
-               <div class="card-body">
-                   <img src="assets/img/jaabaz.png" alt="" class="img-fluid rounded-circle mb-3">
-                   <h3>Team Jaabaz</h3>
-                   
-               </div>
-               </div>
-               </a>
-            </div> 
-           <div class="col-lg-3 col-md-6">
-             <a href="https://www.facebook.com/Team.Kshatriya/" target="_blank" style="text-decoration: none">
-              <div class="card" >
-               <div class="card-body">
-                   <img src="assets/img/kshatriya.jpg" alt="" class="img-fluid rounded-circle mb-3">
-                   <h3>Team Kshatriya</h3>  
-               </div>
-               </div>
-               </a>
-            </div>
-</div> 
-
-<div class="row mb-5">
-           <div class="col-lg-3 col-md-6">
-             <a href="https://www.ojasracing.com/" target="_blank" style="text-decoration: none">
-              <div class="card" >
-               <div class="card-body">
-                   <img src="assets/img/ojas.jpg" alt="" class="img-fluid rounded-circle mb-3">
-                   <h3>Team Ojas</h3>
-                   
-               </div>
-               </div>
-               </a>
-            </div> 
-           <div class="col-lg-3 col-md-6">
-             <a href="https://www.teamrotorfpv.com/updates" target="_blank" style="text-decoration: none">
-              <div class="card" >
-               <div class="card-body">
-                   <img src="assets/img/rotorf.png" alt="" class="img-fluid rounded-circle mb-3">
-                   <h3>Team Rotor FPV</h3>     
-               </div>
-               </div>
-               </a>
-            </div> 
-           <div class="col-lg-3 col-md-6">
-              <a href="https://www.facebook.com/TeamUttejit/" target="_blank" style="text-decoration: none">
-              <div class="card" >
-               <div class="card-body">
-                   <img src="assets/img/uttejit'.jpg" alt="" class="img-fluid rounded-circle mb-3">
-                   <h3>Team Uttejit</h3>
-               </div>
-               </div>
-               </a>
-            </div> 
-           <div class="col-lg-3 col-md-6">
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
              <a href="http://www.tagclub.in/" target="_blank" style="text-decoration: none">
               <div class="card" >
                <div class="card-body">
                    <img src="assets/img/tag.jpg" alt="" class="img-fluid rounded-circle mb-3">
                    <h3>TAG Club</h3>
-                   <p>Technology and Gaming Club</p>
-                   
+<!--                   <p>Technology and Gaming Club</p>-->
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p>
+               </div>
+               </div>
+               </a>
+            </div> 
+           <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+             <a href="https://www.facebook.com/talbatross/" target="_blank" style="text-decoration: none">
+              <div class="card" >
+               <div class="card-body">
+                   <img src="assets/img/albatross.jpg" alt="" class="img-fluid rounded-circle mb-3">
+                   <h3>Team Albatross</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p>
+               </div>
+               </div>
+               </a>
+            </div> 
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+             <a href="https://www.facebook.com/teamcelerityvit/" target="_blank" style="text-decoration: none">
+              <div class="card" >
+               <div class="card-body">
+                   <img src="assets/img/celerity.png" alt="" class="img-fluid rounded-circle mb-3">
+                   <h3>Team Celerity</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p>
+                </div>
+               </div>
+                </a>
+            </div>
+       
+           </div>
+           <div class="row mb-5">
+    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+             <a href="http://teamjaabaz.com/" target="_blank" style="text-decoration: none">
+              <div class="card" >
+               <div class="card-body">
+                   <img src="assets/img/jaabaz.png" alt="" class="img-fluid rounded-circle mb-3">
+                   <h3>Team Jaabaz</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p>
+               </div>
+               </div>
+               </a>
+            </div> 
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+             <a href="https://www.facebook.com/Team.Kshatriya/" target="_blank" style="text-decoration: none">
+              <div class="card" >
+               <div class="card-body">
+                   <img src="assets/img/kshatriya.jpg" alt="" class="img-fluid rounded-circle mb-3">
+                   <h3>Team Kshatriya</h3> 
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p> 
+               </div>
+               </div>
+               </a>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+             <a href="https://www.ojasracing.com/" target="_blank" style="text-decoration: none">
+              <div class="card" >
+               <div class="card-body">
+                   <img src="assets/img/ojas.jpg" alt="" class="img-fluid rounded-circle mb-3">
+                   <h3>Team Ojas</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p>
+               </div>
+               </div>
+               </a>
+            </div> 
+<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+             <a href="https://www.teamrotorfpv.com/updates" target="_blank" style="text-decoration: none">
+              <div class="card" >
+               <div class="card-body">
+                   <img src="assets/img/rotorf.png" alt="" class="img-fluid rounded-circle mb-3">
+                   <h3>Team Rotor FPV</h3>  
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p>   
+               </div>
+               </div>
+               </a>
+            </div> 
+</div> 
+
+<div class="row mb-5">
+          
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+             <a href="https://www.facebook.com/TeamUAV.VIT/" target="_blank" style="text-decoration: none">
+              <div class="card" >
+               <div class="card-body">
+                   <img src="assets/img/uav.jpg" alt="" class="img-fluid rounded-circle mb-3">
+                   <h3>Team UAV Creation Labs</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p>
+               </div>
+               </div>
+               </a>
+            </div> 
+           <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <a href="https://www.facebook.com/TeamUttejit/" target="_blank" style="text-decoration: none">
+              <div class="card" >
+               <div class="card-body">
+                   <img src="assets/img/uttejit'.jpg" alt="" class="img-fluid rounded-circle mb-3">
+                   <h3>Team Uttejit</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p>
+               </div>
+               </div>
+               </a>
+            </div> 
+  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <a href="https://www.facebook.com/tec.vit/" target="_blank" style="text-decoration: none">
+              <div class="card" >
+               <div class="card-body">
+                   <img src="assets/img/tec.png" alt="" class="img-fluid rounded-circle mb-3">
+                   <h3>TEC-VIT</h3>
+<!--                   <p>The Electronics Club</p>-->
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p>
+               </div>
+               </div>
+               </a>
+            </div>
+           <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+             <a href="https://www.facebook.com/venturesity.vit/" target="_blank" style="text-decoration: none">
+              <div class="card" >
+               <div class="card-body">
+                   <img src="assets/img/Vventuresity.jpg" alt="" class="img-fluid rounded-circle mb-3">
+                   <h3>Venturesity-VIT</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p>
                </div>
                </div>
                </a>
@@ -448,47 +788,25 @@
          
 </div>
 <div class="row mb-5">
-           <div class="col-lg-3 col-md-6">
-              <a href="https://www.facebook.com/tec.vit/" target="_blank" style="text-decoration: none">
-              <div class="card" >
-               <div class="card-body">
-                   <img src="assets/img/tec.png" alt="" class="img-fluid rounded-circle mb-3">
-                   <h3>TEC VIT</h3>
-                   <p>The Electronics Club</p>
-                  
-               </div>
-               </div>
-               </a>
-            </div>
-           <div class="col-lg-3 col-md-6">
-             <a href="https://www.facebook.com/venturesity.vit/" target="_blank" style="text-decoration: none">
-              <div class="card" >
-               <div class="card-body">
-                   <img src="assets/img/Vventuresity.jpg" alt="" class="img-fluid rounded-circle mb-3">
-                   <h3>Venturesity-VIT</h3>
-                   
-               </div>
-               </div>
-               </a>
-            </div> 
-           <div class="col-lg-3 col-md-6">
+         
+           <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
              <a href="http://www.vbcvit.com/" target="_blank" style="text-decoration: none">
               <div class="card" >
                <div class="card-body">
                    <img src="assets/img/visual_%20blogger.png" alt="" class="img-fluid rounded-circle mb-3">
                    <h3>Visual Bloggers' Club</h3>
-                   
+                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p>  
                </div>
                </div>
                </a>
             </div> 
-           <div class="col-lg-3 col-md-6">
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
              <a href="https://vinnovateit.com/" target="_blank" style="text-decoration: none">
               <div class="card" >
                <div class="card-body">
                    <img src="assets/img/vinnovate.png" alt="" class="img-fluid rounded-circle mb-3">
                    <h3>VinnovateIT</h3>
-                   
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p> 
                </div>
                </div>
                </a>
@@ -542,9 +860,7 @@
   </div>
 
 </footer>
- 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   </body>

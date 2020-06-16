@@ -1,0 +1,200 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
+.container
+{
+font-family: Raleway;
+margin: 0 auto;
+padding: 1em 3em;
+text-align: center;
+}
+
+.container a
+{
+color: #FFF;
+text-decoration: none;
+font: 17px Raleway;
+margin: 0px 5px;
+padding: 5px 5px;
+position: relative;
+z-index: 0;
+cursor: pointer;
+}
+.topBotomBordersIn a:before, .topBotomBordersIn a:after
+{
+position: absolute;
+left: 0px;
+width: 100%;
+height: 2px;
+background: white;
+content: "";
+opacity: 0;
+transition: all 0.3s;
+}
+
+.topBotomBordersIn a:before
+{
+top: 0px;
+transform: translateY(-10px);
+}
+
+.topBotomBordersIn a:after
+{
+bottom: 0px;
+transform: translateY(10px);
+}
+
+.topBotomBordersIn a:hover:before, .topBotomBordersIn a:hover:after
+{
+opacity: 1;
+transform: translateY(0px);
+}
+
+
+.col-xs-12.col-sm-12.col-md-12.col-lg-12 {
+    padding: 0 20% 0 20%;
+  }
+  
+  .margin-top-25 {
+    margin-top: 25px;
+  }
+  
+  .form-title {
+    padding: 15px;
+    font-size: 20px;
+    font-weight: 450;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  }
+  
+  .form-group .form-control {
+    -webkit-box-shadow: none;
+    border-bottom: 1px;
+    border-style: none none solid none;
+    border-radius:0; 
+    border-color:#5c72d4;
+    border-width: 0.1em;
+  
+  }
+
+
+  .form-groups .form-control {
+    -webkit-box-shadow: none;
+    border-bottom: 1px;
+    border-style: none none solid none;
+    border-radius:0; 
+    border-color:white;
+    border-width: 0.1em;
+  
+  }
+  
+  .form-group .form-control:focus {
+      box-shadow: none;
+    border-width: 0 0 2px 0;
+    border-color: #5c72d4;
+    
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  .btn-mod.btn-large {
+      height: auto;
+      padding: 13px 52px;
+      font-size: 15px;
+      padding-bottom: 15px;
+  }
+  
+  .btn-mod.btn-border {
+      color:  #5c72d4;
+      border: 1px solid  #5c72d4;
+      background: transparent;
+      font-weight: bold;
+  }
+  
+  .btn-mod, a.btn-mod {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 4px 13px;
+      color: #fff;
+      background: rgba(34,34,34, .9);
+      border: 1px solid transparent;
+      font-size: 11px;
+      font-weight: 400;
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 2px;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      -webkit-transition: all 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+      -moz-transition: all 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+      -o-transition: all 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+      -ms-transition: all 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+      transition: all 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+  }
+  
+  .btn-mod.btn-border:hover, .btn-mod.btn-border:active, .btn-mod.btn-border:focus, .btn-mod.btn-border:active:focus {
+      color: #fff;
+      border-color: #5c72d4;
+      background: #5c72d4;
+      outline: none;
+  }
+  
+  @media only screen and (max-width: 500px) {
+      .btn-mod.btn-large {
+         padding: 6px 16px;
+         font-size: 10px;
+      }
+    
+      .form-title {
+          font-size: 20px;
+    }
+  }
+  .radio-item {
+  display: inline-block;
+  position: relative;
+  padding: 0 6px;
+  margin: 10px 0 0;
+}
+
+.radio-item input[type='radio'] {
+  display: none;
+}
+
+.radio-item label {
+  color: #666;
+  font-weight: normal;
+}
+
+.radio-item label:before {
+  content: " ";
+  display: inline-block;
+  position: relative;
+  top: 5px;
+  margin: 0 5px 0 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 11px;
+  border: 2px solid #5c72d4;
+  background-color: transparent;
+}
+
+.radio-item input[type=radio]:checked + label:after {
+  border-radius: 11px;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 9px;
+  left: 10px;
+  content: " ";
+  display: block;
+  background: #5c72d4;
+}
+.row .form>.form-groups>textarea::placeholder{
+    color: white;
+    opacity: 1;
+}
