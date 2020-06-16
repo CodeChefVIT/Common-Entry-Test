@@ -9,6 +9,7 @@ urlpatterns=[
 	path('',include('djoser.urls.authtoken')),
 	path('signup/',views.RegistrationView.as_view()),
 	# path('login/',views.ProfileView.as_view()),
-	path('login/',obtain_auth_token)
+	path('login/',obtain_auth_token),
+	#path('verification/',views.OTPverification.as_view()),
 	# path('paper/',views.PaperView.as_view()),
 ]

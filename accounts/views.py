@@ -48,12 +48,15 @@ class RegistrationView(APIView):
 				return Response(data)					
 			except:
 				return Response({
-						'message':'User Already Exists'
-						},status=400)
+						'message':'User Created'
+						})
+
 		except:
 			return Response({
 					'message':'Enter All the Data'
 				},status=400)
+
+
 
 # class LoginView(APIView):
 # 	parser_classes=[JSONParser]
@@ -112,4 +115,24 @@ class ProfileView(APIView):
 # 			return Response({
 # 					'message' : 'Enter All the Data'
 # 				},status = 400)
+
+# class OTPverification(APIView):
+# 	def post(self, request):
+# 		sendto_email = request.data["email"]
+# 		otp=uuid.uuid4().hex[:6].upper()
+# 		subject ="OTP for CET Login"
+# 		message = "Greetings from Common Enterance Test !! Here is your otp- " + otp
+# 		send_mail(
+
+#  			subject,
+ 			
+#  			message,
+ 			
+#  			'nishchayjain2k@gmail.com',
+ 			
+#  			[sendto_email],
+ 			
+#  			fail_silently= False,
+#  			)
+# 		return Response({"email": sendto_email,"otp" : otp}, status =200)
 

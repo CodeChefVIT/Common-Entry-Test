@@ -6,6 +6,8 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from rest_framework.authtoken.models import Token
 
+
+
 # Create your models here.
 
 class AccountModel(models.Model):
@@ -15,7 +17,7 @@ class AccountModel(models.Model):
 	registration_number = models.CharField(max_length=50)
 	phone  = models.CharField(max_length=20,default=0)
 	text = models.BooleanField(default=False)
-
+	#email = models.EmailField(max_length = 254) 
 
 @receiver(post_save, sender=settings.AUTH_USER_MODEL)
 def create_auth_token(sender, instance = None, created = False, **kwargs):

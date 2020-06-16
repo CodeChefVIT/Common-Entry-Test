@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'djoser',
     'rest_framework',
     'rest_framework.authtoken',
+    'clubs',
 
 ]
 
@@ -79,10 +80,9 @@ TEMPLATES = [
 WSGI_APPLICATION = 'commontest.wsgi.application'
 
 REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-
-       'rest_framework.authentication.TokenAuthentication',   
-    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': ('rest_framework.authentication.TokenAuthentication',),
+    'DEFAULT_AUTHENTICATION_CLASSES': ('rest_framework_simplejwt.authentication.JWTAuthentication',)   
+    
 }
 
 
