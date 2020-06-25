@@ -7,18 +7,19 @@ from django.contrib.auth.models import User
 from rest_framework.permissions import IsAuthenticated,AllowAny
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
+from django.core.mail import send_mail
 #from questions.models import paper
 # from django.contrib.auth.hashers import check_password
 #from rest_framework.authentication import SessionAuthentication, BasicAuthentication
 from rest_framework.authtoken.models import Token
-
+import uuid
 
 class RegistrationView(APIView):
 	parser_classes = [JSONParser]
 	def post(self,request):
 		try:
 			dicti = {
-				'username' : request.data['username'],
+				'username' : request.data['username'], #this username field means email
 				'password' : request.data['password'],
 				'first_name' : request.data['first_name'],
 				'last_name' : request.data['last_name']
@@ -116,23 +117,23 @@ class ProfileView(APIView):
 # 					'message' : 'Enter All the Data'
 # 				},status = 400)
 
-# class OTPverification(APIView):
-# 	def post(self, request):
-# 		sendto_email = request.data["email"]
-# 		otp=uuid.uuid4().hex[:6].upper()
-# 		subject ="OTP for CET Login"
-# 		message = "Greetings from Common Enterance Test !! Here is your otp- " + otp
-# 		send_mail(
+class OTPverification(APIView):
+	def post(self, request):
+		sendto_email = request.data["email"]
+		otp=uuid.uuid4().hex[:6].upper()
+		subject ="OTP for CET Login"
+		message = "Greetings from Common Enterance Test !! Here is your otp- " + otp
+		send_mail(
 
-#  			subject,
+ 			subject,
  			
-#  			message,
+ 			message,
  			
-#  			'nishchayjain2k@gmail.com',
+ 			'commonentrytest@gmail.com',
  			
-#  			[sendto_email],
+ 			[sendto_email],
  			
-#  			fail_silently= False,
-#  			)
-# 		return Response({"email": sendto_email,"otp" : otp}, status =200)
+ 			fail_silently= False,
+ 			)
+		return Response({"email": sendto_email,"otp" : otp}, status =200)
 

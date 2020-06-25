@@ -13,7 +13,7 @@ from rest_framework.authtoken.models import Token
 class AccountModel(models.Model):
 	id = models.UUIDField(default=uuid.uuid4,primary_key=True)
 	user = models.OneToOneField(User,on_delete=models.CASCADE)
-	domain = models.CharField(max_length=50)
+	branch = models.CharField(max_length=50)
 	registration_number = models.CharField(max_length=50)
 	phone  = models.CharField(max_length=20,default=0)
 	text = models.BooleanField(default=False)

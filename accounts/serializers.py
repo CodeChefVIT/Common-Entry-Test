@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from .models import AccountModel
-from questions.models import paper
+#from questions.models import paper
 
 
 class AccountSerializer(serializers.ModelSerializer):
