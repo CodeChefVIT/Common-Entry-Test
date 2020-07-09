@@ -22,5 +22,5 @@ def show_list(request):
 		serializers=ClubsSerializer(data=request.data)
 		if (serializers.is_valid()):
 			serializers.save()
-			return Response(serializers.data,status=status.HTTP_201_CREATED)
-		return Response(serializers.errors,status=status.HTTP_BAD_REQUEST)
+			return Response(serializers.data,status=201)
+		return Response(serializers.errors,status=400)

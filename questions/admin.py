@@ -1,6 +1,5 @@
-# from django.contrib import admin
+from django.contrib import admin
 
-# # Register your models here.
-# from .models import paper
-
-# admin.site.register(Clubs)
+# Register your models here.
+from .models import questions
+admin.site.register(questions)
