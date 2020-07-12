@@ -22,7 +22,11 @@ class Questions(APIView):
 class RandomQuestionSender(APIView):
 	def post(self, request):
 		queryset=questions.objects.all()
-		random_questions_to_send=random.sample(queryset,10)
+		#return Response(len(queryset))
+		l=[]
+		for i in range(0,len(queryset)):
+			l.append(queryset[i])
+		random_questions_to_send=random.sample(l,10)
 		serializers=questionsSerializer(random_questions_to_send,many=True)
 		return Response(serializers.data,status=200)
 
