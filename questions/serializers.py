@@ -8,3 +8,7 @@ class questionsSerializer(serializers.ModelSerializer):
         model = questions
         fields = '__all__'
 
+class RandomquestSerializer(serializers.ModelSerializer):
+	class Meta:
+		model=questions
+		fields='__all__'
