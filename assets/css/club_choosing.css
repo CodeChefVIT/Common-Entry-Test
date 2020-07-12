@@ -278,7 +278,12 @@ tr{
       .form-title {
           font-size: 20px;
     }
-  }
+}
+@media only screen and (max-width: 1000px) {
+    
+    .table{width:100%;}
+    .container{padding-left:5%;padding-right:5%;}
+      }
 /* Remove default checkbox */
 [type="checkbox"]:not(:checked),
 [type="checkbox"]:checked {
