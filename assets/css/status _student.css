@@ -4,7 +4,7 @@
 {
 font-family: Raleway;
 margin: 0 auto;
-padding: 1em 3em;
+padding: 1em 1em;
 text-align: center;
 }
 
@@ -51,7 +51,7 @@ transform: translateY(0px);
 
 
 .col-xs-12.col-sm-12.col-md-12.col-lg-12 {
-    padding: 0 20% 0 20%;
+    padding: 0 10% 0 10%;
   }
   
   .margin-top-25 {
@@ -141,6 +141,10 @@ transform: translateY(0px);
           font-size: 20px;
     }
   }
+@media only screen and (max-width: 1000px) {
+    
+    .table{width:100%;}
+  
    .acc{
         color: white;
             margin-top:20px;

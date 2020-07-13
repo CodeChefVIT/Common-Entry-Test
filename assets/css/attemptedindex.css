@@ -102,7 +102,8 @@ body {
   }
   .margining {
     margin-top:20px;
-    
+    align-items: center;
+    align-content: center;
   
   }
   
@@ -185,7 +186,15 @@ body {
   }
   
   
-
+  ::-webkit-scrollbar{
+    width: 12px;
+    background-color: #5c72d4;
+ 
+}
+::-webkit-scrollbar-thumb{
+    background-color: white;
+    border-radius: 10px;
+}
 
 /********************************************************************************************/
   
@@ -194,7 +203,7 @@ body {
       
       color:white;
     padding-bottom: 30px;
-    font-size:78em;
+    font-size:75em;
     font-family: Raleway;
   }
   
@@ -337,7 +346,7 @@ body {
 
 
   
-  @media( max-width : 585px ){
+  @media( max-width : 768px ){
 
 
    .Main-heading {
@@ -361,13 +370,14 @@ body {
      width: 90%;
      margin: 10px auto;
      text-align: center;
-     color:#000000;
+     color:white;
      font-size:1.4em;
      font-weight: 100000em;
    }
     .board {
-      width: 90%;
+      width: 105%;
       height:auto !important;
+      align-content: center;
     }
     span.round-tabs {
       font-size:16px;
@@ -398,28 +408,44 @@ body {
     left:50%;
   }
 
-  .mainimage{
+
+ul{
     
-   opacity:0.4;
-   object-fit: cover;
- }
+    padding-inline-start:2rem;
+    padding-inline-end:2rem;
+  padding-right: 0;
+;
+}
+.container{
+    padding-left: 0;
+    padding-right: 0;
+  
+}
 
 
+.folded-corner{
+    margin-right: 0px;
+    margin-left: 0px;
+    display: flex;
+    justify-content: center
+}
 
- section {
-	min-height: 50vh;
+ .section123 {
+  min-height: 17vh;
+  background-color: #5c72d4;
 	position: relative;
 	overflow: hidden;
 	width: 100%;
 }
 
 section .wave {
+  
 	background-image: url('https://firebasestorage.googleapis.com/v0/b/fire-fotos-8e3f9.appspot.com/o/img%2Fwave.webp?alt=media&token=a655a7d6-c5d2-40eb-a5ed-2ed9a12d5364');
 	background-size: 1000px 100px;
 	bottom: 0;
 	height: 100px;
 	left: 0;
-	position: absolute;
+	position: fixed;
 	width: 100%;
 }
 
@@ -430,21 +456,21 @@ section .wave.wave-one {
 
 section .wave.wave-two {
 	animation: wave-two 15s -5s linear infinite;
-	bottom: 10px;
+	bottom: 5px;
 	opacity: 0.5;
 	z-index: 3;
 }
 
 section .wave.wave-three {
 	animation: wave-one 30s -2s linear infinite;
-	bottom: 15px;
+	bottom: 8px;
 	opacity: 0.2;
 	z-index: 2;
 }
 
 section .wave.wave-four {
 	animation: wave-two 5s -5s linear infinite;
-	bottom: 20px;
+	bottom: 10px;
 	opacity: 0.7;
 	z-index: 1;
 }

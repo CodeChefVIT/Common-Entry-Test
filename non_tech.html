@@ -12,188 +12,7 @@
     <link rel="stylesheet" href="assets/css/list.css"> 
 
       <title>Non-Technical</title>
-<!--
-      <style>@import 'https://fonts.googleapis.com/css?family=Raleway';
-body{
-    font-size: 14px;
-    font-weight: 400;
-    margin: 0;
-    padding: 0;
-    background:white ;
-    /* background:black linear-gradient(to bottom,white,#000000,white); */ 
-}
 
-h1{
-text-align: center;
-color:#5c72d4 ;
-    padding-top: 20px;
-}
-
-        @import 'https://fonts.googleapis.com/css?family=Raleway';
-
- .navbar       .container
-{
-    font-family: Raleway;
-    margin: 0 auto;
-	padding: 1em 3em;
-	text-align: center;
-}
-
-.navbar .container a
-{
-    color: #FFF;
-    text-decoration: none;
-    font: 17px Raleway;
-    margin: 0px 5px;
-    padding: 5px 5px;
-    position: relative;
-    z-index: 0;
-    cursor: pointer;
-}
-.topBotomBordersIn a:before, .topBotomBordersIn a:after
-{
-    position: absolute;
-    left: 0px;
-    width: 100%;
-    height: 2px;
-    background: white;
-    content: "";
-    opacity: 0;
-    transition: all 0.3s;
-}
-
-.topBotomBordersIn a:before
-{
-    top: 0px;
-    transform: translateY(-10px);
-}
-
-.topBotomBordersIn a:after
-{
-    bottom: 0px;
-    transform: translateY(10px);
-}
-
-.topBotomBordersIn a:hover:before, .topBotomBordersIn a:hover:after
-{
-    opacity: 1;
-    transform: translateY(0px);
-}
-
-
-
-
-.searchbar{
-    margin-bottom:2em;
-    margin-top: 2em;
-    height: 60px;
-    background-color:#5c72d4;
-    border-radius: 30px;
-    padding: 10px;
-}
-.search_input
-{
-    color:white ;
-    border: 0;
-    outline: 0;
-    background: none;
-    width:0;
-    line-height:40px;
-    transition:width 0.4s linear;
-}
-.searchbar:hover>.search_input
-{
-    padding: 0 10px;
-    width:250px;
-    caret-color:white;
-    transition: width 0.4s linear;
-}
-.searchbar:hover>.search_icon
-{
-    background:white;
-    color: #5c72d4;
-}
-.search_icon
-{
-    height:40px;
-    width:40px;
-    float:right;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    border-radius:50%;
-    color:white;
-    text-decoration:none;
-}
-::placeholder { 
-  color: white;
-  opacity: 1; 
-}
-h3{
-  font-size: 24px;
-    font-weight: bold;
-}
-#team img{
-    margin-top: -70px; 
-    height: 100px;
-    width:100px;
-    display: inline-block;
-    margin-bottom:5px;
-    
-}
-#team a{
-    text-decoration: none;
-}
-#team p{
-    font-weight: 500;
-}
-#team .card{
-    transition:all 0.3s ease-in;
-    -webkit-transition:all 0.3s ease-in;
-    -moz-transition:all 0.3s ease-in;
-    margin-bottom: 40px;
-    margin-top: 20px;
-    margin-left: 0;
-    margin-right: 0;
-    background-color:white/*  #2c2c2c */;
-    color: #5c72d4;
-    border:none;
-    min-height: 270px;
-    max-height: 270px;
-    border-radius: 5px;
-    /* box-shadow: 5px 5px 15px #ebebf5; */ 
--moz-box-shadow: inset 0 0 20px #5c72d4 ;
-       -webkit-box-shadow:inset 0 0 20px #5c72d4;
-       box-shadow:inset 0 0 20px #5c72d4;  
-}
-#team .card:hover{
-    transform: scale(1.05);
-    background:#5c72d4;
-    color:white;
-    border-radius: 10px;
-    border:none;
-    /* box-shadow: 5px 5px 10px #2C2C2C; */ 
-    -moz-box-shadow: inset 0 0 20px white ;
-             -webkit-box-shadow:inset 0 0 20px white;
-             box-shadow:inset 0 0 20px white; 
-}
-footer {
-    font-size: 16px;
-    color: white;
-    text-align: center;
-}
-footer hr{
-    background-color: white;
-    height:0.7px;
-}
-footer a{
-    color: white;
-}
-footer a:hover{
-    color:white;
-}
-</style>
--->
 </head>
  
  
@@ -224,17 +43,21 @@ footer a:hover{
    
    <div class="container h-100">
       <div class="d-flex justify-content-center h-100">
-        <div class="searchbar">
-          <input class="search_input" type="text" name="" placeholder="Search a technical club..." >
-          <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+  <div class="searchbox">
+    <input type="text" class="input" placeholder="Search...">
+      
+    <div class="searchbtn">
+      <i class="fas fa-search"></i>
     </div>
-    </div>
+    
+  </div>
+</div>
 </div>
 
     <section id="team">
        <div class="container text-center">
           <div class="row my-5">
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
              <a href="https://www.instagram.com/adivit.student/" target="_blank" style="text-decoration: none">
               <div class="card" >
                <div class="card-body">
@@ -246,7 +69,7 @@ footer a:hover{
                </div>
                 </a>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
               <a href="https://aiesec.org/partner/346704" target="_blank" >
               <div class="card  mx-auto mx-md2" >
                <div class="card-body">
@@ -259,7 +82,7 @@ footer a:hover{
                 </a>
             </div>
             
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
              <a href="https://www.facebook.com/aikyataan.vitu" target="_blank">
               <div class="card  mx-auto mx-md2" >
                <div class="card-body">
@@ -271,7 +94,7 @@ footer a:hover{
                </div>
                 </a>
             </div>
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
              <a href="https://www.facebook.com/asceVIT/" target="_blank">
               <div class="card  mx-auto mx-md2" >
                <div class="card-body">
@@ -287,7 +110,7 @@ footer a:hover{
          
          </div>
           <div class="row my-5">
-                         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                 <a href="https://www.facebook.com/pages/category/Board-Game/Board-Gamers-Club-VIT-108382307239266/" target="_blank">
               <div class="card mx-auto mx-md2" >
                <div class="card-body">
@@ -298,7 +121,7 @@ footer a:hover{
                </div>
                 </a>
             </div>
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
               <a href="https://www.facebook.com/bnbvit/" target="_blank">
               <div class="card mx-auto mx-md2" >
                <div class="card-body">
@@ -310,7 +133,7 @@ footer a:hover{
                 </a>
             </div>   
 
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
              <a href="https://www.facebook.com/creativityclubvit/" target="_blank">
               <div class="card mx-auto mx-md2" >
                <div class="card-body">
@@ -321,7 +144,7 @@ footer a:hover{
                </div>
                 </a>
             </div>  
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
              <a href="https://in.linkedin.com/company/c-u-b-e-vit?trk=public_profile_experience-item_result-card_subtitle-click" target="_blank" >
               <div class="card mx-auto mx-md2" >
                <div class="card-body">
@@ -336,7 +159,7 @@ footer a:hover{
 
          </div>
           <div class="row my-5">
-                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                 <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
              <a href="https://www.facebook.com/culinaryclubvit/" target="_blank">
               <div class="card mx-auto mx-md2" >
                <div class="card-body">
@@ -348,7 +171,7 @@ footer a:hover{
                </div>
                 </a>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
              <a href="https://www.facebook.com/vitcyclingclub" target="_blank">
               <div class="card mx-auto mx-md2" >
                <div class="card-body">
@@ -359,7 +182,7 @@ footer a:hover{
                </div>
                 </a>
             </div>  
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
              <a href="https://www.facebook.com/vitdebsoc/" target="_blank">
               <div class="card mx-auto mx-md2" >
                <div class="card-body">
@@ -372,7 +195,7 @@ footer a:hover{
                 </a>  
             </div>     
           
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">            
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">            
              <a href="https://www.facebook.com/decchronicle/" target="_blank">
               <div class="card mx-auto mx-md2" >
                <div class="card-body">
@@ -387,7 +210,7 @@ footer a:hover{
         </div>
          
           <div class="row my-5">
-               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+               <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
              <a href="https://www.facebook.com/DreamMerchantsVIT/" target="_blank" style="text-decoration: none">
               <div class="card" >
                <div class="card-body">
@@ -398,7 +221,7 @@ footer a:hover{
                </div>
                 </a>
             </div>  
-             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+             <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
              <a href="https://www.facebook.com/vitenglishliteraryassociation/" target="_blank">
               <div class="card mx-auto mx-md2" >
                <div class="card-body">
@@ -410,7 +233,7 @@ footer a:hover{
                </div>
                 </a> 
             </div>
-               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+               <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
              <a href="https://vit.ac.in/campus/Clubs/Health%20%26%20Wellness" target="_blank">
               <div class="card mx-auto mx-md2" >
                <div class="card-body">
@@ -421,7 +244,7 @@ footer a:hover{
                </div>
                 </a>
             </div>
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
              <a href="https://www.facebook.com/hla.vitu/" target="_blank">
               <div class="card mx-auto mx-md2" >
                <div class="card-body">
@@ -437,7 +260,7 @@ footer a:hover{
        
          </div>
           <div class="row my-5">
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
              <a href="https://www.facebook.com/healthclubvit/" target="_blank">
               <div class="card mx-auto mx-md2" >
                <div class="card-body">
@@ -448,7 +271,7 @@ footer a:hover{
                </div>
                 </a> 
             </div>  
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
              <a href="https://www.facebook.com/heartsvit/" target="_blank" style="text-decoration: none">
               <div class="card" >
                <div class="card-body">
@@ -459,7 +282,7 @@ footer a:hover{
                </div>
                 </a>
             </div> 
-               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+               <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
              <a href="https://www.facebook.com/heritageclubvit/" target="_blank">
               <div class="card mx-auto mx-md2" >
                <div class="card-body">
@@ -469,8 +292,8 @@ footer a:hover{
                </div>
                </div>
                 </a> 
-            </div>
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            </div6
+              <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
              <a href="https://www.facebook.com/vitidsa/" target="_blank" style="text-decoration: none">
               <div class="card" >
                <div class="card-body">
@@ -483,7 +306,7 @@ footer a:hover{
             </div>
            </div>
               <div class="row mb-5">
-               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+               <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
              <a href="https://www.facebook.com/vitu.kla/" target="_blank">
               <div class="card mx-auto mx-md2" >
                <div class="card-body">
@@ -494,7 +317,7 @@ footer a:hover{
                </div>
                 </a>  
             </div>
-               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+               <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
              <a href="https://www.facebook.com/musicclubvit/" target="_blank">
               <div class="card mx-auto mx-md2" >
                <div class="card-body">
@@ -506,7 +329,7 @@ footer a:hover{
                 </a>  
             </div>
                
-                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                 <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
              <a href="https://vit.ac.in/campus/Clubs/Health%20%26%20Wellness" target="_blank">
               <div class="card mx-auto mx-md2" >
                <div class="card-body">
@@ -517,7 +340,7 @@ footer a:hover{
                </div>
                 </a>
             </div>    
-                       <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                       <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
              <a href="https://vit.ac.in/campus/Clubs/Arts%26Cultural" target="_blank">
               <div class="card mx-auto mx-md2" >
                <div class="card-body">
@@ -530,7 +353,7 @@ footer a:hover{
             </div>       
          </div>
 <div class="row my-5">
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
              <a href="https://www.facebook.com/pixelatevit" target="_blank">
               <div class="card mx-auto mx-md2" >
                <div class="card-body">
@@ -542,7 +365,7 @@ footer a:hover{
                </div>
                </a> 
             </div>
-                   <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                   <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
              <a href="https://www.facebook.com/sahiti.vit/" target="_blank">
               <div class="card mx-auto mx-md2" >
                <div class="card-body">
@@ -554,7 +377,7 @@ footer a:hover{
                </div>
                 </a>
             </div>
-                       <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                       <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
             <a href="https://www.facebook.com/solaiclubvit/" target="_blank">
               <div class="card mx-auto mx-md2" >
                <div class="card-body">
@@ -566,7 +389,7 @@ footer a:hover{
                </div>
              </a>
             </div>   
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
              <a href="https://www.facebook.com/pages/category/Performance-Art/Spic-Macay-Vit-Chapter-668403383317525/" target="_blank">
               <div class="card mx-auto mx-md2" >
                <div class="card-body">
@@ -581,7 +404,7 @@ footer a:hover{
     
             </div>
  <div class="row my-5">
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
              <a href="https://www.facebook.com/vitu.tla/" target="_blank">
               <div class="card mx-auto mx-md2" >
                <div class="card-body">
@@ -593,7 +416,7 @@ footer a:hover{
                </div>
             </a> 
             </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
              <a href="https://www.facebook.com/Tedxvitvellore/" target="_blank">
               <div class="card mx-auto mx-md2" >
                <div class="card-body">
@@ -605,7 +428,7 @@ footer a:hover{
                </div>
                 </a> 
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
              <a href="https://www.facebook.com/vit.thanima/" target="_blank">
               <div class="card mx-auto mx-md2" >
                <div class="card-body">
@@ -618,7 +441,7 @@ footer a:hover{
                </div>
                 </a>
             </div>   
-                   <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                   <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
              <a href="https://www.facebook.com/thefineartsclubvit/" target="_blank">
               <div class="card mx-auto mx-md2" >
                <div class="card-body">
@@ -632,7 +455,7 @@ footer a:hover{
                  
 </div>
           <div class="row my-5">
-               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+               <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
              <a href="https://www.thepcvit.com/" target="_blank">
               <div class="card mx-auto mx-md2" >
                <div class="card-body">
@@ -645,7 +468,7 @@ footer a:hover{
                 </a>
             </div>
                       
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
              <a href="https://www.facebook.com/pg/The_Next_Chapter_VIT-114335669976334/posts/?ref=page_internal" target="_blank">
               <div class="card mx-auto mx-md2" >
                <div class="card-body">
@@ -658,12 +481,12 @@ footer a:hover{
                </div>
                 </a>
             </div>   
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
             <a href="https://www.facebook.com/thephotographyclubvit/" target="_blank">
               <div class="card mx-auto mx-md2" >
                <div class="card-body">
                    <img src="assets/img/photography.png" alt="" class="img-fluid rounded-circle mb-3">
-                   <h3>The Photography Club VIT</h3>
+                   <h3>The Photography Club</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p>
                                 
                </div>
@@ -671,12 +494,12 @@ footer a:hover{
                 </a>
             </div> 
              
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
              <a href="https://www.facebook.com/vitquizclub/" target="_blank">
               <div class="card mx-auto mx-md2" >
                <div class="card-body">
                    <img src="assets/img/quiz.png" alt="" class="img-fluid rounded-circle mb-3">
-                   <h3>DBQC</h3>
+                   <h3>The DBQC</h3>
 <!--                   <p>The VIT Quiz Club</p>-->
                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi quibusdam placeat dignissimos hic necessitatibus debitis voluptatem neque quo odio.</p>
                                 
@@ -688,7 +511,7 @@ footer a:hover{
                        
          </div>
           <div class="row my-5">
-               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+               <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
              <a href="https://www.facebook.com/toastmastersvit/" target="_blank" >
               <div class="card mx-auto mx-md2" >
                <div class="card-body">
@@ -700,7 +523,7 @@ footer a:hover{
                </div>
                 </a> 
             </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
              <a href="https://www.facebook.com/VitTrekkingClub/" target="_blank">
               <div class="card mx-auto mx-md2" >
                <div class="card-body">
@@ -712,7 +535,7 @@ footer a:hover{
                </div>
                </a>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
              <a href="https://www.facebook.com/vitanimationclub/" target="_blank">
               <div class="card mx-auto mx-md2" >
                <div class="card-body">
@@ -724,7 +547,7 @@ footer a:hover{
                </div>
                 </a>
             </div>  
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
              <a href="https://www.facebook.com/vitdc/" target="_blank">
               <div class="card mx-auto mx-md2" >
                <div class="card-body">
@@ -740,7 +563,7 @@ footer a:hover{
                       
          </div>
           <div class="row my-5">
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
              <a href="https://www.facebook.com/VitDramaClub/" target="_blank">
               <div class="card mx-auto mx-md2" >
                <div class="card-body">
@@ -752,7 +575,7 @@ footer a:hover{
                </div>
                 </a>
             </div>
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
              <a href="https://www.facebook.com/VITFilmSociety/" target="_blank">
               <div class="card mx-auto mx-md2" >
                <div class="card-body">
@@ -764,7 +587,7 @@ footer a:hover{
                </div>
                </a> 
             </div>
-               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+               <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
              <a href="https://www.facebook.com/MUNSocVIT/" target="_blank">
               <div class="card mx-auto mx-md2" >
                <div class="card-body">
@@ -778,7 +601,7 @@ footer a:hover{
                 </a>
             </div>  
 
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
              <a href="https://www.facebook.com/vitspartans/" target="_blank">
               <div class="card mx-auto mx-md2" >
                <div class="card-body">
@@ -793,7 +616,7 @@ footer a:hover{
                 
            </div>
             <div class="row my-5">
-                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
              <a href="https://www.facebook.com/vitcommunityradio/" target="_blank" >
               <div class="card mx-auto mx-md2" >
                <div class="card-body">
@@ -805,7 +628,7 @@ footer a:hover{
                </div>
                 </a>
             </div>
-                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
              <a href="https://www.facebook.com/yogaclubvit/" target="_blank">
               <div class="card mx-auto mx-md2" >
                <div class="card-body">
@@ -817,7 +640,7 @@ footer a:hover{
                </div>
                  </a> 
             </div>
-                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
              <a href="http://yuvamarathi.in/" target="_blank">
               <div class="card mx-auto mx-md2" >
                <div class="card-body">
@@ -887,5 +710,12 @@ footer a:hover{
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script>
+     $(".searchbtn").click(function(){
+  $(this).toggleClass("bg-white");
+  $(".fas").toggleClass("color-bg");
+  $(".input").focus().toggleClass("active-width").val('');
+});</script>
+  
   </body>
 </html>
