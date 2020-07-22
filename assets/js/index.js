@@ -8,13 +8,21 @@ function Validateemail() {
 }
 function Validateemail1() {
     console.log(document.getElementById('email1').value)
-    if(document.getElementById('email').value.endsWith('vitstudent.ac.in')){
+    if(document.getElementById('email1').value.endsWith('vitstudent.ac.in')){
         return true;
     }
     alert("Please enter a valid email address.");
     return false;
 }
 
+function ValidatePass() {
+    if (document.getElementById("password").value.length > 5)
+        return true;
+    else
+        alert("Wrong password");
+    return false;
+
+}
 function ValidatePass() {
     if (document.getElementById("password").value.length > 5)
         return true;
@@ -33,7 +41,7 @@ function ValidateRgno() {
 }
 
 function ValidatePassSignup() {
-    if (document.getElementById("password").value.length > 5)
+    if (document.getElementById("password1").value.length > 5)
         return true;
     else
         alert("Enter minimum 6 Characters for password");
@@ -48,7 +56,9 @@ function validateForm(){
      var branch= document.getElementById('branch');
      var rgno= document.getElementById('rgno');
   
-     if(Validateemail1() && ValidatePassSignup() && ValidateRgno())
+     if(document.getElementById('fname') &&
+        document.getElementById('lname') && document.getElementById('email') && document.getElementById('password1') && document.getElementById('branch')&&
+        document.getElementById('rgno')  && Validateemail1() && ValidatePassSignup() && ValidateRgno())
      {
          SignUp()
      }
