@@ -1,7 +1,14 @@
-
 function Validateemail() {
     console.log(document.getElementById('email').value)
-    if(document.getElementById('email').value.includes('vitstudent.ac.in')){
+    if(document.getElementById('email').value.endsWith('vitstudent.ac.in')){
+        return true;
+    }
+    alert("Please enter a valid email address.");
+    return false;
+}
+function Validateemail1() {
+    console.log(document.getElementById('email1').value)
+    if(document.getElementById('email').value.endsWith('vitstudent.ac.in')){
         return true;
     }
     alert("Please enter a valid email address.");
@@ -41,9 +48,7 @@ function validateForm(){
      var branch= document.getElementById('branch');
      var rgno= document.getElementById('rgno');
   
-     if(document.getElementById('fname') &&
-        document.getElementById('lname') && document.getElementById('email') && document.getElementById('password') && document.getElementById('branch')&&
-        document.getElementById('rgno')  && ValidatePassSignup() && ValidateRgno() && Validateemail())
+     if(Validateemail1() && ValidatePassSignup() && ValidateRgno())
      {
          SignUp()
      }
@@ -66,10 +71,8 @@ function validateLogin(){
 
 
 function Login() {
-    document.getElementById("signin").disabled = true
     var data = {
-                    username: document.getElementById("email").value,
-                password:document.getElementById("password").value
+        username: document.getElementById("email").value, password:document.getElementById("password").value
                 }
             
               var xh = new XMLHttpRequest();
@@ -80,15 +83,12 @@ function Login() {
         if(this.status==200)
         {
             alert("Login Success")
-            document.getElementById("signin").disabled = false
             var data = JSON.parse(this.responseText)
             localStorage.setItem("JWT_Token", "JWT " + data.token)
             window.location.replace('index.html')
         }
         else{
             alert('Invalid login credentials')
-            document.getElementById("password").value = ''
-            document.getElementById("signin").disabled = false
         }
 }
 }
@@ -96,14 +96,13 @@ function Login() {
 
 
 function SignUp() {
-            document.getElementById("signup").disabled = true
            var data={
-                    username: document.getElementById("email").value,
-                    first_name: document.getElementById("fname").value,
-                    last_name: document.getElementById("lname").value,
-                    password: document.getElementById("password").value,
-                     branch: document.getElementById("branch").value, registration_number:
-                    document.getElementById("rgno").value
+            username:document.getElementById("email").value,
+               first_name: document.getElementById("fname").value,
+               last_name: document.getElementById("lname").value,
+               password: document.getElementById("password").value,
+               branch: document.getElementById("branch").value,
+               registration_number:document.getElementById("rgno").value
                 }
                    var xh = new XMLHttpRequest();
     xh.open("POST", "https://cetproject.herokuapp.com/auth/signup", true)
