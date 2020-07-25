@@ -26,7 +26,7 @@ class RandomQuestionSender(APIView):
 		l=[]
 		for i in range(0,len(queryset)):
 			l.append(queryset[i])
-		random_questions_to_send=random.sample(l,10)
+		random_questions_to_send=random.sample(l,5)
 		serializers=questionsSerializer(random_questions_to_send,many=True)
 		return Response(serializers.data,status=200)
 

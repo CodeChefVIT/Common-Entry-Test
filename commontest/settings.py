@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'clubs',
+    'corsheaders'
 
 ]
 
@@ -145,3 +146,5 @@ EMAIL_HOST_PASSWORD= "Codechef@vit"
 
 # Activate Django-Heroku.
 django_heroku.settings(locals())
+
+CORS_ORIGIN_ALLOW_ALL= True

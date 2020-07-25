@@ -1,6 +1,7 @@
 asgiref==3.2.10
 dj-database-url==0.5.0
 Django==3.0.7
+django-cors-headers==3.4.0
 django-heroku==0.3.1
 django-templated-mail==1.1.1
 djangorestframework==3.11.0
