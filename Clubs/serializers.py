@@ -1,6 +1,6 @@
 
 from rest_framework import serializers
-from clubs.models import Clubs
+from Clubs.models import Clubs
 
 
 class ClubsSerializer(serializers.ModelSerializer):

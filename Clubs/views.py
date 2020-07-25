@@ -10,7 +10,7 @@ from rest_framework import status,filters
 
 
 
-class ClubsAPIView(generics.ListCreateAPIView):
+class clubsAPIView(generics.ListCreateAPIView):
     queryset = Clubs.objects.all()
     serializer_class = ClubsSerializer
     search_fields = ['name','fullname']
