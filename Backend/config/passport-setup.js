@@ -27,12 +27,20 @@ passport.use(
                 console.log('user is: ', currentUser);
                 done(null, currentUser);
             } else {
+                var email = profile._json.email;
+                var res = email.split("@")[1];
+                console.log(typeof(res));
+                if (res.includes("gmail")){
+                    console.log('I am Included as Gmail ')
+                    done("Error Is Here !! ", null )
+                }
                 new User({
-					_id: new mongoose.Types.ObjectId(),
-                    googleId: profile.id,
-                    name: profile.displayName,
-                    email:profile._json.email
-                }).save().then((newUser) => {
+					    _id: new mongoose.Types.ObjectId(),
+                        googleId: profile.id,
+                        name: profile.displayName,
+                        email:profile._json.email
+                })
+                .save().then((newUser) => {
                     console.log('created new user: ', newUser);
                     done(null, newUser);
                 });
