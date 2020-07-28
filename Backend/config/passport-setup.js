@@ -29,11 +29,10 @@ passport.use(
             } else {
                 var email = profile._json.email;
                 var res = email.split("@")[1];
-                console.log(typeof(res));
-                if (res.includes("gmail")){
-                    console.log('I am Included as Gmail ')
-                    done("Error Is Here !! ", null )
-                }
+                if (!res.includes("gmail")){
+                    console.log('I am Included as non Gmail ')
+                    done("Error Is Here !! , Non Gmail Guy I am ", null )
+                } // Similar Stuff For Verifying VIT Student Id .
                 new User({
 					    _id: new mongoose.Types.ObjectId(),
                         googleId: profile.id,
