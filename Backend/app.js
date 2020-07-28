@@ -42,6 +42,9 @@ app.use(function(req, res, next) {
     res.locals.error_msg = req.flash('error_msg');
     res.locals.error = req.flash('error');
     next();
-});   
+});
+
+// Defining Routes For Auth 
+app.use(require('./routers/auth'))
 
 app.listen(PORT, console.log(`Server Running on Port ${PORT}`))
