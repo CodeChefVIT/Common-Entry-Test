@@ -7,6 +7,10 @@ const session = require('express-session')
 const MongoStore = require('connect-mongo')(session)
 require('dotenv').config();
 
+// Passport Middleware
+require('./config/passport-setup')
+
+
 // Connecting Database 
 require('./database/mongoose')
 

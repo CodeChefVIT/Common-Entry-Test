@@ -7,14 +7,14 @@ const passport = require("passport");
 const router = express.Router();
 
 router.get(
-	"/google",
+	"/auth/google",
 	passport.authenticate("google", {
 		scope: ["profile", "email"],
 	})
 );
 
 ///Callback route for google to redirect
-router.get("/google/redirect", passport.authenticate('google'),(req, res, next) => {
+router.get("/auth/google/redirect", passport.authenticate('google'),(req, res, next) => {
 	user = req.user
 	res.send(user)
 });
