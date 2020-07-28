@@ -7,6 +7,9 @@ const session = require('express-session')
 const MongoStore = require('connect-mongo')(session)
 require('dotenv').config();
 
+// Connecting Database 
+require('./database/mongoose')
+
 
 const app = express()
 
