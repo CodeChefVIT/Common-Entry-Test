@@ -2,6 +2,7 @@ const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const User = require('../models/user-model');
 const mongoose = require('mongoose');
+require('dotenv').config();
 
 
 passport.serializeUser((user, done) => {
@@ -17,19 +18,15 @@ passport.deserializeUser((id, done) => {
 
 passport.use(
     new GoogleStrategy({
-        // options for google strategy
-        clientID: /* your clientID*/"" ,
-        clientSecret:/*your clienSecret*/"",
+        clientID: process.env.CLIENTID ,
+        clientSecret:process.env.CLIENTSECRET,
         callbackURL: '/auth/google/redirect'
     }, (accessToken, refreshToken, profile, done) => {
-        // check if user already exists in our own db
         User.findOne({googleId: profile.id}).then((currentUser) => {
             if(currentUser){
-                // already have this user
                 console.log('user is: ', currentUser);
                 done(null, currentUser);
             } else {
-                // if not, create user in our db
                 new User({
 					_id: new mongoose.Types.ObjectId(),
                     googleId: profile.id,
