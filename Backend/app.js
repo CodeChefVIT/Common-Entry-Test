@@ -52,6 +52,6 @@ app.use(function(req, res, next) {
 app.use(require('./routers/auth'))
 
 // Route Posting Questions 
-app.use('/questions', )
+app.use('/questions', require('./routers/questions'))
 
 app.listen(PORT, console.log(`Server Running on Port ${PORT}`))
