@@ -69,8 +69,16 @@ router.patch('/updatequestion/:id', async (req, res) => {
 })
 
 // Route For Deleting The Questions in Questions Bank 
-router.delete('/deletequestion', async (req, res) => {
-
+router.delete('/deletequestion/:id', async (req, res) => {
+    var id = req.params.id ;
+    try {
+        const easyDelete = await Easy.findOneAndDelete({_id: id})
+        const moderateDelete = await Moderate.findOneAndDelete({_id: id})
+        const difficultDelete = await Difficult.findOneAndDelete({_id: id})
+    } catch (e) {
+        console.log(e);
+        res.send(e);
+    }
 })
 
 module.exports = router;
