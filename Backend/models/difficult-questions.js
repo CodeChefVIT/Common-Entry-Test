@@ -13,4 +13,4 @@ const difficultQuestionSchema = mongoose.Schema({
 })
 
 
-module.exports = mongoose.model('Difficult', moderateQuestionSchema)
+module.exports = mongoose.model('Difficult', difficultQuestionSchema)
