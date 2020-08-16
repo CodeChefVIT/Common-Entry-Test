@@ -42,4 +42,14 @@ router.get('/allquestions', async (req, res) => {
     }
 })
 
+// Route For Updating The Question Bank 
+router.patch('/updatequestion', async (req, res) => {
+
+})
+
+// Route For Deleting The Questions in Questions Bank 
+router.delete('/deletequestion', async (req, res) => {
+    
+})
+
 module.exports = router;
