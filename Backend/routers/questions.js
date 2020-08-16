@@ -52,14 +52,16 @@ router.patch('/updatequestion/:id', async (req, res) => {
         const difficultUpdate = await Difficult.findOneAndUpdate({_id: id},{$set: {question}})
         console.log(easyUpdate)
         console.log(moderateUpdate)
-        // var update ;
-        // if (easyUpdate != null)
-        //     update = (easyUpdate)
-        // if (moderateUpdate != null)
-        //     update = (moderateUpdate)
-        // if (difficultUpdate != null)
-        //     update = (difficultUpdate)
-        
+        console.log(difficultUpdate)
+        var update ;
+        if (easyUpdate != null)
+            update = await (easyUpdate)
+        if (moderateUpdate != null)
+            update = await (moderateUpdate)
+        if (difficultUpdate != null)
+            update = await (difficultUpdate)
+        update.question = question
+        res.send(update)
     } catch (e) {
         console.log(e);
         res.send(e);
