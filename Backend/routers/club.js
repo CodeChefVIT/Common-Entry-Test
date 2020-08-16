@@ -23,3 +23,5 @@ router.post('/addclub', async (req, res) => {
         res.send(e);
     }
 })
+
+module.exports = router;

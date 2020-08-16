@@ -43,13 +43,21 @@ router.get('/allquestions', async (req, res) => {
 })
 
 // Route For Updating The Question Bank 
-router.patch('/updatequestion', async (req, res) => {
-
+router.patch('/updatequestion/:id', async (req, res) => {
+    var id = req.params.id
+    const {type} = req.body ; 
+    try {
+        const update = await Easy.find({_id: id}) || Moderate.find({_id: id}) || Difficult.find({_id: id })
+        res.send(update);
+    } catch (e) {
+        console.log(e);
+        res.send(e);
+    }
 })
 
 // Route For Deleting The Questions in Questions Bank 
 router.delete('/deletequestion', async (req, res) => {
-    
+
 })
 
 module.exports = router;
