@@ -9,6 +9,10 @@ router.post('/addquestion', async (req, res) => {
     // Adding Status For The User Logged In 
 
     // End ( Temp Changes )
+
+    const {question} = req.body 
+    console.log(question)
+    res.send(question)
 })
 
 module.exports = router;
