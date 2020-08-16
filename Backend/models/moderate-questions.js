@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const easyQuestionSchema = mongoose.Schema({
+const moderateQuestionSchema = mongoose.Schema({
     question: {
         type: String
     },
@@ -11,5 +11,3 @@ const easyQuestionSchema = mongoose.Schema({
         type: String 
     }
 })
-
-module.exports = mongoose.model('Easy', easyQuestionSchema)
