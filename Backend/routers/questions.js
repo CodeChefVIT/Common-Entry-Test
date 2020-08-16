@@ -35,7 +35,7 @@ router.get('/allquestions', async (req, res) => {
         const easy = await Easy.find({})
         const moderate = await Moderate.find({})
         const difficult = await Difficult.find({})
-        res.send(easy, moderate, difficult)
+        res.send(easy +  '\n' + moderate + '\n' + difficult)
     } catch (e) {
         console.log(e);
         res.send(e);
