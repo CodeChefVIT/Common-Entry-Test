@@ -24,4 +24,9 @@ router.post('/addquestion', async (req, res) => {
     res.send(addition);
 })
 
+// Route For Getting Question Bank 
+router.get('/allquestions', async (req, res) => {
+    
+})
+
 module.exports = router;
