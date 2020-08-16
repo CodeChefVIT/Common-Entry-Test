@@ -45,10 +45,21 @@ router.get('/allquestions', async (req, res) => {
 // Route For Updating The Question Bank 
 router.patch('/updatequestion/:id', async (req, res) => {
     var id = req.params.id
-    const {type} = req.body ; 
+    const {question} = req.body ; 
     try {
-        const update = await Easy.find({_id: id}) || Moderate.find({_id: id}) || Difficult.find({_id: id })
-        res.send(update);
+        const easyUpdate = await Easy.findOneAndUpdate({_id: id},{$set: {question}})
+        const moderateUpdate = await Moderate.findOneAndUpdate({_id: id},{$set: {question}})
+        const difficultUpdate = await Difficult.findOneAndUpdate({_id: id},{$set: {question}})
+        console.log(easyUpdate)
+        console.log(moderateUpdate)
+        // var update ;
+        // if (easyUpdate != null)
+        //     update = (easyUpdate)
+        // if (moderateUpdate != null)
+        //     update = (moderateUpdate)
+        // if (difficultUpdate != null)
+        //     update = (difficultUpdate)
+        
     } catch (e) {
         console.log(e);
         res.send(e);
