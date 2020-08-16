@@ -9,16 +9,16 @@ router.post('/addquestion', async (req, res) => {
     // Adding Status For The User Logged In 
 
     // End ( Temp Changes )
-    const {question, author, club, type} = req.body
+    const {question, author, club, type, domain} = req.body
     var addition = null ;
     if (type == 'Easy'){
-        addition = new Easy({question, author, club})
+        addition = new Easy({question, author, club, domain})
         await addition.save()
     } else if (type == 'Moderate'){
-        addition = new Moderate({question, author, club})
+        addition = new Moderate({question, author, club, domain})
         await addition.save()
     } else {
-        addition = new Moderate({question, author, club})
+        addition = new Moderate({question, author, club, domain})
         await addition.save()
     }
     res.send(addition);
@@ -26,7 +26,7 @@ router.post('/addquestion', async (req, res) => {
 
 // Route For Getting Question Bank 
 router.get('/allquestions', async (req, res) => {
-    
+
 })
 
 module.exports = router;

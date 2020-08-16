@@ -9,6 +9,10 @@ const moderateQuestionSchema = mongoose.Schema({
     },
     club :{
         type: String 
+    },
+    domain : {
+        type: String,
+        requried: true
     }
 })
 
