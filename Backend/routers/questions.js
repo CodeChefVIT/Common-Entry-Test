@@ -31,7 +31,15 @@ router.post('/addquestion', async (req, res) => {
 
 // Route For Getting Question Bank 
 router.get('/allquestions', async (req, res) => {
-
+    try {
+        const easy = await Easy.find({})
+        const moderate = await Moderate.find({})
+        const difficult = await Difficult.find({})
+        res.send(easy, moderate, difficult)
+    } catch (e) {
+        console.log(e);
+        res.send(e);
+    }
 })
 
 module.exports = router;
