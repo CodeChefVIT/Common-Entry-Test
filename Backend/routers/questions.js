@@ -75,6 +75,8 @@ router.delete('/deletequestion/:id', async (req, res) => {
         const easyDelete = await Easy.findOneAndDelete({_id: id})
         const moderateDelete = await Moderate.findOneAndDelete({_id: id})
         const difficultDelete = await Difficult.findOneAndDelete({_id: id})
+        console.log(easyDelete + moderateDelete + difficultDelete);
+        res.send(easyDelete + moderateDelete + difficultDelete);
     } catch (e) {
         console.log(e);
         res.send(e);
