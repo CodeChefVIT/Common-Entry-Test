@@ -11,3 +11,6 @@ const moderateQuestionSchema = mongoose.Schema({
         type: String 
     }
 })
+
+
+module.exports = mongoose.model('Moderate', moderateQuestionSchema)
