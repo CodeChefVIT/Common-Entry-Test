@@ -9,10 +9,10 @@ router.post('/addquestion', async (req, res) => {
     // Adding Status For The User Logged In 
 
     // End ( Temp Changes )
+    const {question, author, club, type} = req.body 
+    if (type == 'Easy'){
 
-    const {question} = req.body 
-    console.log(question)
-    res.send(question)
+    } else if (type == 'Moderate')
 })
 
 module.exports = router;
