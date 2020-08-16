@@ -9,7 +9,15 @@ router.post('/addclub', async (req, res) => {
         // Adding Status Based on User's Preference ID
 
         // End (Temp Changes)
-        const {}
+        const {name} = req.body
+        var alternationadd ;
+        if (name != null){
+            alternationadd = new ClubList({name})
+            await alternationadd.save();
+            res.send(alternationadd)
+        }else {
+            res.send(`The Name Cannot be Blank`)
+        }
     } catch (e) {
         console.log(e);
         res.send(e);
