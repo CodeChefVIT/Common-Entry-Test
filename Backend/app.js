@@ -51,4 +51,7 @@ app.use(function(req, res, next) {
 // Defining Routes For Auth 
 app.use(require('./routers/auth'))
 
+// Route Posting Questions 
+app.use('/questions', )
+
 app.listen(PORT, console.log(`Server Running on Port ${PORT}`))
