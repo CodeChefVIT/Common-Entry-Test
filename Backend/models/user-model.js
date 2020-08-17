@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 
 // Importing The Easy Medium Hard Questions 
 // Making Them as Refernces 
+const Questions = require('./questions-general')
 
 const userSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
