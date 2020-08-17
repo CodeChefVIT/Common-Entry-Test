@@ -65,6 +65,7 @@ router.patch('/updateuserinfo/:id', async (req, res) => {
             }
         }
         await entity.save();
+        res.send(entity)
     }
     catch (e){
         console.log(e);
