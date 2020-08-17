@@ -12,6 +12,22 @@ const userSchema = mongoose.Schema({
     email: {
         type: String,
         match: /[a-z0–9!#$%&’*+/=?^_`{|}~-]+(?:\.[a-z0–9!#$%&’*+/=?^_`{|}~-]+)*@(?:[a-z0–9](?:[a-z0–9-]*[a-z0–9])?\.)+[a-z0–9](?:[a-z0–9-]*[a-z0–9])?/,
-    }
+    },
+    domain: {
+        type: String,
+        requried: false
+    },
+    isadmin: {
+        type: Boolean,
+        required: false, 
+        default: false
+    },
+    alpha: [{
+        QuestionId : [],
+        solution: {
+            type: String,
+            requried: false 
+        }
+    }]
 });
 module.exports = mongoose.model('User', userSchema);
