@@ -18,6 +18,10 @@ const userSchema = mongoose.Schema({
         type: String,
         match: /[a-z0–9!#$%&’*+/=?^_`{|}~-]+(?:\.[a-z0–9!#$%&’*+/=?^_`{|}~-]+)*@(?:[a-z0–9](?:[a-z0–9-]*[a-z0–9])?\.)+[a-z0–9](?:[a-z0–9-]*[a-z0–9])?/,
     },
+    contact: {
+        type: Number,
+        match: /^([7-9][0-9]{9})$/g
+    },
     domain: {
         type: Array,
         default: [],
