@@ -1,5 +1,8 @@
+const { MongoStore } = require('connect-mongo');
 const mongoose = require('mongoose');
 
+// Importing The Easy Medium Hard Questions 
+// Making Them as Refernces 
 
 const userSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
@@ -27,7 +30,11 @@ const userSchema = mongoose.Schema({
         type: String,
         required : false
     }],
-    
+    response: [
+        QuestionId : {
+            type : mongoose.ObjectId
+        }
+    ]
 });
 
 
