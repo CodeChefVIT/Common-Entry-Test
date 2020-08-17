@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router();
-const User = require('../models/user-model')
+const User = require('../models/user-model');
+const { route } = require('./auth');
 
 // Add Clubs to Apply
 // Specifing Question on the Go 
@@ -12,8 +13,6 @@ router.post('/addclub/:id', async (req, res) => {
     const {clubs} = req.body 
     try {
         const entity = await User.findOne({_id: id});
-        console.log(clubs)
-        console.log(entity.clubs)
         entity.clubs = clubs
         await entity.save();
         res.send(entity);
@@ -23,7 +22,15 @@ router.post('/addclub/:id', async (req, res) => {
     }
 })
 
-
+route.post('/adddomain/:id', async (req, res) => {
+    var id = req.params.id ;
+    const {domain} = req.body 
+    try {
+        const entity = await User.findOne({_id: id});
+        entity.domain = domain 
+        res.send(entity)
+    }
+})
 
 
 module.exports = router ;
