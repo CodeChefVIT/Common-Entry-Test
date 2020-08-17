@@ -27,19 +27,23 @@ const userSchema = mongoose.Schema({
         type: String,
         required : false
     }],
-    response: [{
-        QuestionId : [],
-        solution: [{
-                    type: String,
-                    default: null,
-                    required: true  
-                },
-                {   
-                type: String, 
-                required: false,
-                default: null 
-            }
-        ]
-    }]
+    
 });
+
+
 module.exports = mongoose.model('User', userSchema);
+
+    // response: [{
+    //     QuestionId : [],
+    //     solution: [{
+    //                 type: String,
+    //                 default: null,
+    //                 required: true  
+    //             },
+    //             {   
+    //             type: String, 
+    //             required: false,
+    //             default: null 
+    //         }
+    //     ]
+    // }]
