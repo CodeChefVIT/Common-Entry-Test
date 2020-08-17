@@ -55,7 +55,7 @@ router.patch('/updateuserinfo/:id', async (req, res) => {
     const {clubs, domain} = req.body ;
     try {
         const entity = await User.findById(id);
-        if (club || domain){
+        if (clubs || domain){
             console.log(`Inside The First If Statement`)
             if (domain){
                 entity.domain = domain 
