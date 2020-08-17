@@ -6,7 +6,7 @@ const User = require('../models/user-model')
 // Specifing Question on the Go 
 // Making Configuration For Repeatation Usage 
 
-/
+// Route For Posting Clubs For An User 
 router.post('/addclub/:id', async (req, res) => {
     var id = req.params.id ;
     const {clubs} = req.body 
