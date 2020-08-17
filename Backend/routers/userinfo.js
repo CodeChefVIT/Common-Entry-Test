@@ -49,5 +49,16 @@ router.get('/getuserinfo/:id', async (req, res) => {
     }
 })
 
+// Route For Updating The Domain Of an User or Clubs For an User
+router.patch('/updateuserinfo/:id', async (req, res) => {
+    var id = req.params.id ;
+    const {clubs, domain} = req.body ;
+    try {
+        const entity = await User.findById(id);
+        if (club || domain){
+            console.log()
+        }
+    }
+})
 
 module.exports = router ;
