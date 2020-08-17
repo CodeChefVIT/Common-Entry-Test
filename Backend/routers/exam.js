@@ -6,8 +6,15 @@ const User = require('../models/user-model')
 // Specifing Question on the Go 
 // Making Configuration For Repeatation Usage 
 
-router.post('/addclub', async (req, res) => {
-
+router.get('/addclub/:id', async (req, res) => {
+    var id = req.params.id ;
+    try {
+        const entity = User.find({_id: id});
+        res.send(entity);
+    } catch (e) {
+        console.log(e);
+        res.send(e);
+    }
 })
 
 
