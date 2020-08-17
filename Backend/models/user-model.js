@@ -30,11 +30,10 @@ const userSchema = mongoose.Schema({
         type: String,
         required : false
     }],
-    response: [
-        QuestionId : {
-            type : mongoose.ObjectId
-        }
-    ]
+    response: [{
+        type: mongoose.ObjectId,
+        ref: ''
+    }]
 });
 
 
