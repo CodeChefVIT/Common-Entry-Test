@@ -1,5 +1,4 @@
 const express = require('express');
-const easyQuestions = require('../models/easy-questions');
 const router = express.Router();
 
 // Importing Easy Question For Responses
@@ -9,9 +8,10 @@ router.post('/temproute/:id', async (req, res) => {
     var id = req.params.id
     const temp = await new General({easyQuestions : id})
     console.log(temp)
-
-    let check = 
-
+    await temp.save();
+    
+    let check = await General.findOne().populate('easyQuestions')
+    console.log(check)
     res.send(id);
 })
 

@@ -1,9 +1,11 @@
-const { MongoStore } = require('connect-mongo');
 const mongoose = require('mongoose');
 
 // Importing The Easy Medium Hard Questions 
 // Making Them as Refernces 
-const Questions = require('./questions-general')
+const Easy = require('./easy-questions')
+const Moderate = require('./moderate-questions')
+const Difficult = require('./difficult-questions');
+const easyQuestions = require('./easy-questions');
 
 const userSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
@@ -30,10 +32,6 @@ const userSchema = mongoose.Schema({
     clubs: [{
         type: String,
         required : false
-    }],
-    response: [{
-        type: mongoose.ObjectId,
-        ref: ''
     }]
 });
 
