@@ -13,9 +13,10 @@ const userSchema = mongoose.Schema({
         type: String,
         match: /[a-z0–9!#$%&’*+/=?^_`{|}~-]+(?:\.[a-z0–9!#$%&’*+/=?^_`{|}~-]+)*@(?:[a-z0–9](?:[a-z0–9-]*[a-z0–9])?\.)+[a-z0–9](?:[a-z0–9-]*[a-z0–9])?/,
     },
-    choice: {
+    domain: {
         type: String,
         requried: false
-    }
+    },
+    isadmin: 
 });
 module.exports = mongoose.model('User', userSchema);
