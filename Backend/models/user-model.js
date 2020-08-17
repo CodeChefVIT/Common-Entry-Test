@@ -17,6 +17,17 @@ const userSchema = mongoose.Schema({
         type: String,
         requried: false
     },
-    isadmin: 
+    isadmin: {
+        type: Boolean,
+        required: false, 
+        default: false
+    },
+    alpha: [{
+        QuestionId : [],
+        solution: {
+            type: String,
+            requried: false 
+        }
+    }]
 });
 module.exports = mongoose.model('User', userSchema);
