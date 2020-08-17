@@ -60,8 +60,15 @@ router.patch('/updateuserinfo/:id', async (req, res) => {
             if (domain){
                 entity.domain = domain 
             }
-            if (domain){}
+            if (clubs){
+                entity.clubs = clubs 
+            }
         }
+        await entity.save();
+    }
+    catch (e){
+        console.log(e);
+        res.send(e);
     }
 })
 
