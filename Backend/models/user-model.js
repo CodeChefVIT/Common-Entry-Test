@@ -27,7 +27,7 @@ const userSchema = mongoose.Schema({
         type: String,
         required : false
     }],
-    alpha: [{
+    response: [{
         QuestionId : [],
         solution: {
             type: String,

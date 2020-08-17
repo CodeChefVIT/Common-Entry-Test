@@ -37,7 +37,7 @@ router.post('/adddomain/:id', async (req, res) => {
     }
 })
 
-// Route For Getting All The Infos of the User --> To Be Restricted 
+// Route For Getting All The Infos of the User --> To Be Restricted to Admin 
 router.get('/getuserinfo/:id', async (req, res) => {
     var id = req.params.id ;
     try {
