@@ -1,11 +1,5 @@
 const mongoose = require('mongoose');
 
-// Importing The Easy Medium Hard Questions 
-// Making Them as Refernces 
-const Easy = require('./easy-questions')
-const Moderate = require('./moderate-questions')
-const Difficult = require('./difficult-questions');
-
 const userSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
     googleId: {

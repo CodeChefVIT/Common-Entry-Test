@@ -7,6 +7,21 @@ const { route } = require('./auth');
 // Specifing Question on the Go 
 // Making Configuration For Repeatation Usage 
 
+// Route For Adding Mobile Number For An User 
+router.post('/addmobilenumber/:id', async(req, res) => {
+    var id = req.params.id ;
+    const {number} = req.body 
+    try {
+        const entity = await User.findById(id);
+        entity.contact = number ;
+        await entity.save();
+    } catch (e) {
+        console.log(e);
+        res.send(e);
+    }
+})
+
+
 // Route For Posting Clubs For An User 
 router.post('/addclub/:id', async (req, res) => {
     var id = req.params.id ;
