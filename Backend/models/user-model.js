@@ -5,7 +5,6 @@ const mongoose = require('mongoose');
 const Easy = require('./easy-questions')
 const Moderate = require('./moderate-questions')
 const Difficult = require('./difficult-questions');
-const easyQuestions = require('./easy-questions');
 
 const userSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
@@ -37,18 +36,3 @@ const userSchema = mongoose.Schema({
 
 
 module.exports = mongoose.model('User', userSchema);
-
-    // response: [{
-    //     QuestionId : [],
-    //     solution: [{
-    //                 type: String,
-    //                 default: null,
-    //                 required: true  
-    //             },
-    //             {   
-    //             type: String, 
-    //             required: false,
-    //             default: null 
-    //         }
-    //     ]
-    // }]
