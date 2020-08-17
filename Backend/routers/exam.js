@@ -6,16 +6,24 @@ const User = require('../models/user-model')
 // Specifing Question on the Go 
 // Making Configuration For Repeatation Usage 
 
-router.get('/addclub/:id', async (req, res) => {
+/
+router.post('/addclub/:id', async (req, res) => {
     var id = req.params.id ;
+    const {clubs} = req.body 
     try {
-        const entity = User.find({_id: id});
+        const entity = await User.findOne({_id: id});
+        console.log(clubs)
+        console.log(entity.clubs)
+        entity.clubs = clubs
+        await entity.save();
         res.send(entity);
     } catch (e) {
         console.log(e);
         res.send(e);
     }
 })
+
+
 
 
 module.exports = router ;

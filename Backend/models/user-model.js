@@ -23,10 +23,10 @@ const userSchema = mongoose.Schema({
         required: false, 
         default: false
     },
-    clubs: {
-        type: Array,
+    clubs: [{
+        type: String,
         required : false
-    },
+    }],
     alpha: [{
         QuestionId : [],
         solution: {
