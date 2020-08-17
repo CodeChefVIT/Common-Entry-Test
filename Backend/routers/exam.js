@@ -22,6 +22,7 @@ router.post('/addclub/:id', async (req, res) => {
     }
 })
 
+// Route For Posting Domains For An User 
 router.post('/adddomain/:id', async (req, res) => {
     var id = req.params.id ;
     const {domain} = req.body 
@@ -34,6 +35,12 @@ router.post('/adddomain/:id', async (req, res) => {
         console.log(e)
         res.send(e);
     }
+})
+
+// Route For Getting All The Infos of the User
+router.get('/getuserinfo', async (req, res) => {
+    console.log(req.user);
+    res.send(req.user);
 })
 
 
