@@ -22,13 +22,17 @@ router.post('/addclub/:id', async (req, res) => {
     }
 })
 
-route.post('/adddomain/:id', async (req, res) => {
+router.post('/adddomain/:id', async (req, res) => {
     var id = req.params.id ;
     const {domain} = req.body 
     try {
         const entity = await User.findOne({_id: id});
         entity.domain = domain 
+        await entity.save();
         res.send(entity)
+    } catch (e) {
+        console.log(e)
+        res.send(e);
     }
 })
 
