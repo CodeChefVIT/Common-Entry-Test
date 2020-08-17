@@ -37,10 +37,16 @@ router.post('/adddomain/:id', async (req, res) => {
     }
 })
 
-// Route For Getting All The Infos of the User
-router.get('/getuserinfo', async (req, res) => {
-    console.log(req.user);
-    res.send(req.user);
+// Route For Getting All The Infos of the User --> To Be Restricted 
+router.get('/getuserinfo/:id', async (req, res) => {
+    var id = req.params.id ;
+    try {
+        const entity = await User.findById(id);
+        res.send(entity)
+    }catch (e){
+        console.log(e)
+        res.send(e)
+    }
 })
 
 
