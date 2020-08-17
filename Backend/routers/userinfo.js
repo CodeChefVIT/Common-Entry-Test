@@ -15,6 +15,7 @@ router.post('/addmobilenumber/:id', async(req, res) => {
         const entity = await User.findById(id);
         entity.contact = number ;
         await entity.save();
+        res.send(entity)
     } catch (e) {
         console.log(e);
         res.send(e);
