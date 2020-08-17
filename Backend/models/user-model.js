@@ -29,13 +29,15 @@ const userSchema = mongoose.Schema({
     }],
     response: [{
         QuestionId : [],
-        solution: [
-            {
-                type: String,
+        solution: [{
+                    type: String,
+                    default: null,
+                    required: true  
+                },
+                {   
+                type: String, 
+                required: false,
                 default: null 
-            },
-            {
-                
             }
         ]
     }]
