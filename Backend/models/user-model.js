@@ -32,15 +32,16 @@ const userSchema = mongoose.Schema({
         type: String,
         required : false
     }],
-    responses :[
-        {
-            type: mongoose.ObjectId,
-            ref: 'Easy'
-        },
-        {
-            type: String,
-            required: false ,
-            default: null 
+    responses :[{
+            easyIds : [{
+                type: mongoose.ObjectId,
+                ref: 'Easy'
+            }],
+            easyanswers : {
+                type: String, 
+                required: false ,
+                default : null 
+            }
         }
     ]
 });
