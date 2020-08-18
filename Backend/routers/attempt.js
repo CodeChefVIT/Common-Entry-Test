@@ -12,8 +12,8 @@ router.post('/temproute/:id', async (req, res) => {
         const username = await User.findById(id);
         const template = {easyIds: [ideasy], easyanswers: 'Hello World'}
         // username.responses.push(template)
-        let check = await (await User.findById(id)).populate('responses.easyIds[0]').execPopulate();
-        // console.log(check)
+        let check = await username.populate('responses.easyIds').execPopulate() 
+        console.log(check)
         console.log(username.responses[0].easyIds)
         // await username.save()
         res.send(username)
