@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 
+const Easy = require('./easy-questions')
+
 const userSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
     googleId: {
@@ -29,7 +31,8 @@ const userSchema = mongoose.Schema({
     clubs: [{
         type: String,
         required : false
-    }]
+    }],
+    
 });
 
 
