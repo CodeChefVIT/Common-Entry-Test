@@ -2,7 +2,7 @@ const { response } = require('express');
 const express = require('express');
 const router = express.Router();
 
-// Importing Easy Question For Responses
+// Importing User Responses
 const User = require('../models/user-model')
 
 router.post('/temproute/:id', async (req, res) => {
@@ -17,7 +17,7 @@ router.post('/temproute/:id', async (req, res) => {
         username.questionsIds.push(template)
         await username.populate('questionsIds.easyIds').populate('questionsIds.moderateIds').populate('questionsIds.difficultIds').execPopulate()
         // await username.save();
-        username.questionsIds.forEach(question => console.log(question))
+        // username.questionsIds.forEach(question => console.log(question))
         res.send(username) 
     } catch (e) {
         console.log(e);
