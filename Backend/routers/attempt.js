@@ -4,6 +4,19 @@ const router = express.Router();
 // Importing User Responses
 const User = require('../models/user-model')
 
+// Importing Questions 
+const Easy = require('../models/easy-questions')
+const Moderate = require('../models/moderate-questions')
+const Difficult = require('../models/difficult-questions')
+
+
+
+// Route Generating The Questions Ids Needed 
+// Route Displaying the Ids For an User 
+// Route For Storing The Response To an Id for an User
+
+
+
 module.exports = router ;
 
 
