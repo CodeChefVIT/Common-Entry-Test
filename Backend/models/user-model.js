@@ -48,14 +48,7 @@ const userSchema = mongoose.Schema({
             ref: 'Difficult'
         }],
     }],
-    responses :[{
-            easyanswers : [{
-                type: String, 
-                required: false ,
-                default : null 
-            }]
-        }
-    ]
+    responses :[]
 });
 
 

@@ -12,8 +12,13 @@ router.post('/temproute/:id', async (req, res) => {
     var ideasy2 = '5f392a2e8cc1c1d5d1ee5580'
     try {
         const username = await User.findById(id);
-        const template 
-        res.send(username)
+        const template = {easyIds: [ideasy, ideasy2], moderateIds:['5f392af88cc1c1d5d1ee5584'], difficultIds: ['5f392cc68cc1c1d5d1ee558a']}
+        console.log(template)
+        username.questionsIds.push(template)
+        await username.populate('questionsIds.easyIds').populate('questionsIds.moderateIds').populate('questionsIds.difficultIds').execPopulate()
+        // await username.save();
+        username.questionsIds.forEach(question => console.log(question))
+        res.send(username) 
     } catch (e) {
         console.log(e);
         res.send(e);
