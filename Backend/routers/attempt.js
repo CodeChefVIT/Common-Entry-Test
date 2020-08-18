@@ -4,6 +4,48 @@ const router = express.Router();
 // Importing User Responses
 const User = require('../models/user-model')
 
+module.exports = router ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
 router.post('/temproute/:id', async (req, res) => {
     var id = req.params.id
     
@@ -28,9 +70,7 @@ router.post('/temproute/:id', async (req, res) => {
 
 
 
-module.exports = router ;
 
-/*
 // const template = {easyIds: [ideasy, ideasy2], easyanswers: 'Hello World'}
         // username.responses.push(template)
         // let check = await username.populate('responses.easyIds').execPopulate() 

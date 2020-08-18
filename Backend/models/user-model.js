@@ -48,10 +48,19 @@ const userSchema = mongoose.Schema({
             ref: 'Difficult'
         }],
     }],
-    responses :[
-        {
+    easyresponses :[{
             id : {type: mongoose.ObjectId, ref: 'Easy'},
             answer : {type: String }
+        }
+    ],
+    moderateresponses : [{
+            id : {type: mongoose.ObjectId, ref : 'Moderate'},
+            answer : {type: String}
+        }
+    ],
+    difficultresponses : [{
+            id : {type: mongoose.ObjectId, ref : 'Difficult'},
+            answer : {type: String}
         }
     ]
 });
