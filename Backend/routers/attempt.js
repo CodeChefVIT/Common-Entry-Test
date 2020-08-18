@@ -18,7 +18,12 @@ const Difficult = require('../models/difficult-questions')
 router.post('/generatequestions/:id', async(req, res) => {
     try{
         const user = await User.findById(req.params.id)
-        res.send(user)
+        const {domain} = req.body
+        if (!user.domain.includes(domain))
+            res.send(`Sorry, You Havent Been Enrolled into ${domain}. Please Select The Domain `)
+        else {
+            res.send(user)
+        }
     }catch(e){
         console.log(e);
         res.send(e);
