@@ -1,3 +1,4 @@
+const { response } = require('express');
 const express = require('express');
 const router = express.Router();
 
@@ -8,13 +9,14 @@ router.post('/temproute/:id', async (req, res) => {
     var id = req.params.id
     
     var ideasy = '5f3923908cc1c1d5d1ee557f'
+    var ideasy2 = '5f392a2e8cc1c1d5d1ee5580'
     try {
         const username = await User.findById(id);
-        const template = {easyIds: [ideasy], easyanswers: 'Hello World'}
-        // username.responses.push(template)
+        const template = {easyIds: [ideasy, ideasy2], easyanswers: 'Hello World'}
+        username.responses.push(template)
         let check = await username.populate('responses.easyIds').execPopulate() 
-        console.log(check)
-        console.log(username.responses[0].easyIds)
+        // console.log(username.responses)
+        username.responses.forEach(response => console.log(response))
         // await username.save()
         res.send(username)
     } catch (e) {
