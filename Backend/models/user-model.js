@@ -48,7 +48,12 @@ const userSchema = mongoose.Schema({
             ref: 'Difficult'
         }],
     }],
-    responses :[]
+    responses :[
+        {
+            id : {type: mongoose.ObjectId, ref: 'Easy'},
+            answer : {type: String }
+        }
+    ]
 });
 
 
