@@ -12,12 +12,7 @@ router.post('/temproute/:id', async (req, res) => {
     var ideasy2 = '5f392a2e8cc1c1d5d1ee5580'
     try {
         const username = await User.findById(id);
-        const template = {easyIds: [ideasy, ideasy2], easyanswers: 'Hello World'}
-        username.responses.push(template)
-        let check = await username.populate('responses.easyIds').execPopulate() 
-        // console.log(username.responses)
-        username.responses.forEach(response => console.log(response))
-        // await username.save()
+        const template 
         res.send(username)
     } catch (e) {
         console.log(e);
@@ -26,3 +21,12 @@ router.post('/temproute/:id', async (req, res) => {
 })
 
 module.exports = router ;
+
+/*
+// const template = {easyIds: [ideasy, ideasy2], easyanswers: 'Hello World'}
+        // username.responses.push(template)
+        // let check = await username.populate('responses.easyIds').execPopulate() 
+        // // console.log(username.responses)
+        // username.responses.forEach(response => console.log(response))
+        // // await username.save()
+*/

@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 
 const Easy = require('./easy-questions')
+const Moderate = require('./moderate-questions')
+const Difficult = require('./difficult-questions')
 
 const userSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
@@ -32,16 +34,26 @@ const userSchema = mongoose.Schema({
         type: String,
         required : false
     }],
+    questionsIds:[{
+        easyIds: [{
+            type: mongoose.ObjectId,
+            ref: 'Easy'
+        }],
+        moderateIds: [{
+            type: mongoose.ObjectId,
+            ref: 'Moderate'
+        }],
+        difficultIds: [{
+            type: mongoose.ObjectId,
+            ref: 'Difficult'
+        }],
+    }],
     responses :[{
-            easyIds : [{
-                type: mongoose.ObjectId,
-                ref: 'Easy'
-            }],
-            easyanswers : {
+            easyanswers : [{
                 type: String, 
                 required: false ,
                 default : null 
-            }
+            }]
         }
     ]
 });
