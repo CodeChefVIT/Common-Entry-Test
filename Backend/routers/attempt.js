@@ -15,6 +15,9 @@ router.post('/temproute/:id', async (req, res) => {
         await username.populate('questionsIds.easyIds').populate('questionsIds.moderateIds').populate('questionsIds.difficultIds').execPopulate()
         // await username.save();
         // username.questionsIds.forEach(question => console.log(question))
+        var temp = {id : '5f3923908cc1c1d5d1ee557f', answer : 'Hello World '}
+        username.responses.push(temp);
+        await username.populate('responses.id').execPopulate() 
         console.log(username.responses)
         res.send(username) 
     } catch (e) {
