@@ -15,6 +15,17 @@ const Difficult = require('../models/difficult-questions')
 // Route Displaying the Ids For an User 
 // Route For Storing The Response To an Id for an User
 
+router.post('/generatequestions/:id', async(req, res) => {
+    try{
+        const user = await User.findById(req.params.id)
+        res.send(user)
+    }catch(e){
+        console.log(e);
+        res.send(e);
+    }
+        
+})
+
 
 
 module.exports = router ;
