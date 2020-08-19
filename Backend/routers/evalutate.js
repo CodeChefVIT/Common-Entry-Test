@@ -25,4 +25,29 @@ router.get('/getresponses/:id', async (req, res) => {
     }
 })
 
+// Route For Posting Marks To The Student Response 
+router.post('/postmarks/:id', async (req, res) => {
+    var id = req.params.id ;
+    const {questionid ,marks} = req.body 
+    try {
+        const user = await User.findById(id);
+        const iseasy = await Easy.findById(questionid)
+        const ismoderate = await Moderate.findById(questionid)
+        const isdifficult = await Difficult.findById(questionid)
+        if (!iseasy && !ismoderate && !isdifficult){
+            res.send(`Sorry No Record Found , Please Check the Id `)
+            console.log(`Sorry No Record Found , Please Check the Id`)
+        }
+
+        if (iseasy){
+
+        }
+
+        res.send(user);
+    } catch (e){
+        console.log(e);
+        res.send(e);
+    }
+})
+
 module.exports = router ;
