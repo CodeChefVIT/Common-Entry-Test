@@ -12,3 +12,9 @@ const Difficult = require('../models/difficult-questions')
 // Route For Posting Marks 
 // Route For Showing The Rank List of Student For Particular domain 
 
+// Route For Getting All The Student Responses with Ids --> Auth for Admins Only 
+router.get('/getresponses/:id', async (req, res) => {
+
+})
+
+module.exports = router ;
