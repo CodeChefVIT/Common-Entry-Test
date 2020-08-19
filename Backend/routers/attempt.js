@@ -124,7 +124,7 @@ router.post('/answerid/:id', async (req, res) => {
             }
             user.difficultresponses.push(template)    
         }
-        await user.save()
+        // await user.save()
         res.send(user)
         console.log(iseasy, ismoderate, isdifficult)
     } catch (e) {
