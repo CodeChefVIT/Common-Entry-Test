@@ -22,7 +22,16 @@ router.post('/generatequestions/:id', async(req, res) => {
         if (!user.domain.includes(domain))
             res.send(`Sorry, You Havent Been Enrolled into ${domain}. Please Select The Domain `)
         else {
-            res.send(user)
+            const easyQs = await Easy.find({domain})
+            const moderateQs = await Moderate.find({domain})
+            const hardQs = await Difficult.find({domain})
+            let idsEasy = []
+            let idsModerate = []
+            let idsDifficult = []
+            easyQs.forEach(Q =>{idsEasy.push(Q._id)})
+            moderateQs.forEach(Q => idsModerate.push(Q._id))
+            hardQs.forEach(Q => idsDifficult.push(Q._id))
+            res.send(easyQs + '\n' + moderateQs + '\n' + hardQs )
         }
     }catch(e){
         console.log(e);
