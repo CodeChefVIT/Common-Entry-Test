@@ -80,7 +80,7 @@ router.get('/questionsall/:id', async (req, res) => {
     var id = req.params.id ;
     try {
         const user = await User.findById(id);
-        await user.populate('questionsIds.easyIds').populate('questionsIds.moderateIds').execPopulate()
+        await user.populate('questionsIds.easyIds').populate('questionsIds.moderateIds').populate('questionsIds.difficultIds').execPopulate()
         res.send(user)
     }catch (e){
         console.log(e);
