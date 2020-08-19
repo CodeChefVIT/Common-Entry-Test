@@ -79,7 +79,9 @@ router.post('/generatequestions/:id', async(req, res) => {
 router.get('/questionsall/:id', async (req, res) => {
     var id = req.params.id ;
     try {
-        
+        const user = await User.findById(id);
+        await user.populate('questionsIds.easyIds').populate('questionsIds.moderateIds').execPopulate()
+        res.send(user)
     }catch (e){
         console.log(e);
         res.send(e);
