@@ -45,18 +45,12 @@ router.post('/generatequestions/:id', async(req, res) => {
             
             for (let index = 0 ; index < initLengthEasy/2 ; index++ ){
                 let randNum = Math.floor(Math.random()*idsEasy.length)
-                // console.log(randNum)
-                // console.log(idsEasy[randNum])
                 easyTemp.easyIds.push(idsEasy[randNum])
-                // user.questionsIds.easyIds.push(idsEasy[randNum])
                 idsEasy.splice(randNum,1)
             }
             for (let index = 0 ; index < initLengthModerate/3 ; index++ ){
                 let randNum = Math.floor(Math.random()*idsModerate.length)
-                // console.log(randNum)
-                // console.log(idsModerate[randNum])
                 easyTemp.moderateIds.push(idsModerate[randNum])
-                // user.questionsIds.easyIds.push(idsEasy[randNum])
                 idsModerate.splice(randNum,1)
             }
             for (let index = 0 ; index < initLengthDifficult/2 ; index++ ){
@@ -65,10 +59,11 @@ router.post('/generatequestions/:id', async(req, res) => {
                 easyTemp.difficultIds.push(idsDifficult[randNum])
                 idsDifficult.splice(randNum,1)
             }
-            console.log(user)
-            console.log(easyTemp)
+            // console.log(user)
+            // console.log(easyTemp)
             user.questionsIds.push(easyTemp)
             console.log(user.questionsIds)
+            // await user.save();
             res.send(user)
         }
     }catch(e){
