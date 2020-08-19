@@ -17,7 +17,7 @@ router.get('/getresponses/:id', async (req, res) => {
     var id = req.params.id 
     try {
         const user = await User.findById(id);
-        await user.easyresponses.populate('id').execPopulate();
+        await user.populate('easyresponses.id').populate('moderateresponses.id').populate('difficultresponses.id').execPopulate();
         res.send(user);
     }catch (e){
         console.log(e);
