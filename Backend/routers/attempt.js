@@ -31,7 +31,15 @@ router.post('/generatequestions/:id', async(req, res) => {
             easyQs.forEach(Q =>{idsEasy.push(Q._id)})
             moderateQs.forEach(Q => idsModerate.push(Q._id))
             hardQs.forEach(Q => idsDifficult.push(Q._id))
-            res.send(easyQs + '\n' + moderateQs + '\n' + hardQs )
+
+            // Putting Constraints For Each Questions 
+            // Easy = Easy/2 ,
+            // Moderate = Moderate/3 
+            // Difficult = Difficult/5 
+
+            
+
+            res.send(idsEasy + '\n' + idsModerate + '\n' + idsDifficult )
         }
     }catch(e){
         console.log(e);
