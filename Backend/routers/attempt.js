@@ -88,6 +88,21 @@ router.get('/questionsall/:id', async (req, res) => {
     }
 })
 
+router.post('/answerid/:id', async (req, res) => {
+    var id = req.params.id ;
+    const {questionid, answer} = req.body 
+    try {
+        const iseasy = await Easy.findById(questionid)
+        const ismoderate = await Moderate.findById(questionid)
+        const isdifficult = await Difficult.findById(questionid)
+        res.send(iseasy + '\n' + ismoderate + '\n' + isdifficult)
+        console.log(iseasy, ismoderate, isdifficult)
+    } catch (e) {
+        console.log(e);
+        res.send(e);
+    }
+})
+
 module.exports = router ;
 
 
