@@ -37,8 +37,16 @@ router.post('/generatequestions/:id', async(req, res) => {
             // Moderate = Moderate/3 
             // Difficult = Difficult/5 
 
-            
-
+            let initLengthEasy = idsEasy.length 
+            var easyTemp = 
+            for (let index = 0 ; index < initLengthEasy/2 ; index++ ){
+                let randNum = Math.floor(Math.random()*idsEasy.length)
+                console.log(randNum)
+                console.log(idsEasy[randNum])
+                // user.questionsIds.easyIds.push(idsEasy[randNum])
+                idsEasy.splice(randNum,1)
+            }
+            console.log(user)
             res.send(idsEasy + '\n' + idsModerate + '\n' + idsDifficult )
         }
     }catch(e){
