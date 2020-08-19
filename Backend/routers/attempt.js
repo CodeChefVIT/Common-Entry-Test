@@ -65,7 +65,7 @@ router.post('/generatequestions/:id', async(req, res) => {
             user.questionsIds = [] 
             user.questionsIds.push(easyTemp)
             console.log(user.questionsIds)
-            await user.save();
+            // await user.save();
             res.send(user)
         }
     }catch(e){
@@ -88,6 +88,7 @@ router.get('/questionsall/:id', async (req, res) => {
     }
 })
 
+// Route For Posting Answers to an Id --> Not Adding For Updation 
 router.post('/answerid/:id', async (req, res) => {
     var id = req.params.id ;
     const {questionid, answer} = req.body 
@@ -95,7 +96,36 @@ router.post('/answerid/:id', async (req, res) => {
         const iseasy = await Easy.findById(questionid)
         const ismoderate = await Moderate.findById(questionid)
         const isdifficult = await Difficult.findById(questionid)
-        res.send(iseasy + '\n' + ismoderate + '\n' + isdifficult)
+        const user = await User.findById(id)
+
+        if (!iseasy && !ismoderate && !isdifficult){
+            res.send(`Sorry No Record Found , Please Check the Id `)
+            console.log(`Sorry No Record Found , Please Check the Id`)
+        }
+
+        if (iseasy){
+            var template = {
+                id: iseasy._id,
+                answer: answer
+            }
+            user.easyresponses.push(template)    
+        }
+        if (ismoderate){
+            var template = {
+                id: ismoderate._id,
+                answer: answer
+            }
+            user.moderateresponses.push(template)    
+        }
+        if (isdifficult){
+            var template = {
+                id: isdifficult._id,
+                answer: answer
+            }
+            user.difficultresponses.push(template)    
+        }
+        await user.save()
+        res.send(user)
         console.log(iseasy, ismoderate, isdifficult)
     } catch (e) {
         console.log(e);

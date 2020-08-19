@@ -50,17 +50,20 @@ const userSchema = mongoose.Schema({
     }],
     easyresponses :[{
             id : {type: mongoose.ObjectId, ref: 'Easy'},
-            answer : {type: String }
+            answer : {type: String },
+            marks: {type: Number}
         }
     ],
     moderateresponses : [{
             id : {type: mongoose.ObjectId, ref : 'Moderate'},
-            answer : {type: String}
+            answer : {type: String},
+            marks: {type: Number}
         }
     ],
     difficultresponses : [{
             id : {type: mongoose.ObjectId, ref : 'Difficult'},
-            answer : {type: String}
+            answer : {type: String},
+            marks: {type: Number}
         }
     ]
 });
