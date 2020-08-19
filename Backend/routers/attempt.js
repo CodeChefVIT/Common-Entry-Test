@@ -45,32 +45,31 @@ router.post('/generatequestions/:id', async(req, res) => {
             
             for (let index = 0 ; index < initLengthEasy/2 ; index++ ){
                 let randNum = Math.floor(Math.random()*idsEasy.length)
-                console.log(randNum)
-                console.log(idsEasy[randNum])
+                // console.log(randNum)
+                // console.log(idsEasy[randNum])
                 easyTemp.easyIds.push(idsEasy[randNum])
                 // user.questionsIds.easyIds.push(idsEasy[randNum])
                 idsEasy.splice(randNum,1)
             }
             for (let index = 0 ; index < initLengthModerate/3 ; index++ ){
                 let randNum = Math.floor(Math.random()*idsModerate.length)
-                console.log(randNum)
-                console.log(idsModerate[randNum])
-                easyTemp.easyIds.push(idsModerate[randNum])
+                // console.log(randNum)
+                // console.log(idsModerate[randNum])
+                easyTemp.moderateIds.push(idsModerate[randNum])
                 // user.questionsIds.easyIds.push(idsEasy[randNum])
-                idsEasy.splice(randNum,1)
+                idsModerate.splice(randNum,1)
             }
             for (let index = 0 ; index < initLengthDifficult/2 ; index++ ){
                 let randNum = Math.floor(Math.random()*idsDifficult.length)
-                console.log(randNum)
-                console.log(idsEasy[randNum])
-                easyTemp.easyIds.push(idsDifficult[randNum])
-                // user.questionsIds.easyIds.push(idsEasy[randNum])
-                idsEasy.splice(randNum,1)
+                
+                easyTemp.difficultIds.push(idsDifficult[randNum])
+                idsDifficult.splice(randNum,1)
             }
             console.log(user)
             console.log(easyTemp)
-            user.questionsIds
-            res.send(idsEasy + '\n' + idsModerate + '\n' + idsDifficult )
+            user.questionsIds.push(easyTemp)
+            console.log(user.questionsIds)
+            res.send(user)
         }
     }catch(e){
         console.log(e);
@@ -121,7 +120,11 @@ module.exports = router ;
 
 
 /*
+// console.log(randNum)
+                // console.log(idsEasy[randNum])
+                // user.questionsIds.easyIds.push(idsEasy[randNum])
 
+            // res.send(idsEasy + '\n' + idsModerate + '\n' + idsDifficult )
 
 router.post('/temproute/:id', async (req, res) => {
     var id = req.params.id
