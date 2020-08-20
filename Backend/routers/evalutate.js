@@ -45,6 +45,7 @@ router.post('/postmarks/:id', async (req, res) => {
             user.easyresponses.forEach((stack) => {
                 if (stack.id == questionid){
                     stack.marks = marks ;
+                    user.totalMarks += parseInt(marks) ;
                 }
             })
         }
@@ -54,6 +55,7 @@ router.post('/postmarks/:id', async (req, res) => {
             user.moderateresponses.forEach((stack) => {
                 if (stack.id == questionid){
                     stack.marks = marks ;
+                    user.totalMarks += parseInt(marks) ;
                 }
             })
         }
@@ -63,6 +65,7 @@ router.post('/postmarks/:id', async (req, res) => {
             user.difficultresponses.forEach((stack) => {
                 if (stack.id == questionid){
                     stack.marks = marks ;
+                    user.totalMarks += parseInt(marks) ;
                 }
             })
         }
@@ -76,6 +79,14 @@ router.post('/postmarks/:id', async (req, res) => {
 
 // Route For Getting The Ranks Being Alloted As Per Marks 
 router.get('/ranklist', async (req, res) => {
+    console.log(req.user);
+    try {
+        const alluser = await User.find({})
+        res.send(alluser)
+    } catch (e) {
+        console.log(e);
+        res.send(e);
+    }
     
 })
 
