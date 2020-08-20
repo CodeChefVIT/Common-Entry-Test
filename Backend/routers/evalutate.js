@@ -25,7 +25,7 @@ router.get('/getresponses/:id', async (req, res) => {
     }
 })
 
-// Route For Posting Marks To The Student Response 
+// Route For Posting Marks To The Student Response , Can Be Used For Updation As well 
 router.post('/postmarks/:id', async (req, res) => {
     var id = req.params.id ;
     const {questionid ,marks} = req.body 
@@ -72,6 +72,11 @@ router.post('/postmarks/:id', async (req, res) => {
         console.log(e);
         res.send(e);
     }
+})
+
+// Route For Getting The Ranks Being Alloted As Per Marks 
+router.get('/ranklist', async (req, res) => {
+    
 })
 
 module.exports = router ;
