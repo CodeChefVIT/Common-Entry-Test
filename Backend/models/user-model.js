@@ -1,5 +1,8 @@
 const mongoose = require('mongoose');
 
+const Easy = require('./easy-questions')
+const Moderate = require('./moderate-questions')
+const Difficult = require('./difficult-questions')
 
 const userSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
@@ -12,6 +15,10 @@ const userSchema = mongoose.Schema({
     email: {
         type: String,
         match: /[a-z0–9!#$%&’*+/=?^_`{|}~-]+(?:\.[a-z0–9!#$%&’*+/=?^_`{|}~-]+)*@(?:[a-z0–9](?:[a-z0–9-]*[a-z0–9])?\.)+[a-z0–9](?:[a-z0–9-]*[a-z0–9])?/,
+    },
+    contact: {
+        type: Number,
+        match: /^([7-9][0-9]{9})$/g
     },
     domain: {
         type: Array,
@@ -27,23 +34,39 @@ const userSchema = mongoose.Schema({
         type: String,
         required : false
     }],
-    
+    questionsIds:[{
+        easyIds: [{
+            type: mongoose.ObjectId,
+            ref: 'Easy'
+        }],
+        moderateIds: [{
+            type: mongoose.ObjectId,
+            ref: 'Moderate'
+        }],
+        difficultIds: [{
+            type: mongoose.ObjectId,
+            ref: 'Difficult'
+        }],
+    }],
+    easyresponses :[{
+            id : {type: mongoose.ObjectId, ref: 'Easy'},
+            answer : {type: String },
+            marks: {type: Number}
+        }
+    ],
+    moderateresponses : [{
+            id : {type: mongoose.ObjectId, ref : 'Moderate'},
+            answer : {type: String},
+            marks: {type: Number}
+        }
+    ],
+    difficultresponses : [{
+            id : {type: mongoose.ObjectId, ref : 'Difficult'},
+            answer : {type: String},
+            marks: {type: Number}
+        }
+    ]
 });
 
 
 module.exports = mongoose.model('User', userSchema);
-
-    // response: [{
-    //     QuestionId : [],
-    //     solution: [{
-    //                 type: String,
-    //                 default: null,
-    //                 required: true  
-    //             },
-    //             {   
-    //             type: String, 
-    //             required: false,
-    //             default: null 
-    //         }
-    //     ]
-    // }]
