@@ -6,7 +6,7 @@ const User = require('../models/user-model')
 const Easy = require('../models/easy-questions')
 const Moderate = require ('../models/moderate-questions')
 const Difficult = require('../models/difficult-questions')
-
+const EvaluationRank = require('../models/rank-result')
 
 // Route For Getting All The Students IDs with Responses 
 // Route For Posting Marks 
@@ -83,11 +83,13 @@ router.get('/ranklist', async (req, res) => {
     try {
         const alluser = await User.find({})
         res.send(alluser)
+        
     } catch (e) {
         console.log(e);
         res.send(e);
     }
     
 })
+
 
 module.exports = router ;
