@@ -82,8 +82,10 @@ router.get('/ranklist', async (req, res) => {
     console.log(req.user);
     try {
         const alluser = await User.find({})
+        alluser.forEach((user) => {
+            console.log(user.totalMarks)
+        })
         res.send(alluser)
-        
     } catch (e) {
         console.log(e);
         res.send(e);
