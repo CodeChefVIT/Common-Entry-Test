@@ -93,8 +93,8 @@ function compare (a, b) {
   
 
 
-// Route For Getting The Ranks Being Alloted As Per Marks 
-router.get('/ranklist', async (req, res) => {
+// Route Generating The Ranks Being Alloted As Per Marks --> Restricted For One Time Use 
+router.get('/generaterank', async (req, res) => {
     // console.log(req.user);
     try {
         const alluser = await User.find({})
@@ -117,5 +117,17 @@ router.get('/ranklist', async (req, res) => {
     
 })
 
+// Route --> All N Number of times
+router.get('/ranklist', async (req, res) => {
+    try {
+        const ranks = await EvaluationRank.find({})
+        res.send(ranks)
+    }catch(e){
+        res.send(e);
+        console.log(e);
+    }
+})
+
+// Route 
 
 module.exports = router ;
