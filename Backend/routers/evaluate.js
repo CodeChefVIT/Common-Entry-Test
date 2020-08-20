@@ -128,6 +128,23 @@ router.get('/ranklist', async (req, res) => {
     }
 })
 
-// Route 
+// Route For Storing the Ranks for User 
+router.post('/postranks/:id', async (req, res) => {
+    var id = req.params.id 
+    try {
+        const user = await User.findById(id)
+        const eval = await EvaluationRank.findOne({email: user.email})
+        if (!eval || !user){
+            res.send(`Sorry , Your Rank Has Not Been Generated, Please Contact The Admin Incase of any Troubles `)
+        } else {
+            user.rank = eval.rank 
+            await user.save();
+            res.send(user);
+        }
+        // res.send(eval)
+    }catch (e){
+
+    }
+})
 
 module.exports = router ;
