@@ -50,7 +50,6 @@ app.use(function(req, res, next) {
 
 // Defining Routes For Auth 
 app.use(require('./routers/auth'))
-
 // Route Posting Questions 
 app.use('/questions', require('./routers/questions'))
 // Route For Club Details 
