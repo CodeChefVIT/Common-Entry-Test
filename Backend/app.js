@@ -50,7 +50,6 @@ app.use(function(req, res, next) {
 
 // Defining Routes For Auth 
 app.use(require('./routers/auth'))
-
 // Route Posting Questions 
 app.use('/questions', require('./routers/questions'))
 // Route For Club Details 
@@ -59,5 +58,7 @@ app.use('/club', require('./routers/club'))
 app.use('/user', require('./routers/userinfo'))
 // Route For Attempts 
 app.use('/attempt', require('./routers/attempt'))
+// Route For Evaluations
+app.use('/evaluate', require('./routers/evaluate'))
 
 app.listen(PORT, console.log(`Server Running on Port ${PORT}`))

@@ -65,7 +65,7 @@ router.post('/generatequestions/:id', async(req, res) => {
             user.questionsIds = [] 
             user.questionsIds.push(easyTemp)
             console.log(user.questionsIds)
-            // await user.save();
+            await user.save();
             res.send(user)
         }
     }catch(e){
