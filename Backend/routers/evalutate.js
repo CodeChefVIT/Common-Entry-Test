@@ -14,7 +14,7 @@ const Difficult = require('../models/difficult-questions')
 
 // Route For Getting All The Student Responses with Ids --> Auth for Admins Only 
 router.get('/getresponses/:id', async (req, res) => {
-    var id = req.params.id 
+    var id = req.params.id // User
     try {
         const user = await User.findById(id);
         await user.populate('easyresponses.id').populate('moderateresponses.id').populate('difficultresponses.id').execPopulate();
@@ -40,9 +40,33 @@ router.post('/postmarks/:id', async (req, res) => {
         }
 
         if (iseasy){
-
+            // await user.updateOne({"easyresponses.id": questionid}, {$set: {"marks": marks}})
+            // console.log(user.easyresponses)
+            user.easyresponses.forEach((stack) => {
+                if (stack.id == questionid){
+                    stack.marks = marks ;
+                }
+            })
         }
-
+        if (ismoderate){
+            // await user.updateOne({"easyresponses.id": questionid}, {$set: {"marks": marks}})
+            // console.log(user.easyresponses)
+            user.moderateresponses.forEach((stack) => {
+                if (stack.id == questionid){
+                    stack.marks = marks ;
+                }
+            })
+        }
+        if (isdifficult){
+            // await user.updateOne({"easyresponses.id": questionid}, {$set: {"marks": marks}})
+            // console.log(user.easyresponses)
+            user.difficultresponses.forEach((stack) => {
+                if (stack.id == questionid){
+                    stack.marks = marks ;
+                }
+            })
+        }
+        await user.save();
         res.send(user);
     } catch (e){
         console.log(e);
