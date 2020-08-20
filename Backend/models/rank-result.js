@@ -1,5 +1,8 @@
 const mongoose = require('mongoose');
 
+// Importing User Model 
+const User = require('./user-model')
+
 const rankSchema = mongoose.Schema({
     name: {
         type: String
@@ -7,6 +10,7 @@ const rankSchema = mongoose.Schema({
     email: {
         type: String,
         match: /[a-z0–9!#$%&’*+/=?^_`{|}~-]+(?:\.[a-z0–9!#$%&’*+/=?^_`{|}~-]+)*@(?:[a-z0–9](?:[a-z0–9-]*[a-z0–9])?\.)+[a-z0–9](?:[a-z0–9-]*[a-z0–9])?/,
+        ref: 'User'
     },
     contact: {
         type: Number,
@@ -14,6 +18,9 @@ const rankSchema = mongoose.Schema({
     },
     marks: {
         type: Number
+    },
+    rank: {
+        type: Number 
     }
 })
 

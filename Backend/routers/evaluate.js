@@ -77,15 +77,37 @@ router.post('/postmarks/:id', async (req, res) => {
     }
 })
 
+// Function For Sorting The Array Of Objects 
+function compare (a, b) {
+    const bandA = a.totalMarks;
+    const bandB = b.totalMarks;
+  
+    let comparison = 0;
+    if (bandA < bandB) {
+      comparison = 1;
+    } else if (bandA > bandB) {
+      comparison = -1;
+    }
+    return comparison;
+}
+  
+
+
 // Route For Getting The Ranks Being Alloted As Per Marks 
 router.get('/ranklist', async (req, res) => {
-    console.log(req.user);
+    // console.log(req.user);
     try {
         const alluser = await User.find({})
-        alluser.forEach((user) => {
+        alluser.sort(compare)
+        var rankiteration = 1 ;
+        var ranklist;
+        alluser.forEach(async (user) => {
             console.log(user.totalMarks)
+            ranklist = new EvaluationRank({name:user.name, email: user.email, contact: user.contact, marks: user.marks, rank: rankiteration})
+            rankiteration += 1
+            await ranklist.save();
         })
-        res.send(alluser)
+        res.send(ranklist)
     } catch (e) {
         console.log(e);
         res.send(e);
