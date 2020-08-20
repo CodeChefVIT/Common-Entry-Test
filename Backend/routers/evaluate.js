@@ -101,13 +101,15 @@ router.get('/ranklist', async (req, res) => {
         alluser.sort(compare)
         var rankiteration = 1 ;
         var ranklist;
+        var arrayofranks = []
         alluser.forEach(async (user) => {
             console.log(user.totalMarks)
             ranklist = new EvaluationRank({name:user.name, email: user.email, contact: user.contact, marks: user.marks, rank: rankiteration})
             rankiteration += 1
+            arrayofranks.push(ranklist)
             await ranklist.save();
         })
-        res.send(ranklist)
+        res.send(arrayofranks)
     } catch (e) {
         console.log(e);
         res.send(e);
