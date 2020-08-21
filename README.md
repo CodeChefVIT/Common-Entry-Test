@@ -15,7 +15,7 @@
     <a href="https://codechefvit.github.io/Common-Entry-Test/index.html"><strong>Give a try</strong></a>
     <br>
     <br>
-    <a href="https://github.com/CodeChefVIT/Common-Entry-Test">View Docs </a>
+    <a href="https://documenter.getpostman.com/view/10696212/T1LTg5PH?version=latest">View Docs </a>
     ··
     <a href="https://youtu.be/edT0Mvr2VnU">Demo Video</a>
     ··
