@@ -20,7 +20,7 @@ passport.use(
     new GoogleStrategy({
         clientID: process.env.CLIENTID ,
         clientSecret:process.env.CLIENTSECRET,
-        callbackURL: 'http://localhost:3000/auth/google/redirect'
+        callbackURL: 'https://common-entry-test.herokuapp.com/auth/google/redirect'
     }, (accessToken, refreshToken, profile, done) => {
         User.findOne({googleId: profile.id}).then((currentUser) => {
             if(currentUser){
@@ -44,6 +44,7 @@ passport.use(
                     done(null, newUser);
                 });
             }
+            
         });
     })
 );
