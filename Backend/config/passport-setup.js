@@ -44,6 +44,7 @@ passport.use(
                     done(null, newUser);
                 });
             }
+            
         });
     })
 );
