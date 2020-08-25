@@ -25,6 +25,9 @@ passport.use(
         User.findOne({googleId: profile.id}).then((currentUser) => {
             if(currentUser){
                 console.log('user is: ', currentUser);
+                const token = jwt.sign({
+                    
+                })
                 done(null, currentUser);
             } else {
                 var email = profile._json.email;
