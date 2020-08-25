@@ -43,6 +43,11 @@ var userSchema = mongoose.Schema({
       required: true
     }
   }],
+  issudoaccess: {
+    type: Boolean,
+    required: false,
+    "default": false
+  },
   clubs: [{
     type: String,
     required: false

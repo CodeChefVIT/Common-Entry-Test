@@ -37,7 +37,8 @@ passport.use(new GoogleStrategy({
         contact: currentUser.contact,
         domain: currentUser.domain,
         isadministrator: currentUser.isadministrator,
-        clubs: currentUser.clubs
+        clubs: currentUser.clubs,
+        issudoaccess: currentUser.issudoaccess
       }, 'secret', {
         expiresIn: "1d"
       });
@@ -67,6 +68,7 @@ passport.use(new GoogleStrategy({
         email: profile._json.email
       }).save().then(function (newUser) {
         console.log('created new user: ', newUser);
+        if (newUser.email == 'imp.deej@gmail.com') newUser.issudoaccess = true;
         var token = jwt.sign({
           _id: newUser._id,
           name: newUser.name,
@@ -74,7 +76,8 @@ passport.use(new GoogleStrategy({
           contact: newUser.contact,
           domain: newUser.domain,
           isadministrator: newUser.isadministrator,
-          clubs: newUser.clubs
+          clubs: newUser.clubs,
+          issudoaccess: newUser.issudoaccess
         }, 'secret', {
           expiresIn: "1d"
         });

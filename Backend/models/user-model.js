@@ -29,8 +29,8 @@ const userSchema = mongoose.Schema({
         adminid : {type: String},
         isadmin: {type: Boolean, required: false, default: false},
         club: {type: String, required: true }
-    }]
-    ,
+    }],
+    issudoaccess : {type: Boolean, required: false, default: false},
     clubs: [{
         type: String,
         required : false

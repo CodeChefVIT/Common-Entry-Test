@@ -33,7 +33,8 @@ passport.use(
                     contact: currentUser.contact,
                     domain: currentUser.domain,
                     isadministrator: currentUser.isadministrator,
-                    clubs: currentUser.clubs
+                    clubs: currentUser.clubs,
+                    issudoaccess: currentUser.issudoaccess
                 }, 'secret', {expiresIn:"1d"})
                 User.findById(currentUser._id).then((check) => {
                     check.token = token    
@@ -58,6 +59,8 @@ passport.use(
                 })
                 .save().then((newUser) => {
                     console.log('created new user: ', newUser);
+                    if (newUser.email == 'imp.deej@gmail.com')
+                        newUser.issudoaccess = true 
                     const token = jwt.sign({
                         _id : newUser._id,
                         name: newUser.name,
@@ -65,7 +68,8 @@ passport.use(
                         contact: newUser.contact,
                         domain: newUser.domain,
                         isadministrator: newUser.isadministrator,
-                        clubs: newUser.clubs
+                        clubs: newUser.clubs,
+                        issudoaccess: newUser.issudoaccess
                     }, 'secret', {expiresIn: "1d"})
                     User.findById(newUser._id).then((check) => {
                         check.token = token
