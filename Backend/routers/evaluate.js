@@ -123,7 +123,7 @@ router.get('/generaterank', async (req, res) => {
 })
 
 // Route --> All N Number of times
-router.get('/ranklist', auth, adminauth, async (req, res) => {
+router.get('/ranklist', auth, async (req, res) => {
     try {
         const ranks = await EvaluationRank.find({})
         res.send(ranks)
