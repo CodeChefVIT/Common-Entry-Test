@@ -2,6 +2,7 @@ const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const User = require('../models/user-model');
 const mongoose = require('mongoose');
+const jwt = require('jsonwebtoken')
 require('dotenv').config();
 
 
@@ -18,15 +19,28 @@ passport.deserializeUser((id, done) => {
 
 passport.use(
     new GoogleStrategy({
-        clientID: process.env.CLIENTID ,
+        clientID: process.env.CLIENTID,
         clientSecret:process.env.CLIENTSECRET,
-        callbackURL: 'https://common-entry-test.herokuapp.com/auth/google/redirect'
+        callbackURL: 'http://localhost:3000/auth/google/redirect'
     }, (accessToken, refreshToken, profile, done) => {
         User.findOne({googleId: profile.id}).then((currentUser) => {
             if(currentUser){
-                console.log('user is: ', currentUser);
+                console.log('user is: ', currentUser);  
                 const token = jwt.sign({
-                    
+                    _id : currentUser._id ,
+                    name : currentUser.name,
+                    email : currentUser.email,
+                    contact: currentUser.contact,
+                    domain: currentUser.domain,
+                    isadministrator: currentUser.isadministrator,
+                    clubs: currentUser.clubs
+                }, 'secret', {expiresIn:"1d"})
+                User.findById(currentUser._id).then((check) => {
+                    check.token = token    
+                    check.googleId = profile.id,
+                    check.save().then((user) => {
+                        done(null, user)
+                    }).catch((e) => console.log(e))
                 })
                 done(null, currentUser);
             } else {
@@ -44,6 +58,19 @@ passport.use(
                 })
                 .save().then((newUser) => {
                     console.log('created new user: ', newUser);
+                    const token = jwt.sign({
+                        _id : newUser._id,
+                        name: newUser.name,
+                        email: newUser.email,
+                        contact: newUser.contact,
+                        domain: newUser.domain,
+                        isadministrator: newUser.isadministrator,
+                        clubs: newUser.clubs
+                    }, 'secret', {expiresIn: "1d"})
+                    User.findById(newUser._id).then((check) => {
+                        check.token = token
+                        check.save().then((user) => {done(null, user)}).catch((e) => console.log(e)).catch((e) => console.log(e))
+                    })
                     done(null, newUser);
                 });
             }

@@ -8,6 +8,8 @@ var User = require('../models/user-model');
 
 var mongoose = require('mongoose');
 
+var jwt = require('jsonwebtoken');
+
 require('dotenv').config();
 
 passport.serializeUser(function (user, done) {
@@ -21,14 +23,32 @@ passport.deserializeUser(function (id, done) {
 passport.use(new GoogleStrategy({
   clientID: process.env.CLIENTID,
   clientSecret: process.env.CLIENTSECRET,
-  callbackURL: 'https://common-entry-test.herokuapp.com/auth/google/redirect'
+  callbackURL: 'http://localhost:3000/auth/google/redirect'
 }, function (accessToken, refreshToken, profile, done) {
   User.findOne({
     googleId: profile.id
   }).then(function (currentUser) {
     if (currentUser) {
       console.log('user is: ', currentUser);
-      var token = jwt.sign({});
+      var token = jwt.sign({
+        _id: currentUser._id,
+        name: currentUser.name,
+        email: currentUser.email,
+        contact: currentUser.contact,
+        domain: currentUser.domain,
+        isadministrator: currentUser.isadministrator,
+        clubs: currentUser.clubs
+      }, 'secret', {
+        expiresIn: "1d"
+      });
+      User.findById(currentUser._id).then(function (check) {
+        check.token = token;
+        check.googleId = profile.id, check.save().then(function (user) {
+          done(null, user);
+        })["catch"](function (e) {
+          return console.log(e);
+        });
+      });
       done(null, currentUser);
     } else {
       var email = profile._json.email;
@@ -47,6 +67,27 @@ passport.use(new GoogleStrategy({
         email: profile._json.email
       }).save().then(function (newUser) {
         console.log('created new user: ', newUser);
+        var token = jwt.sign({
+          _id: newUser._id,
+          name: newUser.name,
+          email: newUser.email,
+          contact: newUser.contact,
+          domain: newUser.domain,
+          isadministrator: newUser.isadministrator,
+          clubs: newUser.clubs
+        }, 'secret', {
+          expiresIn: "1d"
+        });
+        User.findById(newUser._id).then(function (check) {
+          check.token = token;
+          check.save().then(function (user) {
+            done(null, user);
+          })["catch"](function (e) {
+            return console.log(e);
+          })["catch"](function (e) {
+            return console.log(e);
+          });
+        });
         done(null, newUser);
       });
     }

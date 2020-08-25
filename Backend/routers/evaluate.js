@@ -1,6 +1,9 @@
 const express = require('express')
 const router = express.Router();
 
+// Import Middleware Checks 
+const midcheck = require('../middleware/midcheck')
+
 // Importing All The Necessary Models
 const User = require('../models/user-model')
 const Easy = require('../models/easy-questions')
@@ -118,7 +121,7 @@ router.get('/generaterank', async (req, res) => {
 })
 
 // Route --> All N Number of times
-router.get('/ranklist', async (req, res) => {
+router.get('/ranklist', midcheck,async (req, res) => {
     try {
         const ranks = await EvaluationRank.find({})
         res.send(ranks)
