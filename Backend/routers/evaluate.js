@@ -4,6 +4,7 @@ const router = express.Router();
 // Import Middleware Checks 
 const auth = require('../middleware/auth')
 const sudoauth = require('../middleware/sudo-auth')
+const adminauth = require('../middleware/admin-auth')
 
 // Importing All The Necessary Models
 const User = require('../models/user-model')
@@ -117,12 +118,12 @@ router.get('/generaterank', async (req, res) => {
     } catch (e) {
         console.log(e);
         res.send(e);
-    }
+    } 
     
 })
 
 // Route --> All N Number of times
-router.get('/ranklist', auth, sudoauth, async (req, res) => {
+router.get('/ranklist', auth, adminauth, async (req, res) => {
     try {
         const ranks = await EvaluationRank.find({})
         res.send(ranks)
