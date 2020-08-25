@@ -147,7 +147,8 @@ router.post('/postranks/:id', async (req, res) => {
         }
         // res.send(eval)
     }catch (e){
-
+        console.log(e);
+        res.send(e);
     }
 })
 

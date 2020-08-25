@@ -30,9 +30,6 @@ var userSchema = mongoose.Schema({
     requried: false
   },
   isadministrator: [{
-    adminid: {
-      type: String
-    },
     isadmin: {
       type: Boolean,
       required: false,

@@ -33,13 +33,8 @@ passport.use(new GoogleStrategy({
       var token = jwt.sign({
         _id: currentUser._id,
         name: currentUser.name,
-        email: currentUser.email,
-        contact: currentUser.contact,
-        domain: currentUser.domain,
-        isadministrator: currentUser.isadministrator,
-        clubs: currentUser.clubs,
-        issudoaccess: currentUser.issudoaccess
-      }, 'secret', {
+        email: currentUser.email
+      }, process.env.JWTTOKEN, {
         expiresIn: "1d"
       });
       User.findById(currentUser._id).then(function (check) {
@@ -68,17 +63,11 @@ passport.use(new GoogleStrategy({
         email: profile._json.email
       }).save().then(function (newUser) {
         console.log('created new user: ', newUser);
-        if (newUser.email == 'imp.deej@gmail.com') newUser.issudoaccess = true;
         var token = jwt.sign({
           _id: newUser._id,
           name: newUser.name,
-          email: newUser.email,
-          contact: newUser.contact,
-          domain: newUser.domain,
-          isadministrator: newUser.isadministrator,
-          clubs: newUser.clubs,
-          issudoaccess: newUser.issudoaccess
-        }, 'secret', {
+          email: newUser.email
+        }, process.env.JWTTOKEN, {
           expiresIn: "1d"
         });
         User.findById(newUser._id).then(function (check) {

@@ -26,7 +26,6 @@ const userSchema = mongoose.Schema({
         requried: false
     },
     isadministrator :[{
-        adminid : {type: String},
         isadmin: {type: Boolean, required: false, default: false},
         club: {type: String, required: true }
     }],
