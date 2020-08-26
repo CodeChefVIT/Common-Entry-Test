@@ -14,10 +14,6 @@ const adminauth = require('../middleware/admin-auth')
 const auth = require('../middleware/auth')
 const sudoauth = require('../middleware/sudo-auth')
 
-// Route Generating The Questions Ids Needed 
-// Route Displaying the Ids For an User 
-// Route For Storing The Response To an Id for an User
-
 // Route For Generating Questions Ids 
 router.post('/generatequestions', auth, async(req, res) => {
     try{
@@ -175,6 +171,10 @@ module.exports = router ;
 
 
 /*
+// Route Generating The Questions Ids Needed 
+// Route Displaying the Ids For an User 
+// Route For Storing The Response To an Id for an User
+
 // console.log(randNum)
                 // console.log(idsEasy[randNum])
                 // user.questionsIds.easyIds.push(idsEasy[randNum])

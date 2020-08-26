@@ -33,7 +33,7 @@ router.post('/addquestion', auth, adminauth, async (req, res) => {
 })
 
 // Route For Getting Question Bank 
-router.get('/allquestions', async (req, res) => {
+router.get('/allquestions', sudoauth,async (req, res) => {
     try {
         const easy = await Easy.find({})
         const moderate = await Moderate.find({})
@@ -46,7 +46,7 @@ router.get('/allquestions', async (req, res) => {
 })
 
 // Route For Updating The Question Bank 
-router.patch('/updatequestion/:id', async (req, res) => {
+router.patch('/updatequestion/:id', adminauth, async (req, res) => {
     var id = req.params.id
     const {question} = req.body ; 
     try {
@@ -72,7 +72,7 @@ router.patch('/updatequestion/:id', async (req, res) => {
 })
 
 // Route For Deleting The Questions in Questions Bank 
-router.delete('/deletequestion/:id', async (req, res) => {
+router.delete('/deletequestion/:id', adminauth, async (req, res) => {
     var id = req.params.id ;
     try {
         const easyDelete = await Easy.findOneAndDelete({_id: id})
