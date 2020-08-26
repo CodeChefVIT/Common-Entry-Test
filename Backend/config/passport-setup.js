@@ -24,8 +24,7 @@ passport.use(
         callbackURL: 'http://localhost:3000/auth/google/redirect'
     }, (accessToken, refreshToken, profile, done) => {
         User.findOne({googleId: profile.id}).then((currentUser) => {
-            if(currentUser){
-                console.log('user is: ', currentUser);  
+            if(currentUser){  
                 const token = jwt.sign({
                     _id : currentUser._id ,
                     name : currentUser.name,
@@ -35,10 +34,11 @@ passport.use(
                     check.token = token    
                     check.googleId = profile.id,
                     check.save().then((user) => {
+                        console.log('user is: ', currentUser);
                         done(null, user)
                     }).catch((e) => console.log(e))
                 })
-                done(null, currentUser);
+                // done(null, currentUser);
             } else {
                 var email = profile._json.email;
                 var res = email.split("@")[1];
@@ -53,7 +53,6 @@ passport.use(
                         email:profile._json.email
                 })
                 .save().then((newUser) => {
-                    console.log('created new user: ', newUser);
                     const token = jwt.sign({
                         _id : newUser._id,
                         name: newUser.name,
@@ -61,9 +60,10 @@ passport.use(
                     }, process.env.JWTTOKEN, {expiresIn: "1d"})
                     User.findById(newUser._id).then((check) => {
                         check.token = token
-                        check.save().then((user) => {done(null, user)}).catch((e) => console.log(e)).catch((e) => console.log(e))
+                        check.save().then((user) => {console.log('created new user: ', newUser);
+                        done(null, user)}).catch((e) => console.log(e)).catch((e) => console.log(e))
                     })
-                    done(null, newUser);
+                    // done(null, newUser);
                 });
             }
             

@@ -4,7 +4,7 @@ const easyQuestionSchema = mongoose.Schema({
     question: {
         type: String
     },
-    author : {
+    authorid : {
         type: String 
     },
     club :{

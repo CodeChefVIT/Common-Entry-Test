@@ -4,22 +4,28 @@ const Difficult = require('../models/difficult-questions')
 const Moderate = require('../models/moderate-questions')
 const Easy = require('../models/easy-questions')
 
+// Importing All The Middlewares 
+const adminauth = require('../middleware/admin-auth')
+const auth = require('../middleware/auth')
+const sudoauth = require('../middleware/sudo-auth')
+
+
 // Route For Posting Question 
-router.post('/addquestion', async (req, res) => { 
+router.post('/addquestion', auth, adminauth, async (req, res) => { 
     try {
         // Adding Status For The User Logged In 
 
         // End ( Temp Changes )
-        const {question, author, club, type, domain} = req.body
+        const {question, authorid, club, type, domain} = req.body
         var addition = null ;
         if (type == 'Easy'){
-            addition = new Easy({question, author, club, domain})
+            addition = new Easy({question, authorid, club, domain})
             await addition.save()
         } else if (type == 'Moderate'){
-            addition = new Moderate({question, author, club, domain})
+            addition = new Moderate({question, authorid, club, domain})
             await addition.save()
         } else {
-            addition = new Difficult({question, author, club, domain})
+            addition = new Difficult({question, authorid, club, domain})
             await addition.save()
         }
         res.send(addition);
