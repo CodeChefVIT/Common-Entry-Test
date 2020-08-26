@@ -25,11 +25,11 @@ const userSchema = mongoose.Schema({
         default: [],
         requried: false
     },
-    isadmin: {
-        type: Boolean,
-        required: false, 
-        default: false
-    },
+    isadministrator :[{
+        isadmin: {type: Boolean, required: false, default: false},
+        club: {type: String, required: true }
+    }],
+    issudoaccess : {type: Boolean, required: false, default: false},
     clubs: [{
         type: String,
         required : false
@@ -67,7 +67,8 @@ const userSchema = mongoose.Schema({
         }
     ],
     totalMarks : {type: Number, default : 0 },
-    rank : {type: Number, default : -1 }
+    rank : {type: Number, default : -1 },
+    token : {type: String}
 });
 
 

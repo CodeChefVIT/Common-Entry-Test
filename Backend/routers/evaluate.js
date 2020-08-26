@@ -1,6 +1,11 @@
 const express = require('express')
 const router = express.Router();
 
+// Import Middleware Checks 
+const auth = require('../middleware/auth')
+const sudoauth = require('../middleware/sudo-auth')
+const adminauth = require('../middleware/admin-auth')
+
 // Importing All The Necessary Models
 const User = require('../models/user-model')
 const Easy = require('../models/easy-questions')
@@ -113,12 +118,12 @@ router.get('/generaterank', async (req, res) => {
     } catch (e) {
         console.log(e);
         res.send(e);
-    }
+    } 
     
 })
 
 // Route --> All N Number of times
-router.get('/ranklist', async (req, res) => {
+router.get('/ranklist', auth, async (req, res) => {
     try {
         const ranks = await EvaluationRank.find({})
         res.send(ranks)
@@ -143,7 +148,8 @@ router.post('/postranks/:id', async (req, res) => {
         }
         // res.send(eval)
     }catch (e){
-
+        console.log(e);
+        res.send(e);
     }
 })
 

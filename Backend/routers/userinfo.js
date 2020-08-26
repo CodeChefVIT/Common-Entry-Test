@@ -1,8 +1,9 @@
 const express = require('express')
 const router = express.Router();
 const User = require('../models/user-model');
-const { route } = require('./auth');
-
+const sudoauth = require('../middleware/sudo-auth')
+const auth = require('../middleware/auth')
+const mongoose = require('mongoose')
 // Add Clubs to Apply
 // Specifing Question on the Go 
 // Making Configuration For Repeatation Usage 
@@ -84,6 +85,22 @@ router.patch('/updateuserinfo/:id', async (req, res) => {
         res.send(entity)
     }
     catch (e){
+        console.log(e);
+        res.send(e);
+    }
+})
+
+// Route For Giving The Admin Access To the Specified User --> Limited to Sudo Accessors to give the rights 
+router.post('/addtheadmin', auth, sudoauth, async (req, res) => {
+    const {email, club} = req.body ;
+    try {
+        const usertobegrantedaccessrights = await User.findOne({email})
+        var template = {isadmin: true,club: club}
+        console.log(template)
+        usertobegrantedaccessrights.isadministrator.push(template)
+        // await usertobegrantedaccessrights.save()
+        res.send(usertobegrantedaccessrights)
+    }catch (e) {
         console.log(e);
         res.send(e);
     }
