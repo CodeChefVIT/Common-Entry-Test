@@ -9,11 +9,9 @@ module.exports = async function (req, res, next) {
 
     try {
         const verified = JWT.verify(token, process.env.JWTTOKEN)
-        console.log(verified.email)
         const check = await User.findOne({email : verified.email})
-        console.log(check)
         if (check.isadministrator.length > 0){
-            req.user = verified
+            req.user = check 
             next()
         }else 
             res.send(`You Got NO Admin Access `)

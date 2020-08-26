@@ -11,7 +11,8 @@ const User = require('../models/user-model')
 const Easy = require('../models/easy-questions')
 const Moderate = require ('../models/moderate-questions')
 const Difficult = require('../models/difficult-questions')
-const EvaluationRank = require('../models/rank-result')
+const EvaluationRank = require('../models/rank-result');
+const { response } = require('express');
 
 // Route For Getting All The Students IDs with Responses 
 // Route For Posting Marks 
@@ -22,8 +23,22 @@ router.get('/getresponses/:id',adminauth, async (req, res) => {
     var id = req.params.id // User
     try {
         const user = await User.findById(id);
+        var alpha = []
         await user.populate('easyresponses.id').populate('moderateresponses.id').populate('difficultresponses.id').execPopulate();
-        res.send(user);
+        user.easyresponses.forEach((response) => {
+            if(response.id.authorid == req.user.isadministrator[0]._id) {
+                alpha.push(response)
+            }
+        })
+        user.moderateresponses.forEach((response) => {
+            if(response.id.authorid == req.user.isadministrator[0]._id) 
+                alpha.push(response)
+        })
+        user.difficultresponses.forEach((response) => {
+            if(response.id.authorid == req.user.isadministrator[0]._id) 
+                alpha.push(response)
+        })
+        res.send(alpha);
     }catch (e){
         console.log(e);
         res.send(e);
@@ -44,36 +59,49 @@ router.post('/postmarks/:id', adminauth, async (req, res) => {
             console.log(`Sorry No Record Found , Please Check the Id`)
         }
 
-        if (iseasy){
-            // await user.updateOne({"easyresponses.id": questionid}, {$set: {"marks": marks}})
-            // console.log(user.easyresponses)
-            user.easyresponses.forEach((stack) => {
-                if (stack.id == questionid){
-                    stack.marks = marks ;
-                    user.totalMarks += parseInt(marks) ;
-                }
-            })
+        // console.log(req.user.isadministrator[0]._id)
+        console.log(iseasy+ ismoderate +isdifficult)
+        if (iseasy || ismoderate || isdifficult){
+            if (iseasy.authorid != req.user.isadministrator[0]._id){
+                console.log(`Author Id and User Administartion is not Matched, Please Verify to the Fact That You are eligible to Mark This Question`)
+                console.log(iseasy.authorid)
+                console.log(req.user.isadministrator)
+                res.send(`Author Id and User Administartion is not Matched, Please Verify to the Fact That You are eligible to Mark This Question`)
+            }
         }
-        if (ismoderate){
-            // await user.updateOne({"easyresponses.id": questionid}, {$set: {"marks": marks}})
-            // console.log(user.easyresponses)
-            user.moderateresponses.forEach((stack) => {
-                if (stack.id == questionid){
-                    stack.marks = marks ;
-                    user.totalMarks += parseInt(marks) ;
-                }
-            })
+        if(true) {
+            if (iseasy){
+                // await user.updateOne({"easyresponses.id": questionid}, {$set: {"marks": marks}})
+                // console.log(user.easyresponses)
+                user.easyresponses.forEach((stack) => {  
+                    if (stack.id == questionid){
+                        stack.marks = marks ;
+                        user.totalMarks += parseInt(marks) ;
+                    }
+                })
+            }
+            if (ismoderate){
+                // await user.updateOne({"easyresponses.id": questionid}, {$set: {"marks": marks}})
+                // console.log(user.easyresponses)
+                user.moderateresponses.forEach((stack) => {
+                    if (stack.id == questionid){
+                        stack.marks = marks ;
+                        user.totalMarks += parseInt(marks) ;
+                    }
+                })
+            }
+            if (isdifficult){
+                // await user.updateOne({"easyresponses.id": questionid}, {$set: {"marks": marks}})
+                // console.log(user.easyresponses)
+                user.difficultresponses.forEach((stack) => {
+                    if (stack.id == questionid){
+                        stack.marks = marks ;
+                        user.totalMarks += parseInt(marks) ;
+                    }
+                })
+            }
         }
-        if (isdifficult){
-            // await user.updateOne({"easyresponses.id": questionid}, {$set: {"marks": marks}})
-            // console.log(user.easyresponses)
-            user.difficultresponses.forEach((stack) => {
-                if (stack.id == questionid){
-                    stack.marks = marks ;
-                    user.totalMarks += parseInt(marks) ;
-                }
-            })
-        }
+        
         // await user.save();
         res.send(user);
     } catch (e){
@@ -134,7 +162,7 @@ router.get('/ranklist', auth, async (req, res) => {
 })
 
 // Route For Storing the Ranks for User 
-router.post('/postranks/:id', adminauth,async (req, res) => {
+router.post('/postranks/:id', sudoauth,async (req, res) => {
     var id = req.params.id 
     try {
         const user = await User.findById(id)
