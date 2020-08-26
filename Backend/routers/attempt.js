@@ -19,7 +19,7 @@ const sudoauth = require('../middleware/sudo-auth')
 // Route For Storing The Response To an Id for an User
 
 // Route For Generating Questions Ids 
-router.post('/generatequestions', auth,async(req, res) => {
+router.post('/generatequestions', auth, async(req, res) => {
     try{
         const user = await User.findById(req.user._id)
         const {domain} = req.body

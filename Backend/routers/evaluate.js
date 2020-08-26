@@ -18,7 +18,7 @@ const EvaluationRank = require('../models/rank-result')
 // Route For Showing The Rank List of Student For Particular domain 
 
 // Route For Getting All The Student Responses with Ids --> Auth for Admins Only 
-router.get('/getresponses/:id', async (req, res) => {
+router.get('/getresponses/:id',adminauth, async (req, res) => {
     var id = req.params.id // User
     try {
         const user = await User.findById(id);
@@ -31,7 +31,7 @@ router.get('/getresponses/:id', async (req, res) => {
 })
 
 // Route For Posting Marks To The Student Response , Can Be Used For Updation As well 
-router.post('/postmarks/:id', async (req, res) => {
+router.post('/postmarks/:id', adminauth, async (req, res) => {
     var id = req.params.id ;
     const {questionid ,marks} = req.body 
     try {
@@ -74,7 +74,7 @@ router.post('/postmarks/:id', async (req, res) => {
                 }
             })
         }
-        await user.save();
+        // await user.save();
         res.send(user);
     } catch (e){
         console.log(e);
@@ -99,7 +99,7 @@ function compare (a, b) {
 
 
 // Route Generating The Ranks Being Alloted As Per Marks --> Restricted For One Time Use 
-router.get('/generaterank', async (req, res) => {
+router.get('/generaterank', adminauth,async (req, res) => {
     // console.log(req.user);
     try {
         const alluser = await User.find({})
@@ -134,7 +134,7 @@ router.get('/ranklist', auth, async (req, res) => {
 })
 
 // Route For Storing the Ranks for User 
-router.post('/postranks/:id', async (req, res) => {
+router.post('/postranks/:id', adminauth,async (req, res) => {
     var id = req.params.id 
     try {
         const user = await User.findById(id)
