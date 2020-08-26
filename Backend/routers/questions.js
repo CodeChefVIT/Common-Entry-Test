@@ -13,9 +13,6 @@ const sudoauth = require('../middleware/sudo-auth')
 // Route For Posting Question 
 router.post('/addquestion', auth, adminauth, async (req, res) => { 
     try {
-        // Adding Status For The User Logged In 
-
-        // End ( Temp Changes )
         const {question, authorid, club, type, domain} = req.body
         var addition = null ;
         if (type == 'Easy'){

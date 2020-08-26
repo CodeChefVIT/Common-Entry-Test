@@ -12,7 +12,7 @@ module.exports = async function (req, res, next) {
         console.log(verified.email)
         const check = await User.findOne({email : verified.email})
         console.log(check)
-        if (check.isadministrator != null){
+        if (check.isadministrator.length > 0){
             req.user = verified
             next()
         }else 
