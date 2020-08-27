@@ -4,22 +4,25 @@ const Difficult = require('../models/difficult-questions')
 const Moderate = require('../models/moderate-questions')
 const Easy = require('../models/easy-questions')
 
-// Route For Posting Question 
-router.post('/addquestion', async (req, res) => { 
-    try {
-        // Adding Status For The User Logged In 
+// Importing All The Middlewares 
+const adminauth = require('../middleware/admin-auth')
+const auth = require('../middleware/auth')
+const sudoauth = require('../middleware/sudo-auth')
 
-        // End ( Temp Changes )
-        const {question, author, club, type, domain} = req.body
+
+// Route For Posting Question 
+router.post('/addquestion', auth, adminauth, async (req, res) => { 
+    try {
+        const {question, authorid, club, type, domain} = req.body
         var addition = null ;
         if (type == 'Easy'){
-            addition = new Easy({question, author, club, domain})
+            addition = new Easy({question, authorid, club, domain})
             await addition.save()
         } else if (type == 'Moderate'){
-            addition = new Moderate({question, author, club, domain})
+            addition = new Moderate({question, authorid, club, domain})
             await addition.save()
         } else {
-            addition = new Difficult({question, author, club, domain})
+            addition = new Difficult({question, authorid, club, domain})
             await addition.save()
         }
         res.send(addition);
@@ -30,7 +33,7 @@ router.post('/addquestion', async (req, res) => {
 })
 
 // Route For Getting Question Bank 
-router.get('/allquestions', async (req, res) => {
+router.get('/allquestions', sudoauth,async (req, res) => {
     try {
         const easy = await Easy.find({})
         const moderate = await Moderate.find({})
@@ -43,7 +46,7 @@ router.get('/allquestions', async (req, res) => {
 })
 
 // Route For Updating The Question Bank 
-router.patch('/updatequestion/:id', async (req, res) => {
+router.patch('/updatequestion/:id', adminauth, async (req, res) => {
     var id = req.params.id
     const {question} = req.body ; 
     try {
@@ -69,7 +72,7 @@ router.patch('/updatequestion/:id', async (req, res) => {
 })
 
 // Route For Deleting The Questions in Questions Bank 
-router.delete('/deletequestion/:id', async (req, res) => {
+router.delete('/deletequestion/:id', adminauth, async (req, res) => {
     var id = req.params.id ;
     try {
         const easyDelete = await Easy.findOneAndDelete({_id: id})

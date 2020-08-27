@@ -9,16 +9,15 @@ const Easy = require('../models/easy-questions')
 const Moderate = require('../models/moderate-questions')
 const Difficult = require('../models/difficult-questions')
 
-
-
-// Route Generating The Questions Ids Needed 
-// Route Displaying the Ids For an User 
-// Route For Storing The Response To an Id for an User
+// Importing All The Middlewares 
+const adminauth = require('../middleware/admin-auth')
+const auth = require('../middleware/auth')
+const sudoauth = require('../middleware/sudo-auth')
 
 // Route For Generating Questions Ids 
-router.post('/generatequestions/:id', async(req, res) => {
+router.post('/generatequestions', auth, async(req, res) => {
     try{
-        const user = await User.findById(req.params.id)
+        const user = await User.findById(req.user._id)
         const {domain} = req.body
         if (!user.domain.includes(domain))
             res.send(`Sorry, You Havent Been Enrolled into ${domain}. Please Select The Domain `)
@@ -76,10 +75,10 @@ router.post('/generatequestions/:id', async(req, res) => {
 })
 
 // Route For Displaying Questions 
-router.get('/questionsall/:id', async (req, res) => {
-    var id = req.params.id ;
+router.get('/questionsall', auth, async (req, res) => {
+    
     try {
-        const user = await User.findById(id);
+        const user = await User.findById(req.user._id);
         await user.populate('questionsIds.easyIds').populate('questionsIds.moderateIds').populate('questionsIds.difficultIds').execPopulate()
         res.send(user)
     }catch (e){
@@ -89,14 +88,13 @@ router.get('/questionsall/:id', async (req, res) => {
 })
 
 // Route For Posting Answers to an Id --> Not Adding For Updation 
-router.post('/answerid/:id', async (req, res) => {
-    var id = req.params.id ;
+router.post('/answerid', auth, async (req, res) => {
     const {questionid, answer} = req.body 
     try {
         const iseasy = await Easy.findById(questionid)
         const ismoderate = await Moderate.findById(questionid)
         const isdifficult = await Difficult.findById(questionid)
-        const user = await User.findById(id)
+        const user = await User.findById(req.user._id)
 
         if (!iseasy && !ismoderate && !isdifficult){
             res.send(`Sorry No Record Found , Please Check the Id `)
@@ -173,6 +171,10 @@ module.exports = router ;
 
 
 /*
+// Route Generating The Questions Ids Needed 
+// Route Displaying the Ids For an User 
+// Route For Storing The Response To an Id for an User
+
 // console.log(randNum)
                 // console.log(idsEasy[randNum])
                 // user.questionsIds.easyIds.push(idsEasy[randNum])

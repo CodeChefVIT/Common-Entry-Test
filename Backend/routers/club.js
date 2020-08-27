@@ -2,9 +2,14 @@ const express = require('express')
 const ClubList = require('../models/club-list')
 const router = express.Router();
 
+// Importing All The Middlewares 
+const adminauth = require('../middleware/admin-auth')
+const auth = require('../middleware/auth')
+const sudoauth = require('../middleware/sudo-auth')
+
 
 // Route For Adding The Clubs --> Specifically To CC Members
-router.post('/addclub', async (req, res) => {
+router.post('/addclub', sudoauth, async (req, res) => {
     try {
         // Adding Status Based on User's Preference ID
 
