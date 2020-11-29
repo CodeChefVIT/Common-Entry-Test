@@ -11,7 +11,7 @@
   [![UI ](https://img.shields.io/badge/User%20Interface-Link%20to%20UI-orange?style=flat-square&logo=appveyor)](https://cet.codechefvit.com)
 
 <p align="center">
-<img src="./Frontend/common-entry-test/src/images/cet.png" alt="Common-Entry-Test"/>
+<img src="./Frontend/common-entry-test/src/images/cet.png" alt="Common-Entry-Test" width="250px"/>
 </p>
 
 ## What is Common Entry Test ?
