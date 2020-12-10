@@ -7,11 +7,10 @@
 > One stop solution to make club and chapter recruitments in VIT simpler and hassle free.
 
 ---
-[![DOCS](https://img.shields.io/badge/Documentation-see%20docs-green?style=flat-square&logo=appveyor)](INSERT_LINK_FOR_DOCS_HERE) 
-  [![UI ](https://img.shields.io/badge/User%20Interface-Link%20to%20UI-orange?style=flat-square&logo=appveyor)](https://cet.codechefvit.com)
+[![UI ](https://img.shields.io/badge/User%20Interface-Link%20to%20UI-orange?style=flat-square&logo=appveyor)](https://cet.codechefvit.com)
 
 <p align="center">
-<img src="./Frontend/common-entry-test/src/images/cet.png" alt="Common-Entry-Test" width="250px"/>
+<img src="https://i.ibb.co/VppxmWZ/cet.png" alt="Common-Entry-Test" width="250px"/>
 </p>
 
 ## What is Common Entry Test ?
@@ -28,19 +27,22 @@ Common Entry Test is an assistive technology that helps make applying to clubs a
 2. Well updated and informative.
 3. Easy to use.
 
-## Instructions to run Frontend ⚛️
-```
-$ git clone https://github.com/CodeChefVIT/Common-Entry-Test
-$ cd Common-Entry-Test
-$ npm install
-$ cd Frontend/common-entry-test
-$ npm start
-```
+## Important Links
+- [CET Landing Page Repo](https://github.com/CodeChefVIT/Common-Entry-Test)
+- [CET Landing Page](https://cet.codechefvit.com)
+- [CET Frontend Repo](#!) : Will be announced soon!
+- [CET Backend Repo](#!) : Will be announced soon!
+- [CET Frontend](#!) : Will be announced soon!
+- [CET Backend](#!) : Will be announced soon!
+
 
 ## Contributors
 - <a href="https://github.com/akshatvg">Akshat Gupta</a>
-- <a href="https://github.com/NavyaaSharma">Navyaa Sharma</a>
 - <a href="https://github.com/RajatSablok">Rajat Sablok</a>
+- <a href="https://github.com/TheG0dfath3r">Kunal Singh</a>
+- <a href="https://github.com/diptochakrabarty">Dipto Chakrabarty</a>
+- <a href="https://github.com/gvinayakgupta">Vinayak Gupta</a>
+- <a href="https://github.com/Sarthakbh321">Sarthak Bhardwaj</a>
 
 ## Contributing
 
