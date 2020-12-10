@@ -26,7 +26,7 @@ const Home = () => {
                                 <MenuIcon />
                             </IconButton>
                             <Typography variant="h6">
-                                News
+                                CET
                 </Typography>
                             <Button color="inherit">Login</Button>
                             <Switch checked={darkMode} onChange={() => setDarkMode(!darkMode)} />

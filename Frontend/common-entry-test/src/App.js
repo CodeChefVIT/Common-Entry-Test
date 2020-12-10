@@ -8,17 +8,18 @@ import Exam from './components/Exam';
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="App">
-        <Navbar />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/list" component={ClubList} />
-          <Route exact path="/deadlines" component={Deadlines} />
-          <Route exact path="/exam/:exam_id" component={Exam} />
-        </Switch>
-      </div>
-    </BrowserRouter>
+    <Home />
+    // <BrowserRouter>
+    //   <div className="App">
+    //     <Navbar />
+    //     <Switch>
+    //       <Route exact path="/" component={Home} />
+    //       {/* <Route exact path="/list" component={ClubList} />
+    //       <Route exact path="/deadlines" component={Deadlines} />
+    //       <Route exact path="/exam/:exam_id" component={Exam} /> */}
+    //     </Switch>
+    //   </div>
+    // </BrowserRouter>
   )
 }
 
