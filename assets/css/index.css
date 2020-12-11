@@ -407,12 +407,24 @@ header {
 
 /* Cards */
 .introCard {
-    margin-top: -10vh;
     background-color: #222831;
     color: white;
 }
 
-.blogCard, .partnerCard {
+@media only screen and (min-width: 980px) {
+    .introCard {
+        margin-top: -10vh;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    .introCard {
+        margin-top: 5vh;
+    }
+}
+
+.blogCard,
+.partnerCard {
     background-color: #222831;
     color: white;
 }
