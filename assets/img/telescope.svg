@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="79px" height="80px" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-telescope</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Desktop-R4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="0.0-Home-page-" transform="translate(-1111.000000, -844.000000)" stroke="#E31E43" stroke-width="2">
+            <g id="c3.0-explore-colleges-desktop" transform="translate(95.000000, 767.000000)">
+                <g id="icon-telescope" transform="translate(1017.000000, 78.000000)">
+                    <polygon id="Stroke-1" points="53 27 77 27 77 0 53 0"></polygon>
+                    <polygon id="Stroke-3" points="14 21 53 21 53 5 14 5"></polygon>
+                    <g id="Group-8" transform="translate(0.000000, 8.000000)">
+                        <polygon id="Stroke-4" points="0 8.92884696 13.7070896 8.92884696 13.7070896 0 0 0"></polygon>
+                        <path d="M39.7505597,14.8814116 L39.7505597,69.9426345" id="Stroke-6"></path>
+                        <polyline id="Stroke-7" points="61.681903 69.9426345 39.7505597 13.3932704 16.4485075 69.9426345"></polyline>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

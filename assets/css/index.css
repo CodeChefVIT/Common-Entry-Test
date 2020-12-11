@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/* Defaults */
+html,
+body {
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.text-colored {
+    color: #E31E43;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #E31E43;
+}
+
+::-moz-selection {
+    background: #E31E43;
+    color: #fff;
+}
+
+::selection {
+    background: #E31E43;
+    color: #fff;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(227, 30, 66, 0.616);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #E31E43;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(255, 0, 47);
+}
+
+/* Button Outline */
+button {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+/* Loader */
+#loader {
+    position: fixed;
+    width: 96px;
+    height: 96px;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 24px 64px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.24);
+    border-radius: 16px;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.2s ease-out, visibility 0s linear 0.2s;
+    -o-transition: opacity 0.2s ease-out, visibility 0s linear 0.2s;
+    transition: opacity 0.2s ease-out, visibility 0s linear 0.2s;
+    z-index: 9000000;
+}
+
+#loader.fullscreen {
+    padding: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    background-color: #ffffff;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+#loader.show {
+    -webkit-transition: opacity 0.4s ease-out, visibility 0s linear 0s;
+    -o-transition: opacity 0.4s ease-out, visibility 0s linear 0s;
+    transition: opacity 0.4s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+#loader .circular {
+    -webkit-animation: loader-rotate 2s linear infinite;
+    animation: loader-rotate 2s linear infinite;
+    position: absolute;
+    left: calc(50% - 24px);
+    top: calc(50% - 24px);
+    display: block;
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+#loader .path {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+    -webkit-animation: loader-dash 1.5s ease-in-out infinite;
+    animation: loader-dash 1.5s ease-in-out infinite;
+    stroke-linecap: round;
+}
+
+@-webkit-keyframes loader-rotate {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loader-rotate {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes loader-dash {
+    0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+    }
+
+    50% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -35px;
+    }
+
+    100% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -136px;
+    }
+}
+
+@keyframes loader-dash {
+    0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+    }
+
+    50% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -35px;
+    }
+
+    100% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -136px;
+    }
+}
+
+/* Outline */
+input {
+    outline: none !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+input:focus {
+    outline: none !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.form-control {
+    outline: none !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.form-control:focus {
+    outline: none !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+button {
+    outline: none !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+button:focus {
+    outline: none !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+/* Error Messages */
+#errorHandler {
+    color: red;
+}
+
+/* Sidenav */
+.sidenav {
+    border-right: 15px solid #E31E43;
+    color: black;
+}
+
+/* Navbar */
+.nav-wrapper {
+    background-color: #222831;
+    color: #EEEEEE;
+}
+
+/* Active Sidebar */
+#active {
+    color: #E31E43;
+}
+
+#active-icon {
+    color: #E31E43;
+}
+
+#active::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 0;
+    height: 0;
+    top: 15px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 20px solid #E31E43;
+}
+
+/* Overlap Main Remove */
+header {
+    padding-left: 80px;
+}
+
+/* Divider */
+.divider {
+    border: 1px solid #E31E43;
+    width: 100%;
+}
+
+.border-bottom-md {
+    border-bottom: 2px solid #E31E43;
+    width: 175px;
+}
+
+.border-bottom-sm {
+    border-bottom: 2px solid #E31E43;
+    width: 120px;
+}
+
+/* Heading */
+.heading {
+    font-weight: bolder;
+}
+
+/* Navbar Brand */
+.brand {
+    font-size: 30px;
+}
+
+/* Hide Scrollbar */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Displays */
+.d-inline {
+    display: inline !important
+}
+
+.d-none {
+    display: none !important
+}
+
+/* Border Radius */
+.border-radius-5 {
+    border-radius: 5px;
+}
+
+.border-radius-15 {
+    border-radius: 15px;
+}
+
+.border-radius-20 {
+    border-radius: 20px;
+}
+
+/* Hero Carousel */
+.bg-img-1 {
+    background-image: url("../img/dance.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: contain;
+    min-height: 93.2vh;
+}
+
+.bg-img-2 {
+    background-image: url("../img/sports.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: contain;
+    min-height: 93.2vh;
+}
+
+.bg-img-3 {
+    background-image: url("../img/racing.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: contain;
+    min-height: 93.2vh;
+}
+
+.bg-img-4 {
+    background-image: url("../img/hacks.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: contain;
+    min-height: 93.2vh;
+}
+
+@media only screen and (max-width: 980px) {
+    .carousel.carousel-slider {
+        height: 20vh;
+    }
+
+    .black-overlay-text-head {
+        background-color: rgba(0, 0, 0, 0.747);
+        max-width: 200px;
+        text-align: left;
+        padding: 20px;
+    }
+
+    .black-overlay-text {
+        background-color: rgba(0, 0, 0, 0.774);
+        max-width: 250px;
+        text-align: left;
+        padding-left: 20px;
+    }
+}
+
+@media only screen and (min-width: 980px) {
+    .carousel.carousel-slider {
+        height: 93.2vh;
+    }
+
+    .black-overlay-text-head {
+        background-color: rgba(0, 0, 0, 0.747);
+        max-width: 400px;
+        text-align: left;
+        padding: 20px;
+    }
+
+    .black-overlay-text {
+        background-color: rgba(0, 0, 0, 0.774);
+        max-width: 500px;
+        text-align: left;
+        padding-left: 20px;
+        padding: 20px;
+    }
+}
+
+.row.slider-center {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+
+/* Button(s) */
+.btn-cet,
+.btn-cet:hover,
+.btn-cet:focus {
+    background-color: #E31E43;
+    border: 1px solid #E31E43;
+    color: white;
+    border-radius: 30px;
+    min-width: 200px;
+    max-width: 350px;
+    min-height: 45px;
+    max-height: 55px;
+}
+
+/* Dark Mode */
+/* .darkmode-toggle {
+    z-index: 2;
+} */
+
+/* Cards */
+.introCard {
+    margin-top: -10vh;
+    background-color: #222831;
+    color: white;
+}
+
+.blogCard, .partnerCard {
+    background-color: #222831;
+    color: white;
+}
+
+/* Headings */
+h2 {
+    font-size: 1.15rem;
+}
+
+h1 {
+    font-size: 2.62rem;
+}
+
+@media only screen and (max-width: 980px) {
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+h3 {
+    font-size: 2.28rem;
+}
+
+/* Sections */
+#about,
+#demo {
+    background-color: #F3F3F3;
+}
+
+/* tawk.to */
+#maximizeChat {
+    z-index: 30;
+}
+
+/* Footer */
+.page-footer {
+    background: #222831;
+    color: white;
+}
+
+#page-footer {
+    background: #222831;
+    color: white;
+}
