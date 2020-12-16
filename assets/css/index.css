@@ -469,3 +469,13 @@ h3 {
     background: #222831;
     color: white;
 }
+
+/* Recaptcha */
+.grecaptcha-badge {
+    visibility: hidden;
+}
+
+#regBtn {
+    color: white;
+    cursor: pointer;
+}
