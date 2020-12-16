@@ -67,7 +67,7 @@ function preReg() {
         }
         console.log(data)
         var xh = new XMLHttpRequest();
-        xh.open("POST", "https://cet-dev-api.herokuapp.com/api/studentForm/add", true)
+        xh.open("POST", "https://cet-prereg.codechefvit.com/api/studentForm/add", true)
         xh.setRequestHeader('Content-Type', 'application/json')
         xh.send(JSON.stringify(data))
         xh.onload = function () {
