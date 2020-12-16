@@ -39,7 +39,7 @@ Common Entry Test is an assistive technology that helps make applying to clubs a
 ## Contributors
 - <a href="https://github.com/akshatvg">Akshat Gupta</a>
 - <a href="https://github.com/RajatSablok">Rajat Sablok</a>
-- <a href="https://github.com/TheG0dfath3r">Kunal Singh</a>
+- <a href="https://github.com/jugaldb">Jugal Bhatt</a>
 - <a href="https://github.com/diptochakrabarty">Dipto Chakrabarty</a>
 - <a href="https://github.com/gvinayakgupta">Vinayak Gupta</a>
 - <a href="https://github.com/Sarthakbh321">Sarthak Bhardwaj</a>
