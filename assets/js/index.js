@@ -30,6 +30,8 @@
 
 })(jQuery);
 
+chupaHuaAnda();
+
 // tawk.to
 var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
 (function () {
@@ -91,6 +93,52 @@ function preReg() {
     else {
         M.toast({ html: 'Seems like you didn\'t enter something 😔' });
     }
+}
+
+// Anda Dhoond
+function chupaHuaAnda() {
+    "use strict";
+    var key = [67, 79, 79, 75, 79, 70, 70, 68, 69, 86, 83, 79, 67];
+    var ck = 0;
+    var max = key.length;
+    var chupaHuaAnda = function () {
+        var shock = document.createElement('div');
+        var img = new Image;
+        img.src = data;
+        img.style.pointerEvents = "none";
+        img.style.width = '300px';
+        img.style.height = '300px';
+        img.style.transition = '1s all';
+        img.style.position = 'fixed';
+        img.style.left = 'calc(50% - 150px)';
+        img.style.bottom = 'calc(50% - 150px)';
+        img.style.zIndex = 999999;
+        var audio = new Audio('assets/music/scam-1992-theme.mp3');
+        audio.play();
+        document.body.appendChild(img);
+        window.setTimeout(function () {
+            img.style.bottom = '-300px';
+        }, 4300);
+        window.setTimeout(function () {
+            img.parentNode.removeChild(img);
+        }, 5400);
+    };
+    var record = function (e) {
+        if (e.which === key[ck]) {
+            ck++;
+        } else {
+            ck = 0;
+        }
+        if (ck >= max) {
+            chupaHuaAnda();
+            ck = 0;
+        }
+    };
+    var init = function (data) {
+        document.addEventListener('keyup', record);
+    };
+    var data = 'assets/img/studChef.gif';
+    init(data);
 }
 
 console.clear();
