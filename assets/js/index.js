@@ -67,7 +67,6 @@ function preReg() {
             phoneNumber,
             // captcha: { token }
         }
-        console.log(data)
         var xh = new XMLHttpRequest();
         xh.open("POST", "https://cet-prereg.codechefvit.com/api/studentForm/add", true)
         xh.setRequestHeader('Content-Type', 'application/json')
