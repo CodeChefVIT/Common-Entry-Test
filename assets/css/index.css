@@ -450,7 +450,8 @@ h3 {
 
 /* Sections */
 #about,
-#demo {
+#demo,
+#reg {
     background-color: #F3F3F3;
 }
 
