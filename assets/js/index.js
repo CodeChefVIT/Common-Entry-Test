@@ -77,7 +77,7 @@ function preReg() {
             } else if (this.status == 400) {
                 M.toast({ html: 'Seems like you didn\'t enter something 😔' });
                 document.getElementById("regBtn").disabled = false;
-            } else if (this.status == 401) {
+            } else if (this.status == 401 || this.status == 409) {
                 M.toast({ html: 'Looks like you are already registered with us ✨' });
                 document.getElementById("regBtn").disabled = false;
             } else {
