@@ -115,12 +115,76 @@ function chupaHuaAnda() {
         var audio = new Audio('assets/music/scam-1992-theme.mp3');
         audio.play();
         document.body.appendChild(img);
+        var xh = new XMLHttpRequest();
+        xh.open(
+            "GET",
+            "https://cet-prereg.codechefvit.com/api/easterEgg/generateOTP",
+            true
+        );
+        xh.setRequestHeader("Content-Type", "application/json");
+        xh.send();
+        xh.onload = function () {
+            if (this.status == 200 || this.status == 201) {
+                var andaData = JSON.parse(this.responseText);
+                var andeKaFunda = andaData.otp;
+                $('#chupaHuaAndaModal').modal('open');
+                $("#regBtnSpec").click(function () {
+                    document.getElementById("regBtnSpec").disabled = true;
+                    var email = document.getElementById("emailSpec").value;
+                    var registrationNumber = document.getElementById("registrationNumberSpec").value;
+                    var name = document.getElementById("nameSpec").value;
+                    var phoneNumber = document.getElementById("phoneNumberSpec").value;
+                    if (name != "" && registrationNumber != "" && email != "" && phoneNumber != "") {
+                        // grecaptcha.ready(() => {
+                        //     grecaptcha.execute('6LemmQMaAAAAAJEXiW2zQ1Dk06GKeU-0YbYc56oR', {
+                        //         action: '/'
+                        //     }).then((token) => {
+                        var data = {
+                            email,
+                            registrationNumber,
+                            name,
+                            phoneNumber,
+                            otp: andeKaFunda,
+                            // captcha: { token }
+                        }
+                        var xh = new XMLHttpRequest();
+                        xh.open("POST", "https://cet-prereg.codechefvit.com/api/easterEgg/form", true)
+                        xh.setRequestHeader('Content-Type', 'application/json')
+                        xh.send(JSON.stringify(data))
+                        xh.onload = function () {
+                            if (this.status == 201) {
+
+                                M.toast({ html: 'You have been successfully moved ahead 🎉' });
+                                document.getElementById("regBtnSpec").disabled = false;
+                                $('#chupaHuaAndaModal').modal('close');
+                            } else if (this.status == 400) {
+                                M.toast({ html: 'Seems like you didn\'t enter something 😔' });
+                                document.getElementById("regBtnSpec").disabled = false;
+                            } else if (this.status == 401 || this.status == 409) {
+                                M.toast({ html: 'Looks like you have already moved ahead ✨' });
+                                document.getElementById("regBtnSpec").disabled = false;
+                            } else {
+                                M.toast({ html: 'Oops something seems to be wrong. Our team is finding out what went wrong 😢' });
+                                document.getElementById("regBtnSpec").disabled = false;
+                            }
+                        }
+                        //     });
+                        // });
+                    }
+                    else {
+                        M.toast({ html: 'Seems like you didn\'t enter something 😔' });
+                    }
+                });
+            } else {
+                M.toast({ html: 'Oops something seems to be wrong. Our team is finding out what went wrong 😢' });
+            }
+        }
         window.setTimeout(function () {
             img.style.bottom = '-300px';
-        }, 4300);
+        }, 3000);
         window.setTimeout(function () {
             img.parentNode.removeChild(img);
-        }, 5400);
+        }, 3500);
     };
     var record = function (e) {
         if (e.which === key[ck]) {

@@ -400,11 +400,6 @@ header {
     max-height: 55px;
 }
 
-/* Dark Mode */
-/* .darkmode-toggle {
-    z-index: 2;
-} */
-
 /* Cards */
 .introCard {
     background-color: #222831;
@@ -476,7 +471,8 @@ h3 {
     visibility: hidden;
 }
 
-#regBtn {
+#regBtn,
+#regBtnSpec {
     color: white;
     cursor: pointer;
 }
