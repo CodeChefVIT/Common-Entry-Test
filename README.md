@@ -30,19 +30,19 @@ Common Entry Test is an assistive technology that helps make applying to clubs a
 ## Important Links
 - [CET Landing Page Repo](https://github.com/CodeChefVIT/Common-Entry-Test)
 - [CET Landing Page](https://cet.codechefvit.com)
-- [CET Frontend Repo](#!) : Will be announced soon!
-- [CET Backend Repo](#!) : Will be announced soon!
-- [CET Frontend](#!) : Will be announced soon!
-- [CET Backend](#!) : Will be announced soon!
-
+- [CET Frontend Repo](https://github.com/CodeChefVIT/cetFrontend) 
+- [CET Backend Repo](https://github.com/CodeChefVIT/cetBackend) 
+- [CET Frontend](https://cet-portal.codechefvit.com) 
+- [CET API](https://cet-dev-api.herokuapp.com/) 
 
 ## Contributors
-- <a href="https://github.com/akshatvg">Akshat Gupta</a>
 - <a href="https://github.com/RajatSablok">Rajat Sablok</a>
 - <a href="https://github.com/jugaldb">Jugal Bhatt</a>
+- <a href="https://github.com/Sarthakbh321">Sarthak Bhardwaj</a>
+- <a href="https://github.com/shashtag">Shashwat Gupta</a>
+- <a href="https://github.com/akshatvg">Akshat Gupta</a>
 - <a href="https://github.com/diptochakrabarty">Dipto Chakrabarty</a>
 - <a href="https://github.com/gvinayakgupta">Vinayak Gupta</a>
-- <a href="https://github.com/Sarthakbh321">Sarthak Bhardwaj</a>
 
 ## Contributing
 
