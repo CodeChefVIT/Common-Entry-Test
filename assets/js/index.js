@@ -152,15 +152,15 @@ function chupaHuaAnda() {
                         xh.send(JSON.stringify(data))
                         xh.onload = function () {
                             if (this.status == 201) {
-
-                                M.toast({ html: 'You have been successfully moved ahead 🎉' });
+                                M.toast({ html: 'You have been successfully found the clue 🎉' });
+                                M.toast({ html: 'The winners have already been announced though 😔' });
                                 document.getElementById("regBtnSpec").disabled = false;
                                 $('#chupaHuaAndaModal').modal('close');
                             } else if (this.status == 400) {
                                 M.toast({ html: 'Seems like you didn\'t enter something 😔' });
                                 document.getElementById("regBtnSpec").disabled = false;
                             } else if (this.status == 401 || this.status == 409) {
-                                M.toast({ html: 'Looks like you have already moved ahead ✨' });
+                                M.toast({ html: 'Looks like you have already submitted the clue ✨' });
                                 document.getElementById("regBtnSpec").disabled = false;
                             } else {
                                 M.toast({ html: 'Oops something seems to be wrong. Our team is finding out what went wrong 😢' });
