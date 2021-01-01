@@ -47,9 +47,9 @@ Common Entry Test is an assistive technology that helps make applying to clubs a
 - Pentesting and Security: <a href="https://github.com/Kshitizv05">Kshitiz Verma</a>
 
 ## Contributing
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are greatly appreciated. You can contribute to any of our issues given [here](https://github.com/CodeChefVIT/Common-Entry-Test/issues) or come up with any new feature requests.
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are greatly appreciated.
-
+## How to Contribute
 1. Fork the Project
 2. Create your Feature Branch 
 3. Commit your Changes 
