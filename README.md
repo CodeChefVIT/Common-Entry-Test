@@ -1,13 +1,10 @@
-<p align="center"><a href="https://www.codechefvit.com" target="_blank"><img src="https://s3.amazonaws.com/codechef_shared/sites/all/themes/abessive/logo-3.png" title="CodeChef-VIT" alt="Codechef-VIT"></a>
-</p>
-
 # Common Entry Test
 
 > <Subtitle>
 > One stop solution to make club and chapter recruitments in VIT simpler and hassle free.
 
 ---
-[![UI ](https://img.shields.io/badge/User%20Interface-Link%20to%20UI-orange?style=flat-square&logo=appveyor)](https://cet.codechefvit.com)
+[![UI ](https://img.shields.io/badge/User%20Interface-Link%20to%20UI-orange?style=flat-square&logo=appveyor)](https://cet.codechefvit.com) [![API Docs ](https://img.shields.io/badge/API%20Docs-View%20Here-orange?style=flat-square&logo=appveyor)](https://documenter.getpostman.com/view/12931122/TVmPAxAf)
 
 <p align="center">
 <img src="https://i.ibb.co/VppxmWZ/cet.png" alt="Common-Entry-Test" width="250px"/>
@@ -18,9 +15,11 @@ Common Entry Test is an assistive technology that helps make applying to clubs a
 
 ## Why Common Entry Test ?
 1. No other system matches the diversity of clubs and chapters accessible through our portal. Explore and apply to clubs and chapters in VIT.
-2. There is no need to repeat your applicant details for every club or chapter on your list. Enter your information one time and use it to apply to multiple clubs and chapters.
+2. There is no need to repeat your applicant details for every club or chapter on your list. Enter your information one time and use it to apply to multiple clubs, teams and chapters.
 3. Our system alerts you when important dates are approaching. Manage your deadlines and view application progress in one convenient dashboard.
 4. Save time by reducing the time you spend on tedious recruitment tests by giving just one standardised test and spend it with your friends and enjoy college life.
+5. Give a custom test by a club, team or chapter.
+6. As an organisation, you don't need to spend resources and time trying to make your own portal. We do it for you.
 
 ## Features
 1. Reduce redundancy.
@@ -30,19 +29,22 @@ Common Entry Test is an assistive technology that helps make applying to clubs a
 ## Important Links
 - [CET Landing Page Repo](https://github.com/CodeChefVIT/Common-Entry-Test)
 - [CET Landing Page](https://cet.codechefvit.com)
-- [CET Frontend Repo](https://github.com/CodeChefVIT/cetFrontend) 
-- [CET Backend Repo](https://github.com/CodeChefVIT/cetBackend) 
+- [CET Frontend Repo](https://github.com/CodeChefVIT/cetFrontend)
+- [CET Backend Repo](https://github.com/CodeChefVIT/cetBackend)
 - [CET Frontend](https://cet-portal.codechefvit.com) 
-- [CET API](https://cet-dev-api.herokuapp.com/) 
 
 ## Contributors
-- <a href="https://github.com/RajatSablok">Rajat Sablok</a>
-- <a href="https://github.com/jugaldb">Jugal Bhatt</a>
-- <a href="https://github.com/Sarthakbh321">Sarthak Bhardwaj</a>
-- <a href="https://github.com/shashtag">Shashwat Gupta</a>
-- <a href="https://github.com/akshatvg">Akshat Gupta</a>
-- <a href="https://github.com/diptochakrabarty">Dipto Chakrabarty</a>
-- <a href="https://github.com/gvinayakgupta">Vinayak Gupta</a>
+- Backend & Cloud: <a href="https://github.com/RajatSablok">Rajat Sablok</a>
+- Backend & Cloud: <a href="https://github.com/jugaldb">Jugal Bhatt</a>
+- Backend & Cloud: <a href="https://github.com/N0v0cain3">Shivam Mehta</a>
+- Backend & Cloud: <a href="https://github.com/decipher07">Deepankar Jain</a>
+- Frontend: <a href="https://github.com/Sarthakbh321">Sarthak Bhardwaj</a>
+- Frontend: <a href="https://github.com/shashtag">Shashwat Gupta</a>
+- Frontend, SEO & Project Management: <a href="https://github.com/akshatvg">Akshat Gupta</a>
+- Frontend: <a href="https://github.com/gvinayakgupta">Vinayak Gupta</a>
+- DevOps, Security & Cloud: <a href="https://github.com/diptochakrabarty">Dipto Chakrabarty</a>
+- Pentesting and Security: <a href="https://github.com/1UC1F3R616">Kush Choudhary</a>
+- Pentesting and Security: <a href="https://github.com/Kshitizv05">Kshitiz Verma</a>
 
 ## Contributing
 
